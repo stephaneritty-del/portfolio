@@ -17,13 +17,35 @@ function App() {
     setTimeout(() => setEmailCopied(false), 2000);
   };
 
-  // Scroll animation for Why I Build section - blocks appear as you scroll
+  // Scroll animation for Why I Build section - brick by brick construction
   useEffect(() => {
     const whySection = document.querySelector('.why-section');
+    const brickWall = document.querySelector('.brick-wall');
     const textBlocks = document.querySelectorAll('.why-text-block');
-    const bgLayers = document.querySelectorAll('.nature-bg-layer');
     
-    if (!whySection) return;
+    if (!whySection || !brickWall) return;
+
+    // Create brick grid (8 columns x 6 rows = 48 bricks)
+    const cols = 8;
+    const rows = 6;
+    const totalBricks = cols * rows;
+    
+    // Clear and create bricks
+    brickWall.innerHTML = '';
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        const brick = document.createElement('div');
+        brick.className = 'brick';
+        // Offset every other row for realistic brick pattern
+        brick.style.left = `${(col * 12.5) + (row % 2 === 1 ? 6.25 : 0)}%`;
+        brick.style.top = `${row * 16.666}%`;
+        // Random slight delay for organic feel
+        brick.style.transitionDelay = `${Math.random() * 0.3}s`;
+        brickWall.appendChild(brick);
+      }
+    }
+    
+    const bricks = document.querySelectorAll('.brick');
 
     const handleScroll = () => {
       const rect = whySection.getBoundingClientRect();
@@ -31,30 +53,38 @@ function App() {
       const sectionHeight = rect.height;
       
       // Calculate scroll progress through the section (0 to 1)
-      const scrollStart = windowHeight;
-      const scrollEnd = -sectionHeight;
+      const scrollStart = windowHeight * 0.8; // Start building earlier
+      const scrollEnd = -sectionHeight * 0.3;
       const currentPosition = rect.top;
       const progress = Math.min(Math.max((scrollStart - currentPosition) / (scrollStart - scrollEnd), 0), 1);
       
-      // Reveal text blocks progressively
-      textBlocks.forEach((block, index) => {
-        const blockThreshold = (index + 1) * 0.15; // Each block appears at 15%, 30%, 45%
-        if (progress > blockThreshold) {
-          block.classList.add('visible');
+      // Build bricks from bottom to top based on scroll progress
+      const bricksToShow = Math.floor(progress * totalBricks);
+      
+      // Sort bricks: bottom rows first, then left to right
+      const sortedBrickIndices = [];
+      for (let row = rows - 1; row >= 0; row--) {
+        for (let col = 0; col < cols; col++) {
+          sortedBrickIndices.push(row * cols + col);
+        }
+      }
+      
+      bricks.forEach((brick, index) => {
+        const sortedIndex = sortedBrickIndices.indexOf(index);
+        if (sortedIndex < bricksToShow) {
+          brick.classList.add('visible');
+        } else {
+          brick.classList.remove('visible');
         }
       });
       
-      // Transition background images based on progress
-      bgLayers.forEach((layer, index) => {
-        const layerStart = index * 0.33;
-        const layerEnd = (index + 1) * 0.33;
-        
-        if (progress >= layerStart && progress < layerEnd) {
-          layer.style.opacity = '1';
-        } else if (progress >= layerEnd) {
-          layer.style.opacity = '0.3';
+      // Reveal text blocks progressively as wall builds
+      textBlocks.forEach((block, index) => {
+        const blockThreshold = 0.3 + (index * 0.25); // 30%, 55%, 80%
+        if (progress > blockThreshold) {
+          block.classList.add('visible');
         } else {
-          layer.style.opacity = '0';
+          block.classList.remove('visible');
         }
       });
     };
@@ -161,13 +191,14 @@ function App() {
 
       {/* Why I Build Section */}
       <section className="why-section">
-        {/* Nature Background Layers */}
-        <div className="nature-backgrounds">
-          <div className="nature-bg-layer layer-1"></div>
-          <div className="nature-bg-layer layer-2"></div>
-          <div className="nature-bg-layer layer-3"></div>
-          <div className="nature-overlay"></div>
-        </div>
+        {/* Mountain Background */}
+        <div className="mountain-bg"></div>
+        
+        {/* Brick Wall that builds on scroll */}
+        <div className="brick-wall"></div>
+        
+        {/* Emerald overlay on top of bricks */}
+        <div className="emerald-overlay"></div>
         
         <div className="why-content">
           <div className="why-badge">
@@ -179,7 +210,7 @@ function App() {
           </div>
           <h2>Why I Build</h2>
           
-          {/* Text blocks that appear as you scroll */}
+          {/* Text blocks that appear as wall builds */}
           <div className="why-text-block block-1">
             <p>
               Since I was a kid, I've been the person people come to with problems. The hub of information among friends, 
