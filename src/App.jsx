@@ -199,26 +199,20 @@ function App() {
           {/* Text blocks - always visible */}
           <div className="why-text-block">
             <p>
-              Since I was a kid, I've been the person people come to with problems. The hub of information among friends, 
-              the one who listens and connects the dots others miss. It's not a skill I learned—it's how I'm wired. 
-              I became an engineer because that's what you do when you instinctively grasp complex, multi-stakeholder 
-              problems and feel compelled to build solutions. It's in my DNA.
+Since I was a kid, I've been the person people turn to with problems. I've always had an endless curiosity, a need to explore, experience, and understand everything. 
+              That's what made me the trusted voice. The one people come to for perspective. It's not something I learned. It's just how my brain works. It's in my DNA.
             </p>
           </div>
           
           <div className="why-text-block">
             <p>
-              Whether I'm leading a product department and owning the "why," orchestrating Fortune 100 innovation ecosystems, 
-              or coding AI apps at 2 AM, it's the same muscle. I see the complexity, find the thread that connects everyone's 
-              needs, and architect holistic solutions where all stakeholders win. These projects aren't side hustles—they're 
-              me doing what I've always done, just applied to challenges I've lived personally.
+Whether I'm designing a strategic initiative from the ground up, spotting the market gap, architecting a 5-sided platform that connects an entire value chain—or building AI apps at 2 AM, it's the same muscle. Find the opportunity. Align the stakeholders. Ship it.
             </p>
           </div>
           
           <div className="why-text-block">
             <p className="why-closing">
-              That's product leadership. That's problem-solving at scale. That's what happens when you're born to build bridges 
-              between chaos and clarity.
+              Different scales, different stakes—but always the same thing: building bridges between chaos and clarity.
             </p>
           </div>
         </div>
