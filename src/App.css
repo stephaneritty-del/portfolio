@@ -687,11 +687,11 @@ body {
 }
 
 .project-iframe {
-  width: 390px;
+  width: 370px;
   height: 844px;
   border: none;
   display: block;
-  transform: scale(0.8);
+  transform: scale(0.78);
   transform-origin: 0 0;
 }
 
