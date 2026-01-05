@@ -320,18 +320,19 @@ body {
   position: absolute;
   width: 10%;
   height: 12.5%;
-  background: transparent;
-  border: 2px solid rgba(16, 185, 129, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(200, 225, 255, 0.5);
   box-shadow: 
-    inset 0 0 20px rgba(16, 185, 129, 0.1),
-    0 0 15px rgba(16, 185, 129, 0.2);
+    inset 0 0 30px rgba(255, 255, 255, 0.1),
+    inset 0 0 10px rgba(180, 210, 255, 0.15),
+    0 0 20px rgba(200, 230, 255, 0.15);
   opacity: 0;
   transform: translateY(-30px) scale(0.8);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 }
 
-/* Ice cube edge highlights */
+/* Ice cube edge highlights - top shine */
 .brick::before {
   content: '';
   position: absolute;
@@ -341,14 +342,14 @@ body {
   height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.5) 20%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0.5) 80%,
+    rgba(255, 255, 255, 0.6) 20%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.6) 80%,
     transparent 100%
   );
 }
 
-/* Ice cube bottom edge */
+/* Ice cube bottom edge - subtle blue */
 .brick::after {
   content: '';
   position: absolute;
@@ -358,9 +359,9 @@ body {
   height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(16, 185, 129, 0.4) 20%,
-    rgba(16, 185, 129, 0.6) 50%,
-    rgba(16, 185, 129, 0.4) 80%,
+    rgba(180, 210, 255, 0.4) 20%,
+    rgba(200, 225, 255, 0.6) 50%,
+    rgba(180, 210, 255, 0.4) 80%,
     transparent 100%
   );
 }
@@ -371,7 +372,7 @@ body {
   transform: translateY(0) scale(1);
 }
 
-/* Emerald overlay - subtle tint */
+/* Ice overlay - subtle blue/white tint */
 .emerald-overlay {
   position: absolute;
   top: 0;
@@ -380,9 +381,9 @@ body {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(16, 185, 129, 0.3) 0%,
-    rgba(5, 150, 105, 0.2) 50%,
-    rgba(4, 120, 87, 0.3) 100%
+    rgba(200, 220, 255, 0.15) 0%,
+    rgba(180, 200, 240, 0.1) 50%,
+    rgba(200, 220, 255, 0.15) 100%
   );
   z-index: 2;
   pointer-events: none;

@@ -49,10 +49,11 @@ function App() {
     const handleScroll = () => {
       const rect = whySection.getBoundingClientRect();
       const windowHeight = window.innerHeight;
+      const sectionHeight = rect.height;
       
-      // Wall completes much earlier - when section is 40% visible
-      const scrollStart = windowHeight;
-      const scrollEnd = windowHeight * 0.4; // Complete wall earlier
+      // Wall builds throughout the section - slower build
+      const scrollStart = windowHeight * 0.9;
+      const scrollEnd = -sectionHeight * 0.5; // Complete wall much later
       const currentPosition = rect.top;
       const progress = Math.min(Math.max((scrollStart - currentPosition) / (scrollStart - scrollEnd), 0), 1);
       
