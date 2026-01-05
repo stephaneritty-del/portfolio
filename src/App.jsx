@@ -17,6 +17,52 @@ function App() {
     setTimeout(() => setEmailCopied(false), 2000);
   };
 
+  // Scroll animation for Why I Build section
+  useEffect(() => {
+    const handleScroll = () => {
+      const whySection = document.querySelector('.why-section');
+      if (!whySection) return;
+
+      const rect = whySection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate how much of the section is visible
+      const sectionTop = rect.top;
+      const sectionHeight = rect.height;
+      
+      // Start building when section enters viewport
+      if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
+        // Calculate progress (0 to 1)
+        const progress = Math.min(Math.max((windowHeight - sectionTop) / (windowHeight + sectionHeight), 0), 1);
+        
+        // Apply progress to building blocks
+        const blocks = document.querySelectorAll('.building-block');
+        blocks.forEach((block, index) => {
+          const blockProgress = Math.max(0, Math.min(1, (progress - (index * 0.15)) / 0.7));
+          block.style.opacity = blockProgress;
+          
+          if (block.classList.contains('block-1') || block.classList.contains('block-2') || block.classList.contains('block-3')) {
+            block.style.transform = `translateX(${-400 + (400 * blockProgress)}px) rotate(${15 * blockProgress}deg)`;
+          } else {
+            block.style.transform = `translateX(${400 - (400 * blockProgress)}px) rotate(${-15 * blockProgress}deg)`;
+          }
+        });
+
+        // Fade in content
+        const whyContent = document.querySelector('.why-content');
+        if (whyContent) {
+          whyContent.style.opacity = progress;
+          whyContent.style.transform = `translateY(${30 - (30 * progress)}px)`;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const projects = [
     {
       id: 1,
@@ -24,7 +70,7 @@ function App() {
       subtitle: "AI-Powered Food Intolerance Tracker",
       description: "An intelligent nutrition companion that helps identify food intolerances through seamless intake tracking. Built to analyze patterns at the molecular level, it learns your body's responses to different foods, stress levels, and sleep patterns. Uses AI to predict and prevent adverse reactions while coaching you towards optimal nutrition.",
       tags: ["AI/ML", "Health Tech", "React Native", "Voice Interface"],
-      url: "https://stephaneritty-del.vercel.app",
+      url: "https://vitaleat.vercel.app",
       status: "In Active Development",
       gradient: "from-emerald-500 to-teal-600"
     },

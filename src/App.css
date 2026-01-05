@@ -309,6 +309,8 @@ body {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
   border: 2px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }
 
 .block-1 {
@@ -316,8 +318,7 @@ body {
   height: 120px;
   top: 10%;
   left: -60px;
-  animation: slideInFromLeft 1.5s ease-out 0.2s both;
-  transform: rotate(15deg);
+  transform: translateX(-400px) rotate(0deg);
 }
 
 .block-2 {
@@ -325,8 +326,7 @@ body {
   height: 80px;
   top: 40%;
   left: -100px;
-  animation: slideInFromLeft 1.5s ease-out 0.4s both;
-  transform: rotate(-10deg);
+  transform: translateX(-400px) rotate(0deg);
 }
 
 .block-3 {
@@ -334,8 +334,7 @@ body {
   height: 100px;
   top: 70%;
   left: -75px;
-  animation: slideInFromLeft 1.5s ease-out 0.6s both;
-  transform: rotate(20deg);
+  transform: translateX(-400px) rotate(0deg);
 }
 
 .block-4 {
@@ -343,30 +342,7 @@ body {
   height: 180px;
   top: 20%;
   right: -90px;
-  animation: slideInFromRight 1.5s ease-out 0.8s both;
-  transform: rotate(-15deg);
-}
-
-@keyframes slideInFromLeft {
-  from {
-    transform: translateX(-400px) rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) rotate(15deg);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(400px) rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) rotate(-15deg);
-    opacity: 1;
-  }
+  transform: translateX(400px) rotate(0deg);
 }
 
 .why-content {
@@ -375,7 +351,9 @@ body {
   text-align: center;
   position: relative;
   z-index: 2;
-  animation: fadeInUp 1s ease-out 0.3s both;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease-out;
 }
 
 .why-badge {
@@ -671,16 +649,16 @@ body {
 
 /* Mobile Phone Frame */
 .phone-frame {
-  width: 375px;
+  width: 340px;
   max-width: 100%;
-  height: 667px;
+  height: 680px;
   background: #1a1a1a;
-  border-radius: 36px;
-  padding: 12px;
+  border-radius: 40px;
+  padding: 10px;
   box-shadow: 
-    0 0 0 2px #2a2a2a,
-    0 0 0 8px #1a1a1a,
-    0 20px 60px rgba(0, 0, 0, 0.5);
+    0 0 0 3px #2a2a2a,
+    0 0 0 10px #1a1a1a,
+    0 25px 70px rgba(0, 0, 0, 0.6);
   position: relative;
 }
 
@@ -691,10 +669,10 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 140px;
-  height: 28px;
+  width: 130px;
+  height: 26px;
   background: #1a1a1a;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 18px 18px;
   z-index: 10;
 }
 
@@ -703,16 +681,18 @@ body {
   width: 100%;
   height: 100%;
   background: white;
-  border-radius: 28px;
+  border-radius: 32px;
   overflow: hidden;
   position: relative;
 }
 
 .project-iframe {
-  width: 100%;
-  height: 100%;
+  width: 390px;
+  height: 844px;
   border: none;
   display: block;
+  transform: scale(0.87);
+  transform-origin: 0 0;
 }
 
 /* Contact Section */
@@ -828,8 +808,14 @@ body {
 
   .phone-frame {
     width: 100%;
-    max-width: 375px;
+    max-width: 340px;
     height: 600px;
+  }
+
+  .project-iframe {
+    width: 390px;
+    height: 844px;
+    transform: scale(0.77);
   }
 
   .demo-frame {
