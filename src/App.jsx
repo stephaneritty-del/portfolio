@@ -206,13 +206,13 @@ Since I was a kid, I've been the person people turn to with problems. I've alway
           
           <div className="why-text-block">
             <p>
-Whether I'm designing a strategic initiative from the ground up, spotting the market gap, architecting a 5-sided platform that connects an entire value chain—or building AI apps at 2 AM, it's the same muscle. Find the opportunity. Align the stakeholders. Ship it.
+Whether I'm designing a strategic initiative from the ground up, spotting the market gap, architecting a 5-sided platform that connects an entire value chain, or building AI apps at 2 AM, it's the same muscle. Find the opportunity. Align the stakeholders. Ship it.
             </p>
           </div>
           
           <div className="why-text-block">
             <p className="why-closing">
-              Different scales, different stakes—but always the same thing: building bridges between chaos and clarity.
+              Different scales, different stakes, but always the same thing: building bridges between chaos and clarity.
             </p>
           </div>
         </div>
