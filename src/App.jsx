@@ -266,7 +266,7 @@ function App() {
                   <div className="company-badge">Dow</div>
                   <span className="initiative-status ready">Ready to Launch</span>
                 </div>
-                <h3>Renufix — Demand Generation Platform</h3>
+                <h3>Renufix, Demand Generation Platform</h3>
                 <p className="transformation-subtitle">5-Sided B2B2C Marketplace for Construction</p>
                 
                 <p className="transformation-description">
