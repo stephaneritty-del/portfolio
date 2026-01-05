@@ -50,7 +50,7 @@ function App() {
         <div className="hero-content">
           <div className="hero-badge">
             <Sparkles size={16} />
-            <span>Available for Collaboration</span>
+            <span>Fortune 100 Innovation Leadership</span>
           </div>
           
           <h1 className="hero-title">
@@ -58,12 +58,18 @@ function App() {
           </h1>
           
           <p className="hero-subtitle">
-            Product & PMO Leader
+            Senior Product & PMO Leader | Business Model Innovation | Turning Fortune 100 Complexity into Shipped Revenue
           </p>
           
           <p className="hero-description">
-            Building intelligent experiences at the intersection of AI, health tech, and user-centered design. 
-            Transforming complex problems into elegant solutions.
+            I optimize what exists, build what's next, and envision what redefines the industry—then I ship all three. 
+            Triple-threat across Product, Project, and Change leadership. I don't just orchestrate from 30,000 feet: 
+            I build financial models, design business processes, negotiate MSAs, and structure pricing to maintain momentum.
+          </p>
+          
+          <p className="hero-description">
+            <strong>The track record:</strong> 5+ end-to-end innovation programs | $70M+ new revenue within 3 years | 
+            50% faster time-to-market | Led teams of 200+ cross-functional contributors with 88% satisfaction.
           </p>
 
           <div className="hero-cta">
@@ -71,9 +77,9 @@ function App() {
               <Mail size={20} />
               Get in Touch
             </a>
-            <a href="#projects" className="btn btn-secondary">
-              View Projects
-              <ChevronRight size={20} />
+            <a href="https://www.linkedin.com/in/stephaneritty/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+              <Linkedin size={20} />
+              View LinkedIn Profile
             </a>
           </div>
 
@@ -81,7 +87,7 @@ function App() {
             <a href="https://github.com/stephaneritty-del" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/in/stephane-ritty" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/stephaneritty/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin size={24} />
             </a>
           </div>
@@ -91,6 +97,23 @@ function App() {
           <div className="floating-card card-1"></div>
           <div className="floating-card card-2"></div>
           <div className="floating-card card-3"></div>
+        </div>
+      </section>
+
+      {/* Why I Build Section */}
+      <section className="why-section">
+        <div className="why-content">
+          <h2>Why I Build</h2>
+          <p>
+            I've spent my career doing one thing: listening to problems and building solutions. Whether orchestrating 
+            Fortune 100 innovation ecosystems or coding AI apps at midnight, it's the same drive—take complexity, 
+            find the thread that connects multiple stakeholders, and craft holistic solutions where everyone wins.
+          </p>
+          <p>
+            These projects aren't side hustles. They're the same problem-solving muscle, just applied to challenges 
+            I've lived personally. Each one brings together different technologies, user needs, and constraints into 
+            an optimized whole. That's what I do. That's what I've always done.
+          </p>
         </div>
       </section>
 
@@ -173,10 +196,11 @@ function App() {
       {/* Contact Section */}
       <section className="contact-section">
         <div className="contact-content">
-          <h2>Let's Build Something Amazing</h2>
+          <h2>Let's Build Something Transformative</h2>
           <p>
-            Interested in collaboration, discussing product strategy, or exploring innovative solutions? 
-            I'd love to hear from you.
+            Need a PMO lead who builds business moats, a product leader who de-risks million-dollar bets, 
+            or both in one? Whether you're navigating Fortune 100 complexity or launching bold innovation, 
+            let's talk about turning vision into shipped revenue.
           </p>
           <a href="mailto:stephane.ritty@gmail.com" className="contact-email">
             stephane.ritty@gmail.com
