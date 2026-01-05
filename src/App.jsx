@@ -138,7 +138,7 @@ function App() {
           <p className="hero-description">
             I optimize what exists, build what's next, and envision what redefines the industry—then I ship all three. 
             Triple-threat across Product, Project, and Change leadership. I don't just orchestrate from 30,000 feet: 
-            I build financial models, design business processes, negotiate MSAs, and structure pricing to maintain momentum.
+            I build financial models, design business processes, negotiate MSAs, structure pricing, and more to maintain momentum.
           </p>
           
           <p className="hero-description">
