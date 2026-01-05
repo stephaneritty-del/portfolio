@@ -598,6 +598,38 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Product Screenshots */
+.product-screenshots {
+  margin-bottom: 2rem;
+  background: var(--color-surface-light);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.product-screenshots img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.screenshot-labels {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.screenshot-labels span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
 /* Results Grid */
 .transformation-results {
   margin-bottom: 2rem;
@@ -645,35 +677,53 @@ body {
   line-height: 1.4;
 }
 
-/* Value Chain Visual */
-.value-chain {
+/* Value Chain Hub Diagram */
+.value-chain-hub {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  margin-bottom: 2rem;
   padding: 1.5rem;
   background: rgba(16, 185, 129, 0.05);
   border: 1px solid rgba(16, 185, 129, 0.2);
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  border-radius: 16px;
 }
 
-.chain-item {
-  background: var(--color-surface-light);
-  border: 1px solid var(--color-border);
-  padding: 0.625rem 1rem;
-  border-radius: 8px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-text);
-  white-space: nowrap;
+.hub-diagram {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
-.chain-arrow {
-  color: var(--color-primary);
-  font-size: 1.25rem;
-  font-weight: bold;
+.hub-diagram line {
+  animation: pulse-line 2s ease-in-out infinite;
+}
+
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.hub-diagram rect {
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.hub-diagram rect:hover {
+  filter: brightness(1.15);
+  transform: scale(1.02);
+}
+
+.hub-diagram circle {
+  filter: drop-shadow(0 4px 12px rgba(220, 38, 38, 0.4));
+}
+
+.hub-caption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  text-align: center;
 }
 
 .transformation-details {
@@ -757,6 +807,50 @@ body {
   background: rgba(139, 92, 246, 0.15);
   border: 1px solid rgba(139, 92, 246, 0.3);
   color: #a78bfa;
+}
+
+/* More Coming Card */
+.more-coming-card {
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.more-coming-card:hover {
+  opacity: 1;
+  border-color: var(--color-primary);
+}
+
+.more-coming-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: var(--color-surface-light);
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+.more-coming-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.more-coming-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 /* Projects Section */

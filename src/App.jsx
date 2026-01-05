@@ -266,7 +266,7 @@ function App() {
                   <div className="company-badge">Dow</div>
                   <span className="initiative-status ready">Ready to Launch</span>
                 </div>
-                <h3>Demand Generation Platform</h3>
+                <h3>Renufix — Demand Generation Platform</h3>
                 <p className="transformation-subtitle">5-Sided B2B2C Marketplace for Construction</p>
                 
                 <p className="transformation-description">
@@ -274,16 +274,58 @@ function App() {
                   conceived, built, and validated a multi-sided digital platform to disrupt the roofing value chain.
                 </p>
 
-                <div className="value-chain">
-                  <div className="chain-item">Building Owners</div>
-                  <div className="chain-arrow">→</div>
-                  <div className="chain-item">Contractors</div>
-                  <div className="chain-arrow">→</div>
-                  <div className="chain-item">Formulators</div>
-                  <div className="chain-arrow">→</div>
-                  <div className="chain-item">Distributors</div>
-                  <div className="chain-arrow">→</div>
-                  <div className="chain-item">Dow Materials</div>
+                {/* Product Screenshots */}
+                <div className="product-screenshots">
+                  <img src="/renufix-screens.png" alt="Renufix Platform - Stand-alone webpage, Registration flow, and Project Dashboard" />
+                  <div className="screenshot-labels">
+                    <span>Stand-alone webpage</span>
+                    <span>Registration flow</span>
+                    <span>Project Dashboard</span>
+                  </div>
+                </div>
+
+                <div className="value-chain-hub">
+                  <svg viewBox="0 0 400 400" className="hub-diagram">
+                    {/* Connection lines */}
+                    <line x1="200" y1="200" x2="200" y2="60" stroke="rgba(16, 185, 129, 0.4)" strokeWidth="2" strokeDasharray="5,5" />
+                    <line x1="200" y1="200" x2="330" y2="120" stroke="rgba(16, 185, 129, 0.4)" strokeWidth="2" strokeDasharray="5,5" />
+                    <line x1="200" y1="200" x2="330" y2="280" stroke="rgba(16, 185, 129, 0.4)" strokeWidth="2" strokeDasharray="5,5" />
+                    <line x1="200" y1="200" x2="200" y2="340" stroke="rgba(16, 185, 129, 0.4)" strokeWidth="2" strokeDasharray="5,5" />
+                    <line x1="200" y1="200" x2="70" y2="280" stroke="rgba(16, 185, 129, 0.4)" strokeWidth="2" strokeDasharray="5,5" />
+                    <line x1="200" y1="200" x2="70" y2="120" stroke="rgba(16, 185, 129, 0.4)" strokeWidth="2" strokeDasharray="5,5" />
+                    
+                    {/* Center Hub - Dow Platform */}
+                    <circle cx="200" cy="200" r="55" fill="#dc2626" />
+                    <text x="200" y="195" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">Dow</text>
+                    <text x="200" y="212" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">Platform</text>
+                    
+                    {/* Building Owner - Top */}
+                    <rect x="155" y="25" width="90" height="50" rx="8" fill="#3b82f6" />
+                    <text x="200" y="50" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Building</text>
+                    <text x="200" y="65" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Owner</text>
+                    
+                    {/* Promoter - Top Right */}
+                    <rect x="285" y="85" width="90" height="50" rx="8" fill="#22c55e" />
+                    <text x="330" y="115" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Promoter</text>
+                    
+                    {/* Contractors - Right */}
+                    <rect x="285" y="245" width="90" height="50" rx="8" fill="#f59e0b" />
+                    <text x="330" y="275" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Contractors</text>
+                    
+                    {/* Distributors - Bottom */}
+                    <rect x="155" y="315" width="90" height="50" rx="8" fill="#8b5cf6" />
+                    <text x="200" y="345" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Distributors</text>
+                    
+                    {/* Formulator - Bottom Left */}
+                    <rect x="25" y="245" width="90" height="50" rx="8" fill="#0f766e" />
+                    <text x="70" y="275" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Formulator</text>
+                    
+                    {/* Dow Materials - Top Left */}
+                    <rect x="25" y="85" width="90" height="50" rx="8" fill="#dc2626" />
+                    <text x="70" y="110" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Dow</text>
+                    <text x="70" y="125" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">Materials</text>
+                  </svg>
+                  <p className="hub-caption">One platform orchestrating the entire value chain</p>
                 </div>
 
                 <div className="transformation-results">
@@ -329,7 +371,7 @@ function App() {
                 </div>
 
                 <div className="transformation-note">
-                  <em>This was 50% of my role—while also leading product marketing for roofing and wall applications across EMEA.</em>
+                  <em>This was 40% of my role—while also leading product marketing for roofing and wall applications across EMEA.</em>
                 </div>
 
                 <div className="transformation-tags">
@@ -339,6 +381,13 @@ function App() {
                   <span className="tag">B2B2C</span>
                   <span className="tag">Digital Transformation</span>
                 </div>
+              </div>
+
+              {/* More to come placeholder */}
+              <div className="more-coming-card">
+                <div className="more-coming-icon">+</div>
+                <h4>More to come</h4>
+                <p>Thermo Fisher initiatives coming soon</p>
               </div>
             </div>
           </div>
