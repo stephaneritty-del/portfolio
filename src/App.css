@@ -732,7 +732,7 @@ body {
 .project-iframe {
   width: 400px;
   height: 844px;
-  border: 5px;
+  border: None;
   display: block;
   transform: scale(0.80);
   transform-origin: 0 0;
