@@ -92,7 +92,7 @@ function App() {
       description: "An intelligent nutrition companion that helps identify food intolerances through seamless intake tracking. Built to analyze patterns at the molecular level, it learns your body's responses to different foods, stress levels, and sleep patterns. Uses AI to predict and prevent adverse reactions while coaching you towards optimal nutrition.",
       tags: ["AI/ML", "Health Tech", "React Native", "Voice Interface"],
       url: "https://vitaleat.vercel.app",
-      status: "In Active Development",
+      status: "In Active Dev.",
       gradient: "from-emerald-500 to-teal-600"
     },
     {
