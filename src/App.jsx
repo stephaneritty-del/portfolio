@@ -17,30 +17,52 @@ function App() {
     setTimeout(() => setEmailCopied(false), 2000);
   };
 
-  // Scroll animation for Why I Build section - trigger when visible
+  // Scroll animation for Why I Build section - blocks appear as you scroll
   useEffect(() => {
     const whySection = document.querySelector('.why-section');
+    const textBlocks = document.querySelectorAll('.why-text-block');
+    const bgLayers = document.querySelectorAll('.nature-bg-layer');
+    
     if (!whySection) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
-        });
-      },
-      {
-        threshold: 0.2, // Trigger when 20% of section is visible
-        rootMargin: '0px'
-      }
-    );
-
-    observer.observe(whySection);
-
-    return () => {
-      if (whySection) observer.unobserve(whySection);
+    const handleScroll = () => {
+      const rect = whySection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const sectionHeight = rect.height;
+      
+      // Calculate scroll progress through the section (0 to 1)
+      const scrollStart = windowHeight;
+      const scrollEnd = -sectionHeight;
+      const currentPosition = rect.top;
+      const progress = Math.min(Math.max((scrollStart - currentPosition) / (scrollStart - scrollEnd), 0), 1);
+      
+      // Reveal text blocks progressively
+      textBlocks.forEach((block, index) => {
+        const blockThreshold = (index + 1) * 0.15; // Each block appears at 15%, 30%, 45%
+        if (progress > blockThreshold) {
+          block.classList.add('visible');
+        }
+      });
+      
+      // Transition background images based on progress
+      bgLayers.forEach((layer, index) => {
+        const layerStart = index * 0.33;
+        const layerEnd = (index + 1) * 0.33;
+        
+        if (progress >= layerStart && progress < layerEnd) {
+          layer.style.opacity = '1';
+        } else if (progress >= layerEnd) {
+          layer.style.opacity = '0.3';
+        } else {
+          layer.style.opacity = '0';
+        }
+      });
     };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const projects = [
@@ -139,12 +161,14 @@ function App() {
 
       {/* Why I Build Section */}
       <section className="why-section">
-        <div className="why-visual-bg">
-          <div className="building-block block-1"></div>
-          <div className="building-block block-2"></div>
-          <div className="building-block block-3"></div>
-          <div className="building-block block-4"></div>
+        {/* Nature Background Layers */}
+        <div className="nature-backgrounds">
+          <div className="nature-bg-layer layer-1"></div>
+          <div className="nature-bg-layer layer-2"></div>
+          <div className="nature-bg-layer layer-3"></div>
+          <div className="nature-overlay"></div>
         </div>
+        
         <div className="why-content">
           <div className="why-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -154,22 +178,32 @@ function App() {
             Building From the Ground Up
           </div>
           <h2>Why I Build</h2>
-          <p>
-            Since I was a kid, I've been the person people come to with problems. The hub of information among friends, 
-            the one who listens and connects the dots others miss. It's not a skill I learned—it's how I'm wired. 
-            I became an engineer because that's what you do when you instinctively grasp complex, multi-stakeholder 
-            problems and feel compelled to build solutions. It's in my DNA.
-          </p>
-          <p>
-            Whether I'm leading a product department and owning the "why," orchestrating Fortune 100 innovation ecosystems, 
-            or coding AI apps at 2 AM, it's the same muscle. I see the complexity, find the thread that connects everyone's 
-            needs, and architect holistic solutions where all stakeholders win. These projects aren't side hustles—they're 
-            me doing what I've always done, just applied to challenges I've lived personally.
-          </p>
-          <p className="why-closing">
-            That's product leadership. That's problem-solving at scale. That's what happens when you're born to build bridges 
-            between chaos and clarity.
-          </p>
+          
+          {/* Text blocks that appear as you scroll */}
+          <div className="why-text-block block-1">
+            <p>
+              Since I was a kid, I've been the person people come to with problems. The hub of information among friends, 
+              the one who listens and connects the dots others miss. It's not a skill I learned—it's how I'm wired. 
+              I became an engineer because that's what you do when you instinctively grasp complex, multi-stakeholder 
+              problems and feel compelled to build solutions. It's in my DNA.
+            </p>
+          </div>
+          
+          <div className="why-text-block block-2">
+            <p>
+              Whether I'm leading a product department and owning the "why," orchestrating Fortune 100 innovation ecosystems, 
+              or coding AI apps at 2 AM, it's the same muscle. I see the complexity, find the thread that connects everyone's 
+              needs, and architect holistic solutions where all stakeholders win. These projects aren't side hustles—they're 
+              me doing what I've always done, just applied to challenges I've lived personally.
+            </p>
+          </div>
+          
+          <div className="why-text-block block-3">
+            <p className="why-closing">
+              That's product leadership. That's problem-solving at scale. That's what happens when you're born to build bridges 
+              between chaos and clarity.
+            </p>
+          </div>
         </div>
       </section>
 
