@@ -585,6 +585,14 @@ body {
   line-height: 1.8;
 }
 
+.contact-email-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .contact-email {
   display: inline-block;
   font-size: 1.5rem;
@@ -602,6 +610,34 @@ body {
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+}
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-surface-light);
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.copy-email-btn:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+}
+
+.contact-hint {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-style: italic;
 }
 
 /* Footer */

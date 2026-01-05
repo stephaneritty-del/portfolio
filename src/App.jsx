@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Github, Linkedin, ExternalLink, ChevronRight, Sparkles } from 'lucide-react';
+import { Mail, Github, Linkedin, ExternalLink, ChevronRight, Sparkles, Copy, Check } from 'lucide-react';
 import './App.css';
 
 function App() {
   const [activeProject, setActiveProject] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('stephane.ritty@gmail.com');
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
 
   const projects = [
     {
@@ -75,11 +82,15 @@ function App() {
           <div className="hero-cta">
             <a href="mailto:stephane.ritty@gmail.com" className="btn btn-primary">
               <Mail size={20} />
-              Get in Touch
+              Email Me
             </a>
+            <button onClick={copyEmail} className="btn btn-secondary">
+              {emailCopied ? <Check size={20} /> : <Copy size={20} />}
+              {emailCopied ? 'Copied!' : 'Copy Email'}
+            </button>
             <a href="https://www.linkedin.com/in/stephaneritty/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               <Linkedin size={20} />
-              View LinkedIn Profile
+              LinkedIn
             </a>
           </div>
 
@@ -105,14 +116,20 @@ function App() {
         <div className="why-content">
           <h2>Why I Build</h2>
           <p>
-            I've spent my career doing one thing: listening to problems and building solutions. Whether orchestrating 
-            Fortune 100 innovation ecosystems or coding AI apps at midnight, it's the same drive—take complexity, 
-            find the thread that connects multiple stakeholders, and craft holistic solutions where everyone wins.
+            Since I was a kid, I've been the person people come to with problems. The hub of information among friends, 
+            the one who listens and connects the dots others miss. It's not a skill I learned—it's how I'm wired. 
+            I became an engineer because that's what you do when you instinctively grasp complex, multi-stakeholder 
+            problems and feel compelled to build solutions. It's in my DNA.
           </p>
           <p>
-            These projects aren't side hustles. They're the same problem-solving muscle, just applied to challenges 
-            I've lived personally. Each one brings together different technologies, user needs, and constraints into 
-            an optimized whole. That's what I do. That's what I've always done.
+            Whether I'm leading a product department and owning the "why," orchestrating Fortune 100 innovation ecosystems, 
+            or coding AI apps at 2 AM, it's the same muscle. I see the complexity, find the thread that connects everyone's 
+            needs, and architect holistic solutions where all stakeholders win. These projects aren't side hustles—they're 
+            me doing what I've always done, just applied to challenges I've lived personally.
+          </p>
+          <p>
+            That's product leadership. That's problem-solving at scale. That's what happens when you're born to build bridges 
+            between chaos and clarity.
           </p>
         </div>
       </section>
@@ -202,9 +219,14 @@ function App() {
             or both in one? Whether you're navigating Fortune 100 complexity or launching bold innovation, 
             let's talk about turning vision into shipped revenue.
           </p>
-          <a href="mailto:stephane.ritty@gmail.com" className="contact-email">
-            stephane.ritty@gmail.com
-          </a>
+          <div className="contact-email-group">
+            <a href="mailto:stephane.ritty@gmail.com" className="contact-email">
+              stephane.ritty@gmail.com
+            </a>
+            <button onClick={copyEmail} className="copy-email-btn">
+              {emailCopied ? <Check size={18} /> : <Copy size={18} />}
+            </button>
+          </div>
         </div>
       </section>
 
