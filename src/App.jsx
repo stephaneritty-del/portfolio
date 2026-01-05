@@ -24,7 +24,7 @@ function App() {
       subtitle: "AI-Powered Food Intolerance Tracker",
       description: "An intelligent nutrition companion that helps identify food intolerances through seamless intake tracking. Built to analyze patterns at the molecular level, it learns your body's responses to different foods, stress levels, and sleep patterns. Uses AI to predict and prevent adverse reactions while coaching you towards optimal nutrition.",
       tags: ["AI/ML", "Health Tech", "React Native", "Voice Interface"],
-      url: "https://vitaleat.vercel.app",
+      url: "https://stephaneritty-del.vercel.app",
       status: "In Active Development",
       gradient: "from-emerald-500 to-teal-600"
     },
@@ -113,7 +113,20 @@ function App() {
 
       {/* Why I Build Section */}
       <section className="why-section">
+        <div className="why-visual-bg">
+          <div className="building-block block-1"></div>
+          <div className="building-block block-2"></div>
+          <div className="building-block block-3"></div>
+          <div className="building-block block-4"></div>
+        </div>
         <div className="why-content">
+          <div className="why-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Building From the Ground Up
+          </div>
           <h2>Why I Build</h2>
           <p>
             Since I was a kid, I've been the person people come to with problems. The hub of information among friends, 
@@ -127,7 +140,7 @@ function App() {
             needs, and architect holistic solutions where all stakeholders win. These projects aren't side hustles—they're 
             me doing what I've always done, just applied to challenges I've lived personally.
           </p>
-          <p>
+          <p className="why-closing">
             That's product leadership. That's problem-solving at scale. That's what happens when you're born to build bridges 
             between chaos and clarity.
           </p>
@@ -200,12 +213,16 @@ function App() {
             </a>
           </div>
           <div className="demo-frame">
-            <iframe
-              src={projects[activeProject].url}
-              title={projects[activeProject].title}
-              className="project-iframe"
-              loading="lazy"
-            />
+            <div className="phone-frame">
+              <div className="phone-screen">
+                <iframe
+                  src={projects[activeProject].url}
+                  title={projects[activeProject].title}
+                  className="project-iframe"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
