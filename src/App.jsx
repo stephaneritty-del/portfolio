@@ -17,50 +17,30 @@ function App() {
     setTimeout(() => setEmailCopied(false), 2000);
   };
 
-  // Scroll animation for Why I Build section
+  // Scroll animation for Why I Build section - trigger when visible
   useEffect(() => {
-    const handleScroll = () => {
-      const whySection = document.querySelector('.why-section');
-      if (!whySection) return;
+    const whySection = document.querySelector('.why-section');
+    if (!whySection) return;
 
-      const rect = whySection.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Calculate how much of the section is visible
-      const sectionTop = rect.top;
-      const sectionHeight = rect.height;
-      
-      // Start building when section enters viewport
-      if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
-        // Calculate progress (0 to 1)
-        const progress = Math.min(Math.max((windowHeight - sectionTop) / (windowHeight + sectionHeight), 0), 1);
-        
-        // Apply progress to building blocks
-        const blocks = document.querySelectorAll('.building-block');
-        blocks.forEach((block, index) => {
-          const blockProgress = Math.max(0, Math.min(1, (progress - (index * 0.15)) / 0.7));
-          block.style.opacity = blockProgress;
-          
-          if (block.classList.contains('block-1') || block.classList.contains('block-2') || block.classList.contains('block-3')) {
-            block.style.transform = `translateX(${-400 + (400 * blockProgress)}px) rotate(${15 * blockProgress}deg)`;
-          } else {
-            block.style.transform = `translateX(${400 - (400 * blockProgress)}px) rotate(${-15 * blockProgress}deg)`;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
           }
         });
-
-        // Fade in content
-        const whyContent = document.querySelector('.why-content');
-        if (whyContent) {
-          whyContent.style.opacity = progress;
-          whyContent.style.transform = `translateY(${30 - (30 * progress)}px)`;
-        }
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of section is visible
+        rootMargin: '0px'
       }
-    };
+    );
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial position
-    
-    return () => window.removeEventListener('scroll', handleScroll);
+    observer.observe(whySection);
+
+    return () => {
+      if (whySection) observer.unobserve(whySection);
+    };
   }, []);
 
   const projects = [
