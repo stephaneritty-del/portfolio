@@ -147,10 +147,7 @@ function App() {
           </p>
 
           <div className="hero-cta">
-            <a href="mailto:stephane.ritty@gmail.com" className="btn btn-primary">
-              <Mail size={20} />
-              Email Me
-            </a>
+
             <button onClick={copyEmail} className="btn btn-secondary">
               {emailCopied ? <Check size={20} /> : <Copy size={20} />}
               {emailCopied ? 'Copied!' : 'Copy Email'}
