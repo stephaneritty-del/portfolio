@@ -21,13 +21,12 @@ function App() {
   useEffect(() => {
     const whySection = document.querySelector('.why-section');
     const brickWall = document.querySelector('.brick-wall');
-    const textBlocks = document.querySelectorAll('.why-text-block');
     
     if (!whySection || !brickWall) return;
 
-    // Create brick grid (8 columns x 6 rows = 48 bricks)
-    const cols = 8;
-    const rows = 6;
+    // Create brick grid (10 columns x 8 rows = 80 bricks for fuller wall)
+    const cols = 10;
+    const rows = 8;
     const totalBricks = cols * rows;
     
     // Clear and create bricks
@@ -37,10 +36,10 @@ function App() {
         const brick = document.createElement('div');
         brick.className = 'brick';
         // Offset every other row for realistic brick pattern
-        brick.style.left = `${(col * 12.5) + (row % 2 === 1 ? 6.25 : 0)}%`;
-        brick.style.top = `${row * 16.666}%`;
+        brick.style.left = `${(col * 10) + (row % 2 === 1 ? 5 : 0)}%`;
+        brick.style.top = `${row * 12.5}%`;
         // Random slight delay for organic feel
-        brick.style.transitionDelay = `${Math.random() * 0.3}s`;
+        brick.style.transitionDelay = `${Math.random() * 0.2}s`;
         brickWall.appendChild(brick);
       }
     }
@@ -50,11 +49,10 @@ function App() {
     const handleScroll = () => {
       const rect = whySection.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const sectionHeight = rect.height;
       
-      // Calculate scroll progress through the section (0 to 1)
-      const scrollStart = windowHeight * 0.8; // Start building earlier
-      const scrollEnd = -sectionHeight * 0.3;
+      // Wall completes much earlier - when section is 40% visible
+      const scrollStart = windowHeight;
+      const scrollEnd = windowHeight * 0.4; // Complete wall earlier
       const currentPosition = rect.top;
       const progress = Math.min(Math.max((scrollStart - currentPosition) / (scrollStart - scrollEnd), 0), 1);
       
@@ -75,16 +73,6 @@ function App() {
           brick.classList.add('visible');
         } else {
           brick.classList.remove('visible');
-        }
-      });
-      
-      // Reveal text blocks progressively as wall builds
-      textBlocks.forEach((block, index) => {
-        const blockThreshold = 0.3 + (index * 0.25); // 30%, 55%, 80%
-        if (progress > blockThreshold) {
-          block.classList.add('visible');
-        } else {
-          block.classList.remove('visible');
         }
       });
     };
@@ -210,8 +198,8 @@ function App() {
           </div>
           <h2>Why I Build</h2>
           
-          {/* Text blocks that appear as wall builds */}
-          <div className="why-text-block block-1">
+          {/* Text blocks - always visible */}
+          <div className="why-text-block">
             <p>
               Since I was a kid, I've been the person people come to with problems. The hub of information among friends, 
               the one who listens and connects the dots others miss. It's not a skill I learned—it's how I'm wired. 
@@ -220,7 +208,7 @@ function App() {
             </p>
           </div>
           
-          <div className="why-text-block block-2">
+          <div className="why-text-block">
             <p>
               Whether I'm leading a product department and owning the "why," orchestrating Fortune 100 innovation ecosystems, 
               or coding AI apps at 2 AM, it's the same muscle. I see the complexity, find the thread that connects everyone's 
@@ -229,7 +217,7 @@ function App() {
             </p>
           </div>
           
-          <div className="why-text-block block-3">
+          <div className="why-text-block">
             <p className="why-closing">
               That's product leadership. That's problem-solving at scale. That's what happens when you're born to build bridges 
               between chaos and clarity.
