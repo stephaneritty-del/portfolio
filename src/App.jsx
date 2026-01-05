@@ -6,6 +6,7 @@ function App() {
   const [activeProject, setActiveProject] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
+  const [activeTab, setActiveTab] = useState('corporate'); // 'corporate' or 'ai'
 
   useEffect(() => {
     setIsVisible(true);
@@ -92,7 +93,7 @@ function App() {
       description: "An intelligent nutrition companion that helps identify food intolerances through seamless intake tracking. Built to analyze patterns at the molecular level, it learns your body's responses to different foods, stress levels, and sleep patterns. Uses AI to predict and prevent adverse reactions while coaching you towards optimal nutrition.",
       tags: ["AI/ML", "Health Tech", "React Native", "Voice Interface"],
       url: "https://vitaleat.vercel.app",
-      status: "In Active Dev.",
+      status: "In Active Development",
       gradient: "from-emerald-500 to-teal-600"
     },
     {
@@ -138,7 +139,7 @@ function App() {
           <p className="hero-description">
             I optimize what exists, build what's next, and envision what redefines the industry—then I ship all three. 
             Triple-threat across Product, Project, and Change leadership. I don't just orchestrate from 30,000 feet: 
-            I build financial models, design business processes, negotiate MSAs, structure pricing, and more to maintain momentum.
+            I build financial models, design business processes, negotiate MSAs, and structure pricing to maintain momentum.
           </p>
           
           <p className="hero-description">
@@ -147,7 +148,10 @@ function App() {
           </p>
 
           <div className="hero-cta">
-
+            <a href="mailto:stephane.ritty@gmail.com" className="btn btn-primary">
+              <Mail size={20} />
+              Email Me
+            </a>
             <button onClick={copyEmail} className="btn btn-secondary">
               {emailCopied ? <Check size={20} /> : <Copy size={20} />}
               {emailCopied ? 'Copied!' : 'Copy Email'}
@@ -199,103 +203,228 @@ function App() {
           {/* Text blocks - always visible */}
           <div className="why-text-block">
             <p>
-Since I was a kid, I've been the person people turn to with problems. I've always had an endless curiosity, a need to explore, experience, and understand everything. 
-              That's what made me the trusted voice. The one people come to for perspective. It's not something I learned. It's just how my brain works. It's in my DNA.
+              Since I was a kid, I've been the person people turn to with problems. I've always had an endless curiosity, 
+              a need to explore, experience, and understand everything. That's what made me the trusted voice. The one 
+              people come to for perspective. It's not something I learned. It's just how my brain works. It's in my DNA.
             </p>
           </div>
           
           <div className="why-text-block">
             <p>
-Whether I'm designing a strategic initiative from the ground up, spotting the market gap, architecting a 5-sided platform that connects an entire value chain, or building AI apps at 2 AM, it's the same muscle. Find the opportunity. Align the stakeholders. Ship it.
+              Whether I'm designing a strategic initiative from the ground up—spotting the market gap, architecting a 
+              5-sided platform that connects an entire value chain—or building AI apps at 2 AM, it's the same muscle. 
+              Find the opportunity. Align the stakeholders. Ship it.
             </p>
           </div>
           
           <div className="why-text-block">
             <p className="why-closing">
-              Different scales, different stakes, but always the same thing: building bridges between chaos and clarity.
+              Different scales, different stakes—but always the same thing: building bridges between chaos and clarity.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section with Tabs */}
       <section id="projects" className="projects-section">
-        <div className="section-header">
-          <h2>Featured Projects</h2>
-          <p>Interactive demos of live applications</p>
+        {/* Tab Navigation */}
+        <div className="tabs-container">
+          <button 
+            className={`tab-button ${activeTab === 'corporate' ? 'active' : ''}`}
+            onClick={() => setActiveTab('corporate')}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Corporate Transformation
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'ai' ? 'active' : ''}`}
+            onClick={() => setActiveTab('ai')}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"></path>
+              <circle cx="12" cy="14" r="2"></circle>
+            </svg>
+            AI Apps
+          </button>
         </div>
 
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className={`project-card ${activeProject === index ? 'active' : ''}`}
-              onClick={() => setActiveProject(index)}
-            >
-              <div className="project-header">
-                <div className={`project-icon bg-gradient-to-br ${project.gradient}`}>
-                  {project.title.charAt(0)}
+        {/* Corporate Transformation Tab Content */}
+        {activeTab === 'corporate' && (
+          <div className="tab-content">
+            <div className="section-header">
+              <h2>Corporate Transformation</h2>
+              <p>Strategic initiatives at Fortune 100 scale</p>
+            </div>
+
+            <div className="transformation-grid">
+              {/* Dow Platform */}
+              <div className="transformation-card">
+                <div className="transformation-header">
+                  <div className="company-badge">Dow</div>
+                  <span className="initiative-status ready">Ready to Launch</span>
                 </div>
-                <div className="project-title-group">
-                  <h3>{project.title}</h3>
-                  <span className="project-subtitle">{project.subtitle}</span>
+                <h3>Demand Generation Platform</h3>
+                <p className="transformation-subtitle">5-Sided B2B2C Marketplace for Construction</p>
+                
+                <p className="transformation-description">
+                  Identified a massive market gap—7% liquid membrane share in EMEA vs 62% in North America—and 
+                  conceived, built, and validated a multi-sided digital platform to disrupt the roofing value chain.
+                </p>
+
+                <div className="value-chain">
+                  <div className="chain-item">Building Owners</div>
+                  <div className="chain-arrow">→</div>
+                  <div className="chain-item">Contractors</div>
+                  <div className="chain-arrow">→</div>
+                  <div className="chain-item">Formulators</div>
+                  <div className="chain-arrow">→</div>
+                  <div className="chain-item">Distributors</div>
+                  <div className="chain-arrow">→</div>
+                  <div className="chain-item">Dow Materials</div>
                 </div>
-                <span className={`status-badge ${project.status === 'Live' ? 'live' : project.status === 'Live Beta' ? 'beta' : 'dev'}`}>
-                  {project.status}
-                </span>
+
+                <div className="transformation-results">
+                  <h4>What I Built & Achieved:</h4>
+                  <div className="results-grid">
+                    <div className="result-item">
+                      <span className="result-number">1</span>
+                      <span className="result-text">Platform built & functional</span>
+                    </div>
+                    <div className="result-item">
+                      <span className="result-number">✓</span>
+                      <span className="result-text">Contracts signed with formulators</span>
+                    </div>
+                    <div className="result-item">
+                      <span className="result-number">100+</span>
+                      <span className="result-text">Roofers in the contractor pool</span>
+                    </div>
+                    <div className="result-item">
+                      <span className="result-number">~10</span>
+                      <span className="result-text">Building owners ready for renovation</span>
+                    </div>
+                    <div className="result-item">
+                      <span className="result-number">5/5</span>
+                      <span className="result-text">Stakeholder groups committed</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="transformation-details">
+                  <h4>My Role — Full Ownership:</h4>
+                  <ul>
+                    <li>Market analysis & business model conception</li>
+                    <li>BD pipeline — built relationships across all 5 stakeholder groups</li>
+                    <li>Strategic partnership — signed directly with formulator CEO</li>
+                    <li>Product Owner for V1 + Product Manager for roadmap</li>
+                    <li>Fed the pipeline, managed contracts, aligned all parties</li>
+                  </ul>
+                </div>
+
+                <div className="transformation-outcome">
+                  <p><strong>Outcome:</strong> Platform was built, contracts signed, all stakeholders ready—but a company restructuring and leadership change stopped the launch before go-live.</p>
+                  <p><strong>Vision:</strong> x15 revenue potential • Expandable to floors, walls, roads • Multi-geography scale</p>
+                </div>
+
+                <div className="transformation-note">
+                  <em>This was 50% of my role—while also leading product marketing for roofing and wall applications across EMEA.</em>
+                </div>
+
+                <div className="transformation-tags">
+                  <span className="tag">Platform Strategy</span>
+                  <span className="tag">Multi-sided Marketplace</span>
+                  <span className="tag">0→1 Innovation</span>
+                  <span className="tag">B2B2C</span>
+                  <span className="tag">Digital Transformation</span>
+                </div>
               </div>
+            </div>
+          </div>
+        )}
 
-              <p className="project-description">{project.description}</p>
+        {/* AI Apps Tab Content */}
+        {activeTab === 'ai' && (
+          <div className="tab-content">
+            <div className="section-header">
+              <h2>AI Apps</h2>
+              <p>Personal projects — built from scratch, live in production</p>
+            </div>
 
-              <div className="project-tags">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="tag">{tag}</span>
-                ))}
-              </div>
-
-              <div className="project-actions">
-                <a 
-                  href={project.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="project-link"
-                  onClick={(e) => e.stopPropagation()}
+            <div className="projects-grid">
+              {projects.map((project, index) => (
+                <div 
+                  key={project.id} 
+                  className={`project-card ${activeProject === index ? 'active' : ''}`}
+                  onClick={() => setActiveProject(index)}
                 >
-                  Launch App
+                  <div className="project-header">
+                    <div className={`project-icon bg-gradient-to-br ${project.gradient}`}>
+                      {project.title.charAt(0)}
+                    </div>
+                    <div className="project-title-group">
+                      <h3>{project.title}</h3>
+                      <span className="project-subtitle">{project.subtitle}</span>
+                    </div>
+                    <span className={`status-badge ${project.status === 'Live' ? 'live' : project.status === 'Live Beta' ? 'beta' : 'dev'}`}>
+                      {project.status}
+                    </span>
+                  </div>
+
+                  <p className="project-description">{project.description}</p>
+
+                  <div className="project-tags">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="tag">{tag}</span>
+                    ))}
+                  </div>
+
+                  <div className="project-actions">
+                    <a 
+                      href={project.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="project-link"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Launch App
+                      <ExternalLink size={16} />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Live Demo Preview */}
+            <div className="demo-preview">
+              <div className="demo-header">
+                <h3>Live Demo: {projects[activeProject].title}</h3>
+                <a 
+                  href={projects[activeProject].url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="demo-expand"
+                >
+                  Open in new tab
                   <ExternalLink size={16} />
                 </a>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Live Demo Preview */}
-        <div className="demo-preview">
-          <div className="demo-header">
-            <h3>Live Demo: {projects[activeProject].title}</h3>
-            <a 
-              href={projects[activeProject].url} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="demo-expand"
-            >
-              Open in new tab
-              <ExternalLink size={16} />
-            </a>
-          </div>
-          <div className="demo-frame">
-            <div className="phone-frame">
-              <div className="phone-screen">
-                <iframe
-                  src={projects[activeProject].url}
-                  title={projects[activeProject].title}
-                  className="project-iframe"
-                  loading="lazy"
-                />
+              <div className="demo-frame">
+                <div className="phone-frame">
+                  <div className="phone-screen">
+                    <iframe
+                      src={projects[activeProject].url}
+                      title={projects[activeProject].title}
+                      className="project-iframe"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </section>
 
       {/* Contact Section */}
