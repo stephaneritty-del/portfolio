@@ -27,7 +27,7 @@ function BusinessModelAnimation() {
     {
       id: 2,
       title: "Site Visit & Proposal",
-      description: "Strategic Partner and Dow visit owner, present solution and next steps",
+      description: "Strategic Partner and company visit owner, present solution and next steps",
       activeNodes: ["owner", "promoter", "platform", "partner"],
       activeLines: ["owner-promoter", "promoter-platform", "platform-partner", "partner-owner"],
       highlight: "platform"
@@ -150,7 +150,7 @@ function BusinessModelAnimation() {
           {/* Platform (Center) */}
           <g className={`bm-node platform ${step.activeNodes.includes('platform') ? 'active' : ''} ${step.highlight === 'platform' ? 'highlight' : ''}`}>
             <rect x="240" y="160" width="120" height="80" rx="10" />
-            <text x="300" y="195" textAnchor="middle" className="bm-node-text">Renufix</text>
+            <text x="300" y="195" textAnchor="middle" className="bm-node-text">Digital</text>
             <text x="300" y="215" textAnchor="middle" className="bm-node-text">Platform</text>
           </g>
 
@@ -367,14 +367,14 @@ function App() {
             </div>
 
             <div className="transformation-grid">
-              {/* Dow Platform - Full Case Study */}
+              {/* Platform Case Study - Sanitized */}
               <div className="transformation-card featured">
                 <div className="transformation-header">
-                  <div className="company-badge">Dow Chemical</div>
+                  <div className="company-badge">Fortune 100 Chemical</div>
                   <span className="initiative-status ready">Ready to Launch</span>
                 </div>
-                <h3>Renufix, Demand Generation Platform</h3>
-                <p className="transformation-subtitle">From Market Outsider to Ecosystem Architect: A 5-Sided B2B2C Platform</p>
+                <h3>B2B2C Demand Generation Platform</h3>
+                <p className="transformation-subtitle">From Market Outsider to Ecosystem Architect: A 5-Sided Digital Marketplace</p>
                 
                 {/* The Challenge */}
                 <div className="case-section">
@@ -383,8 +383,8 @@ function App() {
                     The Challenge
                   </h4>
                   <p className="transformation-description">
-                    Dow had virtually no presence in EMEA's roofing market. 94% of the market was locked by membrane manufacturers 
-                    through established channels and certification bodies. Traditional go-to-market was impossible, Dow was simply 
+                    The company had virtually no presence in EMEA's roofing market. 94% of the market was locked by membrane manufacturers 
+                    through established channels and certification bodies. Traditional go-to-market was impossible — we were simply 
                     too far from demand.
                   </p>
                   <div className="challenge-stats">
@@ -464,28 +464,28 @@ function App() {
                   </h4>
                   <div className="customer-grid">
                     <div className="customer-card">
-                      <span className="customer-name">DHL</span>
-                      <span className="customer-stat">23 MM m² globally</span>
-                      <span className="customer-note">Active business case initiated</span>
+                      <span className="customer-name">Global Logistics Leaders</span>
+                      <span className="customer-stat">20+ MM m² portfolios</span>
+                      <span className="customer-note">Active business cases initiated</span>
                     </div>
                     <div className="customer-card">
-                      <span className="customer-name">Prologis</span>
-                      <span className="customer-stat">63 MM m² globally</span>
-                      <span className="customer-note">World's largest logistics REIT</span>
+                      <span className="customer-name">REITs</span>
+                      <span className="customer-stat">60+ MM m² globally</span>
+                      <span className="customer-note">World's largest logistics real estate</span>
                     </div>
                     <div className="customer-card">
-                      <span className="customer-name">Blackstone</span>
-                      <span className="customer-stat">10 MM m² in Europe</span>
-                      <span className="customer-note">Private equity, value-driven</span>
+                      <span className="customer-name">Private Equity</span>
+                      <span className="customer-stat">10+ MM m² in Europe</span>
+                      <span className="customer-note">Value-driven asset managers</span>
                     </div>
                     <div className="customer-card">
-                      <span className="customer-name">Goodman</span>
-                      <span className="customer-stat">16 MM m² globally</span>
-                      <span className="customer-note">Major logistics developer</span>
+                      <span className="customer-name">Developers</span>
+                      <span className="customer-stat">15+ MM m² globally</span>
+                      <span className="customer-note">Major logistics developers</span>
                     </div>
                   </div>
                   <p className="customer-insight">
-                    <strong>Key insight:</strong> 1% of DHL buildings alone = 400 MT of binder. These players standardize solutions globally once KPIs are met.
+                    <strong>Key insight:</strong> 1% of a single global player's buildings = 400 MT of binder. These players standardize solutions globally once KPIs are met.
                   </p>
                 </div>
 
@@ -498,30 +498,14 @@ function App() {
                   <div className="transformation-visual">
                     <div className="model-before">
                       <h5>Before: Linear Value Chain</h5>
-                      <p>Dow → Distributors → Formulators → Contractors → End Users</p>
-                      <span className="model-problem">Dow too far from demand, no control, no data</span>
+                      <p>Manufacturer → Distributors → Formulators → Contractors → End Users</p>
+                      <span className="model-problem">Too far from demand, no control, no data</span>
                     </div>
                     <div className="model-arrow">→</div>
                     <div className="model-after">
                       <h5>After: Hub Platform</h5>
-                      <p>All stakeholders connected through Dow's platform</p>
-                      <span className="model-benefit">Dow at center, owns relationships & data</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Product Screenshots */}
-                <div className="case-section">
-                  <h4 className="case-section-title">
-                    <span className="section-icon">📱</span>
-                    The Platform I Built
-                  </h4>
-                  <div className="product-screenshots">
-                    <img src="/renufix-screens.png" alt="Renufix Platform, Stand-alone webpage, Registration flow, and Project Dashboard" />
-                    <div className="screenshot-labels">
-                      <span>Lead Generation Site</span>
-                      <span>Onboarding Flow</span>
-                      <span>Project Management Dashboard</span>
+                      <p>All stakeholders connected through our platform</p>
+                      <span className="model-benefit">At the center, owns relationships & data</span>
                     </div>
                   </div>
                 </div>
@@ -553,14 +537,14 @@ function App() {
                       
                       {/* Center Hub */}
                       <circle cx="200" cy="200" r="55" fill="#dc2626" />
-                      <text x="200" y="192" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">Renufix</text>
+                      <text x="200" y="192" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">Digital</text>
                       <text x="200" y="207" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">Platform</text>
-                      <text x="200" y="220" textAnchor="middle" fill="white" fontSize="9" opacity="0.8">(Dow owned)</text>
+                      <text x="200" y="220" textAnchor="middle" fill="white" fontSize="9" opacity="0.8">(We own it)</text>
                       
                       {/* Building Owner - Top */}
                       <rect x="155" y="25" width="90" height="50" rx="8" fill="#3b82f6" />
                       <text x="200" y="50" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Building Owners</text>
-                      <text x="200" y="63" textAnchor="middle" fill="white" fontSize="8" opacity="0.8">DHL, Prologis...</text>
+                      <text x="200" y="63" textAnchor="middle" fill="white" fontSize="8" opacity="0.8">Global players</text>
                       
                       {/* Insurance - Top Right */}
                       <rect x="285" y="85" width="90" height="50" rx="8" fill="#22c55e" />
@@ -577,17 +561,17 @@ function App() {
                       <text x="200" y="337" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Engineers &</text>
                       <text x="200" y="350" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Architects</text>
                       
-                      {/* Formulator - Bottom Left */}
+                      {/* Strategic Partner - Bottom Left */}
                       <rect x="25" y="245" width="90" height="50" rx="8" fill="#0f766e" />
-                      <text x="70" y="267" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Formulator</text>
-                      <text x="70" y="280" textAnchor="middle" fill="white" fontSize="8" opacity="0.8">CEO signed</text>
+                      <text x="70" y="267" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Strategic</text>
+                      <text x="70" y="280" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Partner</text>
                       
-                      {/* Dow Materials - Top Left */}
+                      {/* Raw Materials - Top Left */}
                       <rect x="25" y="85" width="90" height="50" rx="8" fill="#dc2626" />
-                      <text x="70" y="107" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Dow Materials</text>
-                      <text x="70" y="120" textAnchor="middle" fill="white" fontSize="8" opacity="0.8">Polymers & RM</text>
+                      <text x="70" y="107" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Raw</text>
+                      <text x="70" y="120" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Materials</text>
                     </svg>
-                    <p className="hub-caption">Virtual Integrated Company: All stakeholders win, Dow owns the platform & data</p>
+                    <p className="hub-caption">Virtual Integrated Company: All stakeholders win, we own the platform & data</p>
                   </div>
                 </div>
 
@@ -604,7 +588,7 @@ function App() {
                     </div>
                     <div className="result-item">
                       <span className="result-number">✓</span>
-                      <span className="result-text">Strategic partnership signed with formulator CEO</span>
+                      <span className="result-text">Strategic partnership signed with partner CEO</span>
                     </div>
                     <div className="result-item">
                       <span className="result-number">100+</span>
@@ -619,8 +603,8 @@ function App() {
                       <span className="result-text">Stakeholder groups aligned & committed</span>
                     </div>
                     <div className="result-item">
-                      <span className="result-number">DHL</span>
-                      <span className="result-text">Active business case in progress</span>
+                      <span className="result-number">✓</span>
+                      <span className="result-text">Active business cases with global players</span>
                     </div>
                   </div>
                 </div>
@@ -684,7 +668,7 @@ function App() {
                     </div>
                     <div className="vision-item">
                       <span className="vision-title">Data Ownership</span>
-                      <span className="vision-desc">Dow generates and owns all platform data</span>
+                      <span className="vision-desc">We generate and own all platform data</span>
                     </div>
                   </div>
                   <div className="competitive-advantage">
@@ -694,9 +678,9 @@ function App() {
 
                 {/* Outcome */}
                 <div className="transformation-outcome">
-                  <p><strong>Outcome:</strong> Platform was built, contracts signed, all stakeholders committed, DHL business case active. 
+                  <p><strong>Outcome:</strong> Platform was built, contracts signed, all stakeholders committed, active business cases with global logistics leaders. 
                   A company restructuring and leadership change stopped the launch before go-live.</p>
-                  <p><strong>Legacy:</strong> The concept was disseminated across Dow, influencing future digital transformation initiatives.</p>
+                  <p><strong>Legacy:</strong> The concept was disseminated across the organization, influencing future digital transformation initiatives.</p>
                 </div>
 
                 {/* Personal Reflection */}
