@@ -2,6 +2,189 @@ import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, ExternalLink, Sparkles, Copy, Check } from 'lucide-react';
 import './App.css';
 
+// Business Model Animation Component
+function BusinessModelAnimation() {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const steps = [
+    {
+      id: 0,
+      title: "Lead Generation",
+      description: "Building owner shares renovation needs with Promoter via platform",
+      activeNodes: ["owner", "promoter", "platform"],
+      activeLines: ["owner-promoter", "promoter-platform"],
+      highlight: "owner"
+    },
+    {
+      id: 1,
+      title: "Quote Request",
+      description: "Strategic Partner accesses quote request and project information",
+      activeNodes: ["owner", "promoter", "platform", "partner"],
+      activeLines: ["owner-promoter", "promoter-platform", "platform-partner"],
+      highlight: "partner"
+    },
+    {
+      id: 2,
+      title: "Site Visit & Proposal",
+      description: "Strategic Partner and Dow visit owner, present solution and next steps",
+      activeNodes: ["owner", "promoter", "platform", "partner"],
+      activeLines: ["owner-promoter", "promoter-platform", "platform-partner", "partner-owner"],
+      highlight: "platform"
+    },
+    {
+      id: 3,
+      title: "Project Opens",
+      description: "Project created in platform. Contractors can bid under commission agreement",
+      activeNodes: ["owner", "promoter", "platform", "partner", "contractors"],
+      activeLines: ["owner-promoter", "promoter-platform", "platform-partner", "platform-contractors"],
+      highlight: "contractors"
+    },
+    {
+      id: 4,
+      title: "Contractor Selection",
+      description: "Owner selects contractor and signs renovation contract",
+      activeNodes: ["owner", "promoter", "platform", "partner", "contractors"],
+      activeLines: ["owner-promoter", "promoter-platform", "platform-partner", "platform-contractors", "owner-contractors"],
+      highlight: "owner"
+    },
+    {
+      id: 5,
+      title: "Work Completed",
+      description: "Renovation complete. Owner pays contractor directly",
+      activeNodes: ["owner", "promoter", "platform", "partner", "contractors"],
+      activeLines: ["owner-contractors"],
+      highlight: "contractors"
+    },
+    {
+      id: 6,
+      title: "Commission Distribution",
+      description: "Platform distributes commissions to Promoter and Strategic Partner",
+      activeNodes: ["owner", "promoter", "platform", "partner", "contractors"],
+      activeLines: ["platform-promoter", "platform-partner", "contractors-platform"],
+      highlight: "platform"
+    }
+  ];
+
+  useEffect(() => {
+    let interval;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentStep((prev) => (prev + 1) % steps.length);
+      }, 3000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying]);
+
+  const step = steps[currentStep];
+
+  return (
+    <div className="bm-animation">
+      <div className="bm-controls">
+        <button 
+          className={`bm-play-btn ${isPlaying ? 'playing' : ''}`}
+          onClick={() => setIsPlaying(!isPlaying)}
+        >
+          {isPlaying ? '⏸ Pause' : '▶ Play Animation'}
+        </button>
+        <div className="bm-steps">
+          {steps.map((s, i) => (
+            <button
+              key={i}
+              className={`bm-step-dot ${currentStep === i ? 'active' : ''} ${currentStep > i ? 'completed' : ''}`}
+              onClick={() => { setCurrentStep(i); setIsPlaying(false); }}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="bm-diagram">
+        <svg viewBox="0 0 600 400" className="bm-svg">
+          {/* Connection Lines */}
+          <line 
+            x1="150" y1="80" x2="300" y2="200" 
+            className={`bm-line ${step.activeLines.includes('owner-promoter') ? 'active' : ''}`}
+          />
+          <line 
+            x1="450" y1="80" x2="300" y2="200" 
+            className={`bm-line ${step.activeLines.includes('promoter-platform') ? 'active' : ''}`}
+          />
+          <line 
+            x1="100" y1="280" x2="300" y2="200" 
+            className={`bm-line ${step.activeLines.includes('platform-partner') ? 'active' : ''}`}
+          />
+          <line 
+            x1="500" y1="280" x2="300" y2="200" 
+            className={`bm-line ${step.activeLines.includes('platform-contractors') ? 'active' : ''}`}
+          />
+          <line 
+            x1="150" y1="80" x2="100" y2="280" 
+            className={`bm-line ${step.activeLines.includes('partner-owner') ? 'active' : ''}`}
+          />
+          <line 
+            x1="150" y1="80" x2="500" y2="280" 
+            className={`bm-line ${step.activeLines.includes('owner-contractors') ? 'active' : ''}`}
+          />
+          <line 
+            x1="300" y1="200" x2="450" y2="80" 
+            className={`bm-line ${step.activeLines.includes('platform-promoter') ? 'active' : ''}`}
+          />
+          <line 
+            x1="500" y1="280" x2="300" y2="200" 
+            className={`bm-line ${step.activeLines.includes('contractors-platform') ? 'active' : ''}`}
+          />
+
+          {/* Building Owner */}
+          <g className={`bm-node ${step.activeNodes.includes('owner') ? 'active' : ''} ${step.highlight === 'owner' ? 'highlight' : ''}`}>
+            <rect x="100" y="40" width="100" height="60" rx="8" />
+            <text x="150" y="70" textAnchor="middle" className="bm-node-text">Building</text>
+            <text x="150" y="88" textAnchor="middle" className="bm-node-text">Owner</text>
+          </g>
+
+          {/* Promoter */}
+          <g className={`bm-node promoter ${step.activeNodes.includes('promoter') ? 'active' : ''} ${step.highlight === 'promoter' ? 'highlight' : ''}`}>
+            <rect x="400" y="40" width="100" height="60" rx="8" />
+            <text x="450" y="75" textAnchor="middle" className="bm-node-text">Promoter</text>
+          </g>
+
+          {/* Platform (Center) */}
+          <g className={`bm-node platform ${step.activeNodes.includes('platform') ? 'active' : ''} ${step.highlight === 'platform' ? 'highlight' : ''}`}>
+            <rect x="240" y="160" width="120" height="80" rx="10" />
+            <text x="300" y="195" textAnchor="middle" className="bm-node-text">Renufix</text>
+            <text x="300" y="215" textAnchor="middle" className="bm-node-text">Platform</text>
+          </g>
+
+          {/* Strategic Partner */}
+          <g className={`bm-node partner ${step.activeNodes.includes('partner') ? 'active' : ''} ${step.highlight === 'partner' ? 'highlight' : ''}`}>
+            <rect x="40" y="250" width="120" height="60" rx="8" />
+            <text x="100" y="278" textAnchor="middle" className="bm-node-text">Strategic</text>
+            <text x="100" y="296" textAnchor="middle" className="bm-node-text">Partner</text>
+          </g>
+
+          {/* Contractors */}
+          <g className={`bm-node contractors ${step.activeNodes.includes('contractors') ? 'active' : ''} ${step.highlight === 'contractors' ? 'highlight' : ''}`}>
+            <rect x="440" y="250" width="120" height="60" rx="8" />
+            <text x="500" y="285" textAnchor="middle" className="bm-node-text">Contractors</text>
+            {/* Dashed border for pool */}
+            <rect x="435" y="245" width="130" height="70" rx="10" fill="none" stroke="#f59e0b" strokeWidth="2" strokeDasharray="5,5" opacity="0.5" />
+          </g>
+
+          {/* Agreement Labels */}
+          <text x="380" y="145" className="bm-label" transform="rotate(-25, 380, 145)">Commission</text>
+          <text x="170" y="180" className="bm-label" transform="rotate(35, 170, 180)">Marketing & Sales</text>
+          <text x="400" y="240" className="bm-label" transform="rotate(-35, 400, 240)">Commission</text>
+        </svg>
+      </div>
+
+      <div className="bm-status">
+        <div className="bm-step-number">Step {currentStep + 1} of {steps.length}</div>
+        <h5 className="bm-step-title">{step.title}</h5>
+        <p className="bm-step-desc">{step.description}</p>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [activeProject, setActiveProject] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -343,7 +526,16 @@ function App() {
                   </div>
                 </div>
 
-                {/* Hub Diagram */}
+                {/* Interactive Business Model Animation */}
+                <div className="case-section">
+                  <h4 className="case-section-title">
+                    <span className="section-icon">🔄</span>
+                    Business Model Flow (Interactive)
+                  </h4>
+                  <BusinessModelAnimation />
+                </div>
+
+                {/* Ecosystem Architecture */}
                 <div className="case-section">
                   <h4 className="case-section-title">
                     <span className="section-icon">🕸️</span>
@@ -461,6 +653,10 @@ function App() {
                       <span className="role-desc">Roadmap planning, feature prioritization, stakeholder alignment</span>
                     </div>
                     <div className="role-card">
+                      <span className="role-title">UX/UI Design Lead</span>
+                      <span className="role-desc">Led the Scrum team on user experience and interface design decisions</span>
+                    </div>
+                    <div className="role-card">
                       <span className="role-title">Ecosystem Builder</span>
                       <span className="role-desc">Orchestrated partnerships, aligned incentives across all parties</span>
                     </div>
@@ -501,6 +697,46 @@ function App() {
                   <p><strong>Outcome:</strong> Platform was built, contracts signed, all stakeholders committed, DHL business case active. 
                   A company restructuring and leadership change stopped the launch before go-live.</p>
                   <p><strong>Legacy:</strong> The concept was disseminated across Dow, influencing future digital transformation initiatives.</p>
+                </div>
+
+                {/* Personal Reflection */}
+                <div className="personal-reflection">
+                  <h4>💡 Personal Note</h4>
+                  <p>
+                    This project was my baby. Honestly? It was a blast to build. From the first market insight to signing 
+                    contracts with CEOs, from sketching the UX wireframes to watching the platform come alive, every step 
+                    was exhilarating. The kind of work that doesn't feel like work.
+                  </p>
+                </div>
+
+                {/* Lessons Learned */}
+                <div className="lessons-learned">
+                  <h4>🎓 What I'd Do Differently</h4>
+                  <p>
+                    Looking back, what I missed was <strong>change management</strong>. I had the strategy, the product, the 
+                    partnerships, the execution, but I underestimated the internal politics and organizational resistance. 
+                    Today, with the change management skills I've developed since, I'm confident this would have been pushed 
+                    across the entire business. That lesson cost me a launch, but it made me a more complete leader.
+                  </p>
+                </div>
+
+                {/* Call to Action for B2B Companies */}
+                <div className="b2b-cta">
+                  <h4>🚀 A Message to B2B Commodity Businesses</h4>
+                  <p>
+                    If you're a <strong>commodity B2B business struggling to increase revenue and value</strong>, this is your playbook. 
+                    Stop competing on price. Stop being a distant supplier in a locked value chain.
+                  </p>
+                  <p>
+                    <strong>Build a marketplace.</strong> Identify a key application. Connect the stakeholders. Own the platform. 
+                    Own the data. Expand from there. It's not easy, but it's the path from commodity to ecosystem leader.
+                  </p>
+                  <div className="cta-offer">
+                    <p>
+                      <strong>I'd be more than happy to help anyone willing to disrupt a locked value chain.</strong><br/>
+                      If this resonates with you, let's talk.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="transformation-note">
