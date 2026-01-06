@@ -686,9 +686,9 @@ I build vision, architect business and operating models, design financial and pr
                       <h3>{project.title}</h3>
                       <span className="project-subtitle">{project.subtitle}</span>
                     </div>
-                    <span className={`status-badge ${project.status === 'Live' ? 'live' : project.status === 'Live Beta' ? 'beta' : 'dev'}`}>
-                      {project.status}
-                    </span>
+<span className={`status-badge ${project.status === 'Live' ? 'live' : project.status === 'Live Beta' ? 'beta' : project.status === 'Debug' ? 'debug' : 'dev'}`}>
+  {project.status}
+</span>
                   </div>
 
                   <p className="project-description">{project.description}</p>
