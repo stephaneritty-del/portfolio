@@ -79,14 +79,15 @@ function App() {
           </p>
           
           <p className="hero-description">
-            I optimize what exists, build what's next, and envision what redefines the industry, then I ship all three. 
-            Triple-threat across Product, Project, and Change leadership. I don't just orchestrate from 30,000 feet: 
-            I build vision, architect business and operating models, financial models, design business processes, negotiate MSAs, and structure pricing to maintain momentum.
+I optimize what exists, build what’s next, and envision what redefines the industry, then I ship all three.
+A triple threat across Product, Program, and Change leadership, I don’t just orchestrate from 30,000 feet. 
+I build vision, architect business and operating models, design financial and pricing structures, negotiate MSAs & pricing, more if needed, all to maintain delivery momentum and market impact.
+
+            
           </p>
           
           <p className="hero-description">
-            <strong>The track record:</strong> 5+ end-to-end innovation programs | $70M+ new revenue within 3 years | 
-            50% faster time-to-market | Led teams of 200+ cross-functional contributors with 88% satisfaction.
+            <strong>The track record:</strong> 5+ end-to-end innovation programs for Fortune 100 companies | $70M+ in new revenue generated within 3 years across regulated industries | 50% faster time-to-market | Led 200+ cross-functional contributors with 88% satisfaction
           </p>
 
           <div className="hero-cta">
