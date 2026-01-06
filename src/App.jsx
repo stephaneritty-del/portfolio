@@ -50,6 +50,16 @@ function App() {
       status: "Live",
       gradient: "from-orange-500 to-red-600"
     }
+        {
+      id: 4,
+      title: "Ikigai Finder",
+      subtitle: "Discover Your Life Purpose",
+      description: "An introspective journey to uncover your Ikigai — the Japanese concept of 'reason for being'. Through guided reflection, explore the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.",
+      tags: ["AI Coach", "Self-Discovery", "Psychology", "React"],
+      url: "https://ikigai-pi-green.vercel.app",
+      status: "Live",
+      gradient: "from-rose-500 to-amber-500"
+    }
   ];
 
   const initiatives = [
