@@ -75,7 +75,7 @@ function App() {
           </h1>
           
           <p className="hero-subtitle">
-            Product & Business Innovation Leader | PMO & New Product Introduction Leader | Business Model Innovation | Turning Fortune 100 Complexity into Shipped Revenue
+            Product & Business Innovation Leader | PMO & New Product Introduction Expert | Business Model Innovation | Turning Fortune 100 Complexity into Shipped Revenue
           </p>
           
           <p className="hero-description">
