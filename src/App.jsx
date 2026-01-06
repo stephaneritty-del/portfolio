@@ -75,13 +75,13 @@ function App() {
           </h1>
           
           <p className="hero-subtitle">
-            Senior Product & PMO Leader | Business Model Innovation | Turning Fortune 100 Complexity into Shipped Revenue
+            Product & Business Innovation Leader | PMO & New Product Introduction Leader | Business Model Innovation | Turning Fortune 100 Complexity into Shipped Revenue
           </p>
           
           <p className="hero-description">
             I optimize what exists, build what's next, and envision what redefines the industry, then I ship all three. 
             Triple-threat across Product, Project, and Change leadership. I don't just orchestrate from 30,000 feet: 
-            I build financial models, design business processes, negotiate MSAs, and structure pricing to maintain momentum.
+            I build vision, architect business and operating models, financial models, design business processes, negotiate MSAs, and structure pricing to maintain momentum.
           </p>
           
           <p className="hero-description">
