@@ -49,7 +49,7 @@ function App() {
       url: "https://missionmot.vercel.app",
       status: "Live",
       gradient: "from-orange-500 to-red-600"
-    }
+    },
         {
       id: 4,
       title: "Ikigai Finder",
