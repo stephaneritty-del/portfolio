@@ -1148,6 +1148,30 @@ body {
   overflow: hidden;
 }
 
+/* Video Container */
+.video-container {
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.business-model-video {
+  width: 100%;
+  border-radius: 12px;
+  background: #000;
+}
+
+.video-caption {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
 .bm-controls {
   display: flex;
   justify-content: space-between;

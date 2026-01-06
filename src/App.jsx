@@ -519,6 +519,25 @@ function App() {
                   <BusinessModelAnimation />
                 </div>
 
+                {/* Video Explainer */}
+                <div className="case-section">
+                  <h4 className="case-section-title">
+                    <span className="section-icon">🎬</span>
+                    Watch the Business Model in Action
+                  </h4>
+                  <div className="video-container">
+                    <video 
+                      controls 
+                      className="business-model-video"
+                      poster=""
+                    >
+                      <source src="/business-model.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    <p className="video-caption">Animated walkthrough of the platform's value flow and stakeholder interactions</p>
+                  </div>
+                </div>
+
                 {/* Ecosystem Architecture */}
                 <div className="case-section">
                   <h4 className="case-section-title">
