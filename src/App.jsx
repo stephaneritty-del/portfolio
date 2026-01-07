@@ -73,6 +73,7 @@ function App() {
   return (
     <div className="portfolio">
       {/* Hero Section */}
+      <img src="/stephane.jpg" alt="Stephane Ritty" className="hero-photo" />
       <section className={`hero ${isVisible ? 'visible' : ''}`}>
         <div className="hero-content">
           <div className="hero-badge">
