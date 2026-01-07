@@ -77,30 +77,27 @@ function App() {
       <section className={`hero ${isVisible ? 'visible' : ''}`}>
           <div className="hero-layout">
 
-        <div className="hero-content">
-          <div className="hero-badge">
-            <Sparkles size={16} />
-            <span>Fortune 100 Innovation Leadership</span>
-          </div>
-          
-          <h1 className="hero-title">
-            <span className="gradient-text">Stephane Ritty</span>
-          </h1>
-          
-          <p className="hero-subtitle">
-            Product & Business Innovation Leader | PMO & New Product Introduction Saavy | Business Model Innovation Exert | Turning Fortune 100 Complexity into Shipped Revenue
-          </p>
-          
-          <p className="hero-description">
-I build businesses from zero. Product strategy, business model design, and execution at Fortune 100 scale.
-I optimize what exists, build what’s next, and envision what redefines the industry, then I ship all three.
-            
-          </p>
-          
-          <p className="hero-description">
-            <strong>The track record:</strong> $70M+ new revenue generated within 3 years | 5+ innovation programs shipped | 50% faster to market
-          </p>
-
+      <div className="hero-content">
+  <div className="hero-badge">
+    <Sparkles size={16} />
+    <span>Fortune 100 to Startup</span>
+  </div>
+  
+  <h1 className="hero-title">
+    <span className="gradient-text">Stephane Ritty</span>
+  </h1>
+  
+  <p className="hero-subtitle">
+    I Turn Chaos Into Revenue Lines
+  </p>
+  
+  <p className="hero-description">
+    Twice-failed initiatives, empty seats, markets with zero presence: I walk in, build the strategy, assemble the team, and ship. Product Director mindset, hands-on execution.
+  </p>
+  
+  <p className="hero-description">
+    <strong>$70M+ new revenue</strong> · <strong>5 businesses built from zero</strong> · <strong>3 marketplaces launched</strong>
+  </p>
           <div className="hero-cta">
             <button onClick={copyEmail} className="btn btn-primary">
               {emailCopied ? <Check size={20} /> : <Copy size={20} />}
