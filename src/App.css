@@ -231,24 +231,9 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  z-index: 2;
 }
 
-.hero-testimonial p {
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--color-text);
-  margin: 0 0 0.5rem 0;
-}
-
-.hero-testimonial cite {
-  font-style: normal;
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-}
-
-.hero-testimonial cite strong {
-  color: var(--color-primary-light);
-}
 
 .btn {
   display: inline-flex;
