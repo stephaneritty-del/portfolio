@@ -452,7 +452,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                         <span className="result-text">Building owners ready for renovation</span>
                       </div>
                       <div className="result-item">
-                        <span className="result-number">6/6</span>
+                        <span className="result-number">4/4</span>
                         <span className="result-text">Stakeholder groups aligned & committed</span>
                       </div>
                       <div className="result-item">
