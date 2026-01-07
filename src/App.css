@@ -95,6 +95,7 @@ body {
   max-width: 1400px;
   width: 100%;
   z-index: 2;
+  padding-bottom: 3rem;  /* A
 }
 
 .hero-photo-container {
