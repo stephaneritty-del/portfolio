@@ -956,7 +956,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                   <div className="personal-reflection">
                     <h4>💡 Personal Note</h4>
                     <p>
-                      I wasn't asked to take over this initiative. The Product Manager changed roles just as I joined, leaving an empty seat. 
+                      I wasn't asked to take over that level of ownership but when the Product Manager changed roles just as I joined, leaving an empty seat,
                       I stepped in and delivered what two previous attempts could not. The "bottleneck" strategy was my insight. 
                       In 3 months, during my onboarding process, I had the complete business plan. In 9 months, we launched. Sometimes the best way to lead is to simply start leading.
                     </p>
