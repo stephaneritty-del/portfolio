@@ -98,6 +98,17 @@ function App() {
 <p className="hero-description">
   <strong>$70M+ new revenue</strong> · <strong>5+ innovation programs shipped</strong> · <strong>50% faster to market</strong>
 </p>
+
+        {/* Testimonial */}
+<div className="testimonial-section">
+  <blockquote className="testimonial">
+    <p>"Excellent forward thinking individual with entrepreneurial and strategic mindset!"</p>
+    <cite>
+      <strong>Marco ten Bruggencate</strong>
+      <span>Business President II&I, Dow (CEO direct report)</span>
+    </cite>
+  </blockquote>
+</div>
           <div className="hero-cta">
             <button onClick={copyEmail} className="btn btn-primary">
               {emailCopied ? <Check size={20} /> : <Copy size={20} />}
