@@ -124,7 +124,7 @@ I build vision, architect business and operating models, design financial and pr
           </div>
         </div>
    <div className="hero-photo-container">
-      <img src="/stephane.jpg" alt="Stephane Ritty" className="hero-photo" />
+      <img src="/Stephane.jpg" alt="Stephane Ritty" className="hero-photo" />
     </div>
              </div>
         <div className="hero-visual">
