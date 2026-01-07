@@ -653,7 +653,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                       issues, and no clearly defined strategy.
                     </p>
                     <p className="transformation-description">
-                      Just as I joined the project, the Product Manager changed roles. It was an empty seat that I filled, and I filled it so well 
+                      Just as I joined, the company and the project, the Product Manager changed roles. It was an empty seat that I filled, and I filled it so well 
                       that we never actually needed one. I assumed full ownership as <strong>Product Director and Program Lead</strong> for what 
                       would become an entirely new revenue line.
                     </p>
@@ -841,7 +841,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                     <div className="results-grid">
                       <div className="result-item">
                         <span className="result-number">3 mo</span>
-                        <span className="result-text">Complete business plan and strategy from zero knowledge</span>
+                        <span className="result-text">Complete business plan and strategy from zero knowledge and during my onboarding process</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">9 mo</span>
@@ -958,7 +958,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                     <p>
                       I wasn't asked to take over this initiative. The Product Manager changed roles just as I joined, leaving an empty seat. 
                       I stepped in and delivered what two previous attempts could not. The "bottleneck" strategy was my insight. 
-                      In 3 months, I had the complete business plan. In 9 months, we launched. Sometimes the best way to lead is to simply start leading.
+                      In 3 months, during my onboarding process, I had the complete business plan. In 9 months, we launched. Sometimes the best way to lead is to simply start leading.
                     </p>
                   </div>
 
