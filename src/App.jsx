@@ -64,7 +64,7 @@ function App() {
 
   const initiatives = [
     { id: 'platform', label: 'B2B2C Platform', shortLabel: 'Platform' },
-    { id: 'adherence', label: 'Adherence Portfolio Strategy', shortLabel: 'Adherence' },
+    { id: 'adherence', label: 'Adherence Marketplace', shortLabel: 'Adherence' },
     { id: 'rental', label: 'Sales-to-Rental Transformation', shortLabel: 'Rental Model' },
     { id: 'dct', label: 'Decentralized Clinical Trials', shortLabel: 'DCT' },
     { id: 'operations', label: 'Operational Excellence', shortLabel: 'Operations' }
@@ -633,7 +633,7 @@ I build vision, architect business and operating models, design financial and pr
                     <div className="company-badge">Fortune 100 Life Sciences</div>
                     <span className="initiative-status ready">Launched, Unique in Market</span>
                   </div>
-                  <h3>Medication Adherence Portfolio Strategy</h3>
+                  <h3>Medication Adherence Marketplace</h3>
                   <p className="transformation-subtitle">Turned a Twice-Failed Initiative Into a $20M Revenue Line in 9 Months. Created an Entirely New Business from Strategy to Launch.</p>
                   
                   {/* The Situation */}
@@ -645,11 +645,12 @@ I build vision, architect business and operating models, design financial and pr
                     <p className="transformation-description">
                       Medication adherence technology had existed for 20+ years, yet no one had achieved mainstream adoption in clinical trials. 
                       This initiative had been attempted twice before internally. The last attempt ended in a pilot with mixed results, major operational 
-                      issues, and no clearly defined strategy. When the Product Manager left, everything was messy, dislocated, and without vision.
+                      issues, and no clearly defined strategy.
                     </p>
                     <p className="transformation-description">
-                      <strong>I was originally assigned to help lead the project.</strong> Instead, I stepped in and assumed full ownership: 
-                      Product Director, Product Manager, Program Lead, and Head of Business Development for what would become an entirely new revenue line.
+                      Just as I joined the project, the Product Manager changed roles. It was an empty seat that I filled, and I filled it so well 
+                      that we never actually needed one. I assumed full ownership as <strong>Product Director and Program Lead</strong> for what 
+                      would become an entirely new revenue line.
                     </p>
                     <div className="challenge-stats">
                       <div className="stat-item negative">
@@ -679,9 +680,9 @@ I build vision, architect business and operating models, design financial and pr
                         Cost: ~$2M and 12-18 months per vendor, per pharma. And that's for just ONE form factor (bottles, blisters, pouches).
                       </p>
                       <p>
-                        <strong>My solution:</strong> What if WE qualified all the vendors once? We invest to qualify 10+ suppliers, 
-                        but that investment serves ALL pharma clients. We become the <strong>strategic bottleneck</strong>: the only player 
-                        in the market with a pre-qualified portfolio of all serious medication adherence technologies.
+                        <strong>My solution:</strong> What if WE qualified all the reliable vendors once through a strict qualification process? 
+                        We invest to qualify 10+ suppliers, but that investment serves ALL pharma clients. We become the <strong>strategic bottleneck</strong>: 
+                        the only player in the market with a pre-qualified portfolio of all serious medication adherence technologies.
                       </p>
                       <p>
                         <strong>The moat:</strong> Competition would need years to copy this approach. First-mover advantage with locked-in supplier relationships.
@@ -696,10 +697,15 @@ I build vision, architect business and operating models, design financial and pr
                       De-risking with Strategyzer
                     </h4>
                     <p className="transformation-description">
-                      In parallel to building the business case, I ran a Strategyzer process to systematically de-risk our remaining assumptions 
-                      and sharpen our positioning and go-to-market strategy. This allowed us to validate critical hypotheses before committing 
-                      resources and refine our value proposition based on real customer feedback.
+                      In parallel to building the business case, I ran a Strategyzer process with senior directors who had high-level understanding 
+                      of the ins and outs. This approach was validated by the VP of Product Management of the group, as it was new and carried risk 
+                      because tests needed to embed Legal. I brought Legal into all our test discoveries from the start. This allowed us to 
+                      systematically de-risk our remaining assumptions and sharpen our positioning and go-to-market strategy.
                     </p>
+                    <div className="process-image">
+                      <img src="/strategyzer-process.jpg" alt="Parallel Strategyzer process with stage-gate governance" className="case-study-image" />
+                      <p className="image-caption">Parallel process: Business Model Canvas feeding into agile test sprints alongside traditional stage-gate governance</p>
+                    </div>
                   </div>
 
                   {/* Market Analysis */}
@@ -769,7 +775,7 @@ I build vision, architect business and operating models, design financial and pr
                       Supplier Portfolio I Built
                     </h4>
                     <p className="transformation-description">
-                      I evaluated and qualified a strategic portfolio of suppliers covering all form factors and technology approaches:
+                      I evaluated and qualified a strategic portfolio of reliable suppliers through a strict qualification process, covering all form factors and technology approaches:
                     </p>
                     <div className="roles-grid">
                       <div className="role-card">
@@ -855,6 +861,24 @@ I build vision, architect business and operating models, design financial and pr
                     </div>
                   </div>
 
+                  {/* Tools I Built */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🛠️</span>
+                      Tools I Built
+                    </h4>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Lead Generation Web Page</span>
+                        <span className="role-desc">Built a dedicated landing page to capture and qualify inbound leads for the new service line</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Pricing Sensitivity Tool (VBA)</span>
+                        <span className="role-desc">Built a scenario modeling tool for sales to find optimal pricing per patient, phase, and protocol variables based on cost models and customer price sensitivity</span>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Organizational Legacy */}
                   <div className="case-section">
                     <h4 className="case-section-title">
@@ -863,7 +887,7 @@ I build vision, architect business and operating models, design financial and pr
                     </h4>
                     <p className="transformation-description">
                       Beyond the revenue, I built the organizational capability: the company now has the complete process infrastructure 
-                      to qualify new form factors rapidly and cost-effectively, plus all the operational processes to run the business at scale.
+                      to qualify new form factors rapidly and inexpensively, plus all the operational processes to run the business at scale.
                     </p>
                   </div>
 
@@ -881,6 +905,20 @@ I build vision, architect business and operating models, design financial and pr
                     </p>
                   </div>
 
+                  {/* Long-term Vision */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🔮</span>
+                      Long-term Vision I Defined
+                    </h4>
+                    <p className="transformation-description">
+                      The roadmap I designed went beyond the initial marketplace. The long-term vision was to build a <strong>digital platform 
+                      where all data from all vendors flows into a unified system</strong>, enabling predictive adherence analytics using AI. 
+                      This would reduce operational costs of trials while achieving higher statistical power, making clinical trials more 
+                      science-based because patients actually take their drugs. Another marketplace play, another strategic moat.
+                    </p>
+                  </div>
+
                   {/* My Roles */}
                   <div className="case-section">
                     <h4 className="case-section-title">
@@ -890,19 +928,11 @@ I build vision, architect business and operating models, design financial and pr
                     <div className="roles-grid">
                       <div className="role-card">
                         <span className="role-title">Product Director</span>
-                        <span className="role-desc">Vision, strategy, market planning, portfolio architecture</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Head of Business</span>
-                        <span className="role-desc">Created an entirely new revenue line from scratch</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Product Manager</span>
-                        <span className="role-desc">Service design, customer segmentation, go-to-market</span>
+                        <span className="role-desc">Vision, strategy, market planning, portfolio architecture, service design, customer segmentation, go-to-market</span>
                       </div>
                       <div className="role-card">
                         <span className="role-title">Program Lead</span>
-                        <span className="role-desc">Cross-functional team coordination across 12 stakeholders</span>
+                        <span className="role-desc">Cross-functional team coordination across 12 stakeholders, vendor management, RFPs, contract negotiations</span>
                       </div>
                       <div className="role-card">
                         <span className="role-title">Change Manager</span>
@@ -921,8 +951,8 @@ I build vision, architect business and operating models, design financial and pr
                   <div className="personal-reflection">
                     <h4>💡 Personal Note</h4>
                     <p>
-                      I wasn't asked to take over this initiative. The Product Manager left, everything was scattered, and there was no clear path forward. 
-                      I saw the opportunity, stepped in, and delivered what two previous attempts could not. The "bottleneck" strategy was my insight. 
+                      I wasn't asked to take over this initiative. The Product Manager changed roles just as I joined, leaving an empty seat. 
+                      I stepped in and delivered what two previous attempts could not. The "bottleneck" strategy was my insight. 
                       In 3 months, I had the complete business plan. In 9 months, we launched. Sometimes the best way to lead is to simply start leading.
                     </p>
                   </div>
@@ -933,9 +963,23 @@ I build vision, architect business and operating models, design financial and pr
                     <p>
                       The strategy worked, but adoption was slower than projected. My regret: I couldn't convince leadership to invest more in 
                       <strong> lead generation and channel strategy</strong>. Just because you're a big corporation doesn't mean traditional 
-                      go-to-market is optimal. A more innovative channel approach could have accelerated adoption significantly. 
-                      I had too many other programs to lead and couldn't dedicate the time to push this point harder.
+                      go-to-market is optimal. New services need a tailored channel-to-market approach.
                     </p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="b2b-cta">
+                    <h4>🚀 Have a Product the Market Wants But No Clear Path to Market?</h4>
+                    <p>
+                      If you have a product or service the market is asking for but have no idea how to make the most out of it 
+                      and build a strategic moat, let's talk.
+                    </p>
+                    <div className="cta-offer">
+                      <p>
+                        <strong>I help turn market demand into defensible business positions.</strong><br/>
+                        New services need tailored channel-to-market approaches. I can help you find yours.
+                      </p>
+                    </div>
                   </div>
 
                   <div className="transformation-note">
@@ -944,6 +988,7 @@ I build vision, architect business and operating models, design financial and pr
 
                   <div className="transformation-tags">
                     <span className="tag">New Business Creation</span>
+                    <span className="tag">Marketplace</span>
                     <span className="tag">Portfolio Strategy</span>
                     <span className="tag">Business Model Innovation</span>
                     <span className="tag">Strategyzer</span>
