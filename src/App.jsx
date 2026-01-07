@@ -88,16 +88,16 @@ function App() {
   </h1>
   
   <p className="hero-subtitle">
-    I Turn Chaos Into Revenue Lines
+    I Turn Chaos Into Revenue Lines.
   </p>
   
   <p className="hero-description">
-    Twice-failed initiatives, empty seats, markets with zero presence: I walk in, build the strategy, assemble the team, and ship. Product Director mindset, hands-on execution.
+  I see what others miss. Markets with zero presence, stalled initiatives, empty seats: I walk in, build the strategy, assemble the team, and ship.
   </p>
   
-  <p className="hero-description">
-    <strong>$70M+ new revenue</strong> · <strong>5 businesses built from zero</strong> · <strong>3 marketplaces launched</strong>
-  </p>
+<p className="hero-description">
+  <strong>$70M+ new revenue</strong> · <strong>5+ innovation programs shipped</strong> · <strong>50% faster to market</strong>
+</p>
           <div className="hero-cta">
             <button onClick={copyEmail} className="btn btn-primary">
               {emailCopied ? <Check size={20} /> : <Copy size={20} />}
