@@ -93,7 +93,7 @@ function App() {
           
           <p className="hero-description">
 I build businesses from zero. Product strategy, business model design, and execution at Fortune 100 scale.
-I optimize what exists, build what’s next, and envision what redefines the industry—then I ship all three.
+I optimize what exists, build what’s next, and envision what redefines the industry, then I ship all three.
             
           </p>
           
