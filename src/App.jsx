@@ -92,15 +92,13 @@ function App() {
           </p>
           
           <p className="hero-description">
-I optimize what exists, build what’s next, and envision what redefines the industry, then I ship all three.
-A triple threat across Product, Program, and Change leadership, I don’t just orchestrate from 30,000 feet. 
-I build vision, architect business and operating models, design financial and pricing structures, negotiate MSAs & pricing, more if needed, all to maintain delivery momentum and market impact.
-
+I build businesses from zero. Product strategy, business model design, and execution at Fortune 100 scale.
+I optimize what exists, build what’s next, and envision what redefines the industry—then I ship all three.
             
           </p>
           
           <p className="hero-description">
-            <strong>The track record:</strong> 5+ end-to-end innovation programs for Fortune 100 companies | $70M+ in new revenue generated within 3 years across regulated industries | 50% faster time-to-market | Led 200+ cross-functional contributors with 88% satisfaction
+            <strong>The track record:</strong> $70M+ new revenue generated within 3 years | 5+ innovation programs shipped | 50% faster to market
           </p>
 
           <div className="hero-cta">
