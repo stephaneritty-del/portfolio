@@ -174,8 +174,6 @@ body {
 }
 
 
-
-
 .gradient-text {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-accent) 100%);
   -webkit-background-clip: text;
@@ -223,7 +221,7 @@ body {
 }
 
 .hero-testimonial {
-  margin-top: 3rem;
+  margin-top: 5rem;
   padding: 1.5rem 2rem;
   background: rgba(16, 185, 129, 0.08);
   border: 1px solid rgba(16, 185, 129, 0.2);
