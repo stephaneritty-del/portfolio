@@ -88,7 +88,7 @@ function App() {
   </h1>
   
   <p className="hero-subtitle">
-    I Turn Chaos Into Revenue Lines.
+    I Turn Chaos Into Revenue Lines
   </p>
   
   <p className="hero-description">
