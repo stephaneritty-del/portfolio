@@ -223,10 +223,10 @@ body {
 
 .hero-testimonial {
   margin-top: 3rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.5rem 2rem;
   background: rgba(16, 185, 129, 0.08);
-  border-left: 3px solid var(--color-primary);
-  border-radius: 0 8px 8px 0;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
   max-width: 500px;
   text-align: center;
   margin-left: auto;
@@ -249,7 +249,6 @@ body {
 .hero-testimonial cite strong {
   color: var(--color-primary-light);
 }
-
 
 .btn {
   display: inline-flex;
