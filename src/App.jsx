@@ -708,7 +708,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                       systematically de-risk our remaining assumptions and sharpen our positioning and go-to-market strategy.
                     </p>
                     <div className="process-image">
-                      <img src="/strategyzer-process.jpg" alt="Parallel Strategyzer process with stage-gate governance" className="case-study-image" />
+                      <img src="/Paralalalprocess.JPG" alt="Parallel Strategyzer process with stage-gate governance" className="case-study-image" />
                       <p className="image-caption">Parallel process: Business Model Canvas feeding into agile test sprints alongside traditional stage-gate governance</p>
                     </div>
                   </div>
