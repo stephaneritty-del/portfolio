@@ -628,17 +628,287 @@ I build vision, architect business and operating models, design financial and pr
             {/* Adherence Portfolio Strategy */}
             {activeInitiative === 'adherence' && (
               <div className="initiative-content">
-                <div className="coming-soon-card">
-                  <div className="coming-soon-icon">📊</div>
-                  <h3>Adherence Measurement Portfolio Strategy</h3>
-                  <p className="coming-soon-subtitle">Strategic Business Portfolio Optimization</p>
-                  <div className="coming-soon-badge">
-                    <span>Coming Soon</span>
+                <div className="transformation-card featured">
+                  <div className="transformation-header">
+                    <div className="company-badge">Fortune 100 Life Sciences</div>
+                    <span className="initiative-status ready">Launched & Unique in Market</span>
                   </div>
-                  <p className="coming-soon-desc">
-                    Full case study being prepared. This initiative developed the strategic roadmap for 
-                    the adherence measurement product portfolio, aligning business objectives with market opportunities.
-                  </p>
+                  <h3>Medication Adherence Portfolio Strategy</h3>
+                  <p className="transformation-subtitle">After Multiple Failed Attempts, I Built the Industry's Only Multi-Vendor Platform in 3 Months — From Zero Knowledge to $20M Revenue</p>
+                  
+                  {/* The Challenge */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🎯</span>
+                      The Challenge
+                    </h4>
+                    <p className="transformation-description">
+                      Medication adherence technology had existed for 20+ years, yet no one had achieved mainstream adoption in clinical trials. 
+                      <strong> This initiative had failed multiple times internally before I took it on.</strong> The company was responding reactively to customer requests — and losing deals because of it. 
+                      I was asked to build a strategy with <strong>zero prior knowledge</strong> of the market or industry.
+                    </p>
+                    <div className="challenge-stats">
+                      <div className="stat-item negative">
+                        <span className="stat-number">20+</span>
+                        <span className="stat-label">Years of failed adoption attempts</span>
+                      </div>
+                      <div className="stat-item negative">
+                        <span className="stat-number">~$2M</span>
+                        <span className="stat-label">Cost per vendor qualification (per pharma)</span>
+                      </div>
+                      <div className="stat-item neutral">
+                        <span className="stat-number">12-18 mo</span>
+                        <span className="stat-label">Time per vendor qualification</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* My Strategic Insight */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">💡</span>
+                      My Strategic Insight: The Bottleneck Play
+                    </h4>
+                    <div className="problem-box">
+                      <p>
+                        <strong>The industry problem:</strong> Each pharma company had to qualify smart packaging vendors individually. 
+                        Cost: ~$2M and 12-18 months per vendor, per pharma. And that's for just ONE form factor (bottles, blisters, pouches).
+                      </p>
+                      <p>
+                        <strong>My solution:</strong> What if WE qualified all the vendors once? We spend ~$20M to qualify 10+ suppliers, 
+                        but that investment serves ALL pharma clients. We become the <strong>strategic bottleneck</strong> — the only player 
+                        in the market with a pre-qualified portfolio of all serious medication adherence technologies.
+                      </p>
+                      <p>
+                        <strong>The moat:</strong> Competition would need years to copy this approach. First-mover advantage with locked-in supplier relationships.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Market Analysis */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🔍</span>
+                      Market Analysis I Conducted
+                    </h4>
+                    <div className="market-opportunity">
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">$100M→$200M</span>
+                        <span className="opportunity-label">Smart packaging market growth 2020-2025</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">151%</span>
+                        <span className="opportunity-label">CAGR projection</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">$20M+</span>
+                        <span className="opportunity-label">Year 3 revenue target</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">5</span>
+                        <span className="opportunity-label">Customer requests in first 3 months</span>
+                      </div>
+                    </div>
+                    <p className="customer-insight">
+                      <strong>Timing catalyst:</strong> COVID accelerated pharma digital adoption. FDA 2019 guidance encouraged smart technologies. 
+                      Decentralized clinical trials required remote monitoring. The window was NOW.
+                    </p>
+                  </div>
+
+                  {/* Customer Segmentation */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🎯</span>
+                      Customer Segmentation I Designed
+                    </h4>
+                    <div className="customer-grid">
+                      <div className="customer-card">
+                        <span className="customer-name">The Trusted Advisor</span>
+                        <span className="customer-stat">Large Pharma, Low Digital Maturity</span>
+                        <span className="customer-note">Fear change, need hand-holding, low price sensitivity</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">The Simplifier</span>
+                        <span className="customer-stat">Large Pharma, High Digital Maturity</span>
+                        <span className="customer-note">Know what they need, want one contract for pool of suppliers</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">E2E Full Package</span>
+                        <span className="customer-stat">Small Pharma/Biotech, Low Maturity</span>
+                        <span className="customer-note">Need everything, rely on experienced partners</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">The Bundle Facilitator</span>
+                        <span className="customer-stat">Small Pharma/Biotech, High Maturity</span>
+                        <span className="customer-note">Know gaps, want specific services bundled</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Supplier Portfolio */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🧩</span>
+                      Supplier Portfolio I Built
+                    </h4>
+                    <p className="transformation-description">
+                      I evaluated and qualified a strategic portfolio of suppliers covering all form factors and technology approaches:
+                    </p>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Aardex</span>
+                        <span className="role-desc">Platform + Bottles + Blisters (via Schreiner/WestRock). Strategic player with 100K+ patients measured.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Schreiner</span>
+                        <span className="role-desc">Smart blisters with conductive ink. Integrational complexity but broad design coverage.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">CMT</span>
+                        <span className="role-desc">Platform + Smart bottles. Pass-through operational model.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Med-Con</span>
+                        <span className="role-desc">Smart labels (QR-code) for any form factor. Low implementation complexity.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Spencer Health</span>
+                        <span className="role-desc">Smart dispenser with integrated patient engagement. Added for large pouch request (11K+ patients).</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Value Proposition */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">✨</span>
+                      Value Proposition I Crafted
+                    </h4>
+                    <div className="vision-grid">
+                      <div className="vision-item">
+                        <span className="vision-title">Risk Reduction</span>
+                        <span className="vision-desc">Outsource supplier qualification and contracts to us</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Complete Offer</span>
+                        <span className="vision-desc">Cohesive, integrated portfolio at speed</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Convenience</span>
+                        <span className="vision-desc">Single interlocutor, simplified access to all solutions</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Customization</span>
+                        <span className="vision-desc">On-demand qualification, smart design advisory</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* What I Delivered */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">✅</span>
+                      What I Delivered
+                    </h4>
+                    <div className="results-grid">
+                      <div className="result-item">
+                        <span className="result-number">3 mo</span>
+                        <span className="result-text">Complete business case from zero industry knowledge</span>
+                      </div>
+                      <div className="result-item">
+                        <span className="result-number">5</span>
+                        <span className="result-text">Suppliers evaluated, qualified, and contracted</span>
+                      </div>
+                      <div className="result-item">
+                        <span className="result-number">$20M</span>
+                        <span className="result-text">Year 3 revenue target (achieved)</span>
+                      </div>
+                      <div className="result-item">
+                        <span className="result-number">1st</span>
+                        <span className="result-text">Only CDMO with pre-qualified portfolio</span>
+                      </div>
+                      <div className="result-item">
+                        <span className="result-number">12</span>
+                        <span className="result-text">Cross-functional team members led</span>
+                      </div>
+                      <div className="result-item">
+                        <span className="result-number">✓</span>
+                        <span className="result-text">Gross margin above division target</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* My Roles */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">👤</span>
+                      Hats I Wore
+                    </h4>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Strategist</span>
+                        <span className="role-desc">Market analysis, competitive positioning, bottleneck strategy</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Business Architect</span>
+                        <span className="role-desc">Financial model, pricing, margin optimization</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Vendor Manager</span>
+                        <span className="role-desc">Supplier evaluation, RFPs, contract negotiations</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Product Manager</span>
+                        <span className="role-desc">Service design, customer segmentation, go-to-market</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Program Lead</span>
+                        <span className="role-desc">Cross-functional team coordination across 12 stakeholders</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Outcome */}
+                  <div className="transformation-outcome">
+                    <p><strong>Outcome:</strong> Service launched. Unique positioning in market. Year 3 revenue target of $20M achieved despite missing Years 1-2 
+                    (industry adoption is notoriously slow). We became the only CDMO with a pre-qualified medication adherence portfolio.</p>
+                  </div>
+
+                  {/* Personal Reflection */}
+                  <div className="personal-reflection">
+                    <h4>💡 Personal Note</h4>
+                    <p>
+                      This initiative had failed multiple times before I got involved. I came in with zero industry knowledge and delivered 
+                      a complete business case in 3 months. The "bottleneck" insight — qualifying suppliers once for all pharma clients — was my idea. 
+                      It transformed what others couldn't solve into a unique market position. Sometimes fresh eyes see what industry veterans miss.
+                    </p>
+                  </div>
+
+                  {/* Lessons Learned */}
+                  <div className="lessons-learned">
+                    <h4>🎓 What I'd Do Differently</h4>
+                    <p>
+                      The strategy worked, but adoption was slower than projected. My regret: I couldn't convince leadership to invest more in 
+                      <strong> lead generation and channel strategy</strong>. Just because you're a big corporation doesn't mean traditional 
+                      go-to-market is optimal. A more innovative channel approach could have accelerated adoption significantly. 
+                      I had too many other programs to lead and couldn't dedicate the time to push this point harder.
+                    </p>
+                  </div>
+
+                  <div className="transformation-note">
+                    <em>Built from zero industry knowledge in 3 months while managing multiple other strategic programs.</em>
+                  </div>
+
+                  <div className="transformation-tags">
+                    <span className="tag">Portfolio Strategy</span>
+                    <span className="tag">Business Model Innovation</span>
+                    <span className="tag">Vendor Management</span>
+                    <span className="tag">Market Analysis</span>
+                    <span className="tag">Life Sciences</span>
+                    <span className="tag">Clinical Trials</span>
+                    <span className="tag">Platform Strategy</span>
+                    <span className="tag">Go-to-Market</span>
+                  </div>
                 </div>
               </div>
             )}
