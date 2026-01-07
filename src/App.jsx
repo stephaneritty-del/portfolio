@@ -73,8 +73,10 @@ function App() {
   return (
     <div className="portfolio">
       {/* Hero Section */}
-      <img src="/stephane.jpg" alt="Stephane Ritty" className="hero-photo" />
+
       <section className={`hero ${isVisible ? 'visible' : ''}`}>
+          <div className="hero-layout">
+
         <div className="hero-content">
           <div className="hero-badge">
             <Sparkles size={16} />
@@ -121,11 +123,15 @@ I build vision, architect business and operating models, design financial and pr
             </a>
           </div>
         </div>
-
+   <div className="hero-photo-container">
+      <img src="/stephane.jpg" alt="Stephane Ritty" className="hero-photo" />
+    </div>
+             </div>
         <div className="hero-visual">
           <div className="floating-card card-1"></div>
           <div className="floating-card card-2"></div>
           <div className="floating-card card-3"></div>
+          
         </div>
       </section>
 
