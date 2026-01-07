@@ -724,6 +724,7 @@ function App() {
                   </div>
 
                   {/* Market Analysis */}
+                  {/* Market Analysis */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">🔍</span>
@@ -731,20 +732,20 @@ function App() {
                     </h4>
                     <div className="market-opportunity">
                       <div className="opportunity-card">
-                        <span className="opportunity-number">$100M to $200M</span>
-                        <span className="opportunity-label">Smart packaging market growth 2020 to 2025</span>
+                        <span className="opportunity-number">~$2M</span>
+                        <span className="opportunity-label">Saved per client per vendor qualification</span>
                       </div>
                       <div className="opportunity-card">
-                        <span className="opportunity-number">151%</span>
-                        <span className="opportunity-label">CAGR projection</span>
+                        <span className="opportunity-number">12-18 mo</span>
+                        <span className="opportunity-label">Time saved per qualification</span>
                       </div>
                       <div className="opportunity-card">
-                        <span className="opportunity-number">$20M+</span>
-                        <span className="opportunity-label">Year 3 revenue target</span>
+                        <span className="opportunity-number">$20M</span>
+                        <span className="opportunity-label">Revenue line I created (Year 3)</span>
                       </div>
                       <div className="opportunity-card">
-                        <span className="opportunity-number">5</span>
-                        <span className="opportunity-label">Customer requests in first 3 months</span>
+                        <span className="opportunity-number">1st</span>
+                        <span className="opportunity-label">Only CDMO with pre-qualified portfolio</span>
                       </div>
                     </div>
                     <p className="customer-insight">
