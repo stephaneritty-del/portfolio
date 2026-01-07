@@ -159,7 +159,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
           <div className="why-text-block">
             <p>
               Whether I'm designing a strategic initiative from the ground up, spotting the market gap, architecting a 
-              5-sided platform that connects an entire value chain, or building AI apps at 2 AM, it's the same muscle. 
+              4-sided platform that connects an entire value chain, or building AI apps at 2 AM, it's the same muscle. 
               Find the opportunity. Align the stakeholders. Focus. Ship it.
             </p>
           </div>
@@ -229,7 +229,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                     <span className="initiative-status ready">Ready to Launch</span>
                   </div>
                   <h3>B2B2C Demand Generation Platform</h3>
-                  <p className="transformation-subtitle">From Market Outsider to Ecosystem Architect: A 5-Sided Digital Marketplace</p>
+                  <p className="transformation-subtitle">From Market Outsider to Ecosystem Architect: A 4-Sided Digital Marketplace</p>
                   
                   {/* The Challenge */}
                   <div className="case-section">
