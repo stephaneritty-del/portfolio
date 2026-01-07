@@ -653,8 +653,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
                       issues, and no clearly defined strategy.
                     </p>
                     <p className="transformation-description">
-                      Just as I joined, the company and the project, the Product Manager changed roles. It was an empty seat that I filled, and I filled it so well 
-                      that we never actually needed one. I assumed full ownership as <strong>Product Director and Program Lead</strong> for what 
+                      Just as I joined, the company and the project, the Product Manager changed roles. It was an empty seat that I filled. I assumed full ownership as <strong>Product Director and Program Lead</strong> for what 
                       would become an entirely new revenue line.
                     </p>
                     <div className="challenge-stats">
