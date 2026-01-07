@@ -120,16 +120,7 @@ function App() {
             </a>
           </div>
 
-                {/* Testimonial */}
-<div className="testimonial-section">
-  <blockquote className="testimonial">
-    <p>"Excellent forward thinking individual with entrepreneurial and strategic mindset!"</p>
-    <cite>
-      <strong>Marco ten Bruggencate</strong>
-      <span>  Business President II&I, Dow </span>
-    </cite>
-  </blockquote>
-</div>
+
         </div>
    <div className="hero-photo-container">
       <img src="/Stephane.jpg" alt="Stephane Ritty" className="hero-photo" />
@@ -141,6 +132,16 @@ function App() {
           <div className="floating-card card-3"></div>
           
         </div>
+                        {/* Testimonial */}
+<div className="testimonial-section">
+  <blockquote className="testimonial">
+    <p>"Excellent forward thinking individual with entrepreneurial and strategic mindset!"</p>
+    <cite>
+      <strong>Marco ten Bruggencate</strong>
+      <span>  Business President II&I, Dow </span>
+    </cite>
+  </blockquote>
+</div>
       </section>
 
       {/* Why I Build Section */}
