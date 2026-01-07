@@ -126,7 +126,7 @@ function App() {
     <p>"Excellent forward thinking individual with entrepreneurial and strategic mindset!"</p>
     <cite>
       <strong>Marco ten Bruggencate</strong>
-      <span>Business President II&I, Dow (CEO direct report)</span>
+      <span>  Business President II&I, Dow </span>
     </cite>
   </blockquote>
 </div>
