@@ -88,7 +88,7 @@ function App() {
           </h1>
           
           <p className="hero-subtitle">
-            Product & Business Innovation Leader | PMO & New Product Introduction Expert | Business Model Innovation | Turning Fortune 100 Complexity into Shipped Revenue
+            Product & Business Innovation Leader | PMO & New Product Introduction Saavy | Business Model Innovation Exert | Turning Fortune 100 Complexity into Shipped Revenue
           </p>
           
           <p className="hero-description">
@@ -152,7 +152,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
             <p>
               Since I was a kid, I've been the person people turn to with problems. I've always had an endless curiosity, 
               a need to explore, experience, and understand everything. That's what made me the trusted voice. The one 
-              people come to for perspective. It's not something I learned. It's just how my brain works. It's in my DNA.
+              people come to for perspective. It's more than something I learned. It's just how my brain works. It's in my DNA.
             </p>
           </div>
           
@@ -160,7 +160,7 @@ I optimize what exists, build what’s next, and envision what redefines the ind
             <p>
               Whether I'm designing a strategic initiative from the ground up, spotting the market gap, architecting a 
               5-sided platform that connects an entire value chain, or building AI apps at 2 AM, it's the same muscle. 
-              Find the opportunity. Align the stakeholders. Ship it.
+              Find the opportunity. Align the stakeholders. Focus. Ship it.
             </p>
           </div>
           
