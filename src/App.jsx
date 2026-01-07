@@ -54,7 +54,7 @@ function App() {
       id: 4,
       title: "Ikigai Finder",
       subtitle: "Discover Your Life Purpose",
-      description: "An introspective journey to uncover your Ikigai — the Japanese concept of 'reason for being'. Through guided reflection, explore the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.",
+      description: "An introspective journey to uncover your Ikigai , the Japanese concept of 'reason for being'. Through guided reflection, explore the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.",
       tags: ["AI Coach", "Self-Discovery", "Psychology", "React"],
       url: "https://ikigai-pi-green.vercel.app",
       status: "Debug",
@@ -64,9 +64,9 @@ function App() {
 
   const initiatives = [
     { id: 'platform', label: 'B2B2C Platform', shortLabel: 'Platform' },
+    { id: 'adherence', label: 'Adherence Portfolio Strategy', shortLabel: 'Adherence' },
     { id: 'rental', label: 'Sales-to-Rental Transformation', shortLabel: 'Rental Model' },
     { id: 'dct', label: 'Decentralized Clinical Trials', shortLabel: 'DCT' },
-    { id: 'adherence', label: 'Adherence Portfolio Strategy', shortLabel: 'Adherence' },
     { id: 'operations', label: 'Operational Excellence', shortLabel: 'Operations' }
   ];
 
@@ -234,7 +234,7 @@ I build vision, architect business and operating models, design financial and pr
                     </h4>
                     <p className="transformation-description">
                       The company had virtually no presence in EMEA's roofing market. 94% of the market was locked by membrane manufacturers 
-                      through established channels and certification bodies. Traditional go-to-market was impossible — we were simply 
+                      through established channels and certification bodies. Traditional go-to-market was impossible , we were simply 
                       too far from demand.
                     </p>
                     <div className="challenge-stats">
@@ -631,26 +631,30 @@ I build vision, architect business and operating models, design financial and pr
                 <div className="transformation-card featured">
                   <div className="transformation-header">
                     <div className="company-badge">Fortune 100 Life Sciences</div>
-                    <span className="initiative-status ready">Launched & Unique in Market</span>
+                    <span className="initiative-status ready">Launched, Unique in Market</span>
                   </div>
                   <h3>Medication Adherence Portfolio Strategy</h3>
-                  <p className="transformation-subtitle">After Multiple Failed Attempts, I Built the Industry's Only Multi-Vendor Platform in 3 Months — From Zero Knowledge to $20M Revenue</p>
+                  <p className="transformation-subtitle">Turned a Twice-Failed Initiative Into a $20M Revenue Line in 9 Months. Created an Entirely New Business from Strategy to Launch.</p>
                   
-                  {/* The Challenge */}
+                  {/* The Situation */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">🎯</span>
-                      The Challenge
+                      The Situation I Walked Into
                     </h4>
                     <p className="transformation-description">
                       Medication adherence technology had existed for 20+ years, yet no one had achieved mainstream adoption in clinical trials. 
-                      <strong> This initiative had failed multiple times internally before I took it on.</strong> The company was responding reactively to customer requests — and losing deals because of it. 
-                      I was asked to build a strategy with <strong>zero prior knowledge</strong> of the market or industry.
+                      This initiative had been attempted twice before internally. The last attempt ended in a pilot with mixed results, major operational 
+                      issues, and no clearly defined strategy. When the Product Manager left, everything was messy, dislocated, and without vision.
+                    </p>
+                    <p className="transformation-description">
+                      <strong>I was originally assigned to help lead the project.</strong> Instead, I stepped in and assumed full ownership: 
+                      Product Director, Product Manager, Program Lead, and Head of Business Development for what would become an entirely new revenue line.
                     </p>
                     <div className="challenge-stats">
                       <div className="stat-item negative">
-                        <span className="stat-number">20+</span>
-                        <span className="stat-label">Years of failed adoption attempts</span>
+                        <span className="stat-number">2</span>
+                        <span className="stat-label">Previous failed attempts</span>
                       </div>
                       <div className="stat-item negative">
                         <span className="stat-number">~$2M</span>
@@ -675,14 +679,27 @@ I build vision, architect business and operating models, design financial and pr
                         Cost: ~$2M and 12-18 months per vendor, per pharma. And that's for just ONE form factor (bottles, blisters, pouches).
                       </p>
                       <p>
-                        <strong>My solution:</strong> What if WE qualified all the vendors once? We spend ~$20M to qualify 10+ suppliers, 
-                        but that investment serves ALL pharma clients. We become the <strong>strategic bottleneck</strong> — the only player 
+                        <strong>My solution:</strong> What if WE qualified all the vendors once? We invest to qualify 10+ suppliers, 
+                        but that investment serves ALL pharma clients. We become the <strong>strategic bottleneck</strong>: the only player 
                         in the market with a pre-qualified portfolio of all serious medication adherence technologies.
                       </p>
                       <p>
                         <strong>The moat:</strong> Competition would need years to copy this approach. First-mover advantage with locked-in supplier relationships.
                       </p>
                     </div>
+                  </div>
+
+                  {/* Strategyzer Process */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🧪</span>
+                      De-risking with Strategyzer
+                    </h4>
+                    <p className="transformation-description">
+                      In parallel to building the business case, I ran a Strategyzer process to systematically de-risk our remaining assumptions 
+                      and sharpen our positioning and go-to-market strategy. This allowed us to validate critical hypotheses before committing 
+                      resources and refine our value proposition based on real customer feedback.
+                    </p>
                   </div>
 
                   {/* Market Analysis */}
@@ -693,8 +710,8 @@ I build vision, architect business and operating models, design financial and pr
                     </h4>
                     <div className="market-opportunity">
                       <div className="opportunity-card">
-                        <span className="opportunity-number">$100M→$200M</span>
-                        <span className="opportunity-label">Smart packaging market growth 2020-2025</span>
+                        <span className="opportunity-number">$100M to $200M</span>
+                        <span className="opportunity-label">Smart packaging market growth 2020 to 2025</span>
                       </div>
                       <div className="opportunity-card">
                         <span className="opportunity-number">151%</span>
@@ -813,19 +830,19 @@ I build vision, architect business and operating models, design financial and pr
                     <div className="results-grid">
                       <div className="result-item">
                         <span className="result-number">3 mo</span>
-                        <span className="result-text">Complete business case from zero industry knowledge</span>
+                        <span className="result-text">Complete business plan and strategy from zero knowledge</span>
                       </div>
                       <div className="result-item">
-                        <span className="result-number">5</span>
-                        <span className="result-text">Suppliers evaluated, qualified, and contracted</span>
+                        <span className="result-number">9 mo</span>
+                        <span className="result-text">Total time from chaos to launched service</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">$20M</span>
-                        <span className="result-text">Year 3 revenue target (achieved)</span>
+                        <span className="result-text">Year 3 revenue target achieved</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">1st</span>
-                        <span className="result-text">Only CDMO with pre-qualified portfolio</span>
+                        <span className="result-text">Only CDMO with pre-qualified portfolio in market</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">12</span>
@@ -838,24 +855,46 @@ I build vision, architect business and operating models, design financial and pr
                     </div>
                   </div>
 
+                  {/* Organizational Legacy */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🏗️</span>
+                      Organizational Legacy
+                    </h4>
+                    <p className="transformation-description">
+                      Beyond the revenue, I built the organizational capability: the company now has the complete process infrastructure 
+                      to qualify new form factors rapidly and cost-effectively, plus all the operational processes to run the business at scale.
+                    </p>
+                  </div>
+
+                  {/* Change Management */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🔄</span>
+                      Change Management Win
+                    </h4>
+                    <p className="transformation-description">
+                      I personally led change management activities, speaking with every stakeholder group. During this process, 
+                      I discovered that <strong>Accounting was systematically forgotten</strong> in the company's project processes. 
+                      I spotted early a critical risk: in large corporations, money doesn't flow as easily as people assume. 
+                      This insight prevented what would have been a significant operational issue post-launch.
+                    </p>
+                  </div>
+
                   {/* My Roles */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">👤</span>
-                      Hats I Wore
+                      Roles I Assumed (Not Assigned)
                     </h4>
                     <div className="roles-grid">
                       <div className="role-card">
-                        <span className="role-title">Strategist</span>
-                        <span className="role-desc">Market analysis, competitive positioning, bottleneck strategy</span>
+                        <span className="role-title">Product Director</span>
+                        <span className="role-desc">Vision, strategy, market planning, portfolio architecture</span>
                       </div>
                       <div className="role-card">
-                        <span className="role-title">Business Architect</span>
-                        <span className="role-desc">Financial model, pricing, margin optimization</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Vendor Manager</span>
-                        <span className="role-desc">Supplier evaluation, RFPs, contract negotiations</span>
+                        <span className="role-title">Head of Business</span>
+                        <span className="role-desc">Created an entirely new revenue line from scratch</span>
                       </div>
                       <div className="role-card">
                         <span className="role-title">Product Manager</span>
@@ -864,6 +903,10 @@ I build vision, architect business and operating models, design financial and pr
                       <div className="role-card">
                         <span className="role-title">Program Lead</span>
                         <span className="role-desc">Cross-functional team coordination across 12 stakeholders</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Change Manager</span>
+                        <span className="role-desc">Stakeholder alignment, risk identification, process integration</span>
                       </div>
                     </div>
                   </div>
@@ -878,9 +921,9 @@ I build vision, architect business and operating models, design financial and pr
                   <div className="personal-reflection">
                     <h4>💡 Personal Note</h4>
                     <p>
-                      This initiative had failed multiple times before I got involved. I came in with zero industry knowledge and delivered 
-                      a complete business case in 3 months. The "bottleneck" insight — qualifying suppliers once for all pharma clients — was my idea. 
-                      It transformed what others couldn't solve into a unique market position. Sometimes fresh eyes see what industry veterans miss.
+                      I wasn't asked to take over this initiative. The Product Manager left, everything was scattered, and there was no clear path forward. 
+                      I saw the opportunity, stepped in, and delivered what two previous attempts could not. The "bottleneck" strategy was my insight. 
+                      In 3 months, I had the complete business plan. In 9 months, we launched. Sometimes the best way to lead is to simply start leading.
                     </p>
                   </div>
 
@@ -896,18 +939,18 @@ I build vision, architect business and operating models, design financial and pr
                   </div>
 
                   <div className="transformation-note">
-                    <em>Built from zero industry knowledge in 3 months while managing multiple other strategic programs.</em>
+                    <em>From chaos to $20M revenue line. Business plan in 3 months. Launched in 9 months. All while managing multiple other strategic programs.</em>
                   </div>
 
                   <div className="transformation-tags">
+                    <span className="tag">New Business Creation</span>
                     <span className="tag">Portfolio Strategy</span>
                     <span className="tag">Business Model Innovation</span>
+                    <span className="tag">Strategyzer</span>
                     <span className="tag">Vendor Management</span>
-                    <span className="tag">Market Analysis</span>
+                    <span className="tag">Change Management</span>
                     <span className="tag">Life Sciences</span>
                     <span className="tag">Clinical Trials</span>
-                    <span className="tag">Platform Strategy</span>
-                    <span className="tag">Go-to-Market</span>
                   </div>
                 </div>
               </div>
