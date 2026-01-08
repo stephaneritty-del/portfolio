@@ -1528,9 +1528,8 @@ I spent time understanding why: his team was tired of always fixing, never build
         <div className="contact-content">
           <h2>Let's Build Something Transformative</h2>
           <p>
-            Need a PMO lead who builds business moats, a product leader who de-risks million-dollar bets, 
-            or both in one? Whether you're navigating Fortune 100 complexity or launching bold innovation, 
-            let's talk about turning vision into shipped revenue.
+Need a Product & Business Innovation Leader who builds business moats, de-risks million-dollar bets, and breaks value chain resistance? 
+            Whether you’re navigating Fortune 100 complexity or launching bold innovation, let’s talk about turning vision into shipped revenue.
           </p>
           <div className="contact-email-group">
             <a href="mailto:stephane.ritty@gmail.com" className="contact-email">
