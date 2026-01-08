@@ -8,6 +8,42 @@
     <meta name="author" content="Stephane Ritty" />
     <title>Stephane Ritty | Product & PMO Leader</title>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MP6KTWMN7Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Basic config
+  gtag('config', 'G-MP6KTWMN7Y');
+</script>
+
+<script>
+  // Helper: check cookie
+  function getCookie(name) {
+    return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
+  }
+
+  // Only load GA if consent was already given
+  if (getCookie('cookie_consent') === 'accepted') {
+    loadGA();
+  }
+
+  function loadGA() {
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MP6KTWMN7Y";
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-MP6KTWMN7Y');
+  }
+</script>
+
+    
   </head>
 
   <body>
