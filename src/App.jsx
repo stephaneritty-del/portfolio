@@ -1,4 +1,344 @@
-                        <span className="customer-note">World's largest logistics real estate</span>
+import React, { useState, useEffect } from 'react';
+import { Github, Linkedin, ExternalLink, Sparkles, Copy, Check } from 'lucide-react';
+import './App.css';
+
+function App() {
+  const [activeProject, setActiveProject] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [activeTab, setActiveTab] = useState('corporate');
+  const [activeInitiative, setActiveInitiative] = useState('platform');
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('stephane.ritty@gmail.com');
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const projects = [
+    {
+      id: 1,
+      title: "VitalEat",
+      subtitle: "AI-Powered Food Intolerance Tracker",
+      description: "An intelligent nutrition companion that helps identify food intolerances through seamless intake tracking. Built to analyze patterns at the molecular level, it learns your body's responses to different foods, stress levels, and sleep patterns.",
+      tags: ["AI/ML", "Health Tech", "React Native", "Voice Interface"],
+      url: "https://vitaleat.vercel.app",
+      status: "In Active Dev.",
+      gradient: "from-emerald-500 to-teal-600"
+    },
+    {
+      id: 2,
+      title: "WineCard Selector",
+      subtitle: "Your Pocket Sommelier",
+      description: "Snap a photo of any wine card or bottle, and instantly access comprehensive wine information. Perfect for restaurant dining or wine shopping.",
+      tags: ["Computer Vision", "Web Scraping", "React", "API Integration"],
+      url: "https://winecardselctor.vercel.app",
+      status: "Live Beta",
+      gradient: "from-purple-500 to-pink-600"
+    },
+    {
+      id: 3,
+      title: "MissionMot",
+      subtitle: "Social Dinner Game",
+      description: "A playful party game where each player assumes a character and must cleverly guide others to say rare, assigned words during dinner conversations.",
+      tags: ["Game Design", "Social", "React", "Real-time"],
+      url: "https://missionmot.vercel.app",
+      status: "Live",
+      gradient: "from-orange-500 to-red-600"
+    },
+        {
+      id: 4,
+      title: "Ikigai Finder",
+      subtitle: "Discover Your Life Purpose",
+      description: "An introspective journey to uncover your Ikigai , the Japanese concept of 'reason for being'. Through guided reflection, explore the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.",
+      tags: ["AI Coach", "Self-Discovery", "Psychology", "React"],
+      url: "https://ikigai-pi-green.vercel.app",
+      status: "Debug",
+      gradient: "from-rose-500 to-amber-500"
+    }
+  ];
+
+  const initiatives = [
+    { id: 'platform', label: 'B2B2C Platform', shortLabel: 'Platform' },
+    { id: 'adherence', label: 'Adherence Marketplace', shortLabel: 'Adherence' },
+    { id: 'rental', label: 'Sales-to-Rental Transformation', shortLabel: 'Rental Model' },
+    { id: 'dct', label: 'Decentralized Clinical Trials', shortLabel: 'DCT' },
+    { id: 'operations', label: 'Operational Excellence', shortLabel: 'Operations' }
+  ];
+
+  return (
+    <div className="portfolio">
+      {/* Hero Section */}
+
+      <section className={`hero ${isVisible ? 'visible' : ''}`}>
+          <div className="hero-layout">
+
+      <div className="hero-content">
+  <div className="hero-badge">
+    <Sparkles size={16} />
+    <span>Fortune 100 to Startup</span>
+  </div>
+  
+  <h1 className="hero-title">
+    <span className="gradient-text">Stephane Ritty</span>
+  </h1>
+  
+  <p className="hero-subtitle">
+    I Turn Chaos Into Revenue Lines
+  </p>
+  
+  <p className="hero-description">
+  I see what others miss. Markets with zero presence, stalled initiatives, empty seats: I walk in, build the strategy, assemble the team, and ship.
+  </p>
+  
+<p className="hero-description">
+  <strong>$70M+ new revenue</strong> · <strong>5+ innovation programs shipped</strong> · <strong>50% faster to market</strong>
+</p>
+
+
+          <div className="hero-cta">
+            <button onClick={copyEmail} className="btn btn-primary">
+              {emailCopied ? <Check size={20} /> : <Copy size={20} />}
+              {emailCopied ? 'Copied!' : 'Copy Email'}
+            </button>
+            <a href="https://www.linkedin.com/in/stephaneritty/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+              <Linkedin size={20} />
+              LinkedIn
+            </a>
+          </div>
+
+          <div className="social-links">
+            <a href="https://github.com/stephaneritty-del" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Github size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/stephaneritty/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Linkedin size={24} />
+            </a>
+          </div>
+
+
+        </div>
+   <div className="hero-photo-container">
+      <img src="/Stephane.jpg" alt="Stephane Ritty" className="hero-photo" />
+    </div>
+             </div>
+        <div className="hero-visual">
+          <div className="floating-card card-1"></div>
+          <div className="floating-card card-2"></div>
+          <div className="floating-card card-3"></div>
+          
+        </div>
+                        {/* Testimonial */}
+<div className="testimonial-section">
+  <blockquote className="testimonial">
+    <p>"Excellent forward thinking individual with entrepreneurial and strategic mindset!"</p>
+    <cite>
+      <strong>Marco ten Bruggencate</strong>
+      <span>  Business President II&I, Dow </span>
+    </cite>
+  </blockquote>
+</div>
+      </section>
+
+      {/* Why I Build Section */}
+      <section className="why-section">
+        <div className="why-bg"></div>
+        <div className="why-overlay"></div>
+        
+        <div className="why-content">
+          <div className="why-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Building From the Ground Up
+          </div>
+          <h2>Why I Build</h2>
+          
+          <div className="why-text-block">
+            <p>
+              Since I was a kid, I've been the person people turn to with problems. I've always had an endless curiosity, 
+              a need to explore, experience, and understand everything. That's what made me the trusted voice. The one 
+              people come to for perspective. It's more than something I learned. It's just how my brain works. It's in my DNA.
+            </p>
+          </div>
+          
+          <div className="why-text-block">
+            <p>
+              Whether I'm designing a strategic initiative from the ground up, spotting the market gap, architecting a 
+              4-sided platform that connects an entire value chain, or building AI apps at 2 AM, it's the same muscle. 
+              Find the opportunity. Align the stakeholders. Focus. Ship it.
+            </p>
+          </div>
+          
+          <div className="why-text-block">
+            <p className="why-closing">
+              Different scales, different stakes, but always the same thing: building bridges between chaos and clarity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section with Tabs */}
+      <section id="projects" className="projects-section">
+        {/* Main Tab Navigation */}
+        <div className="tabs-container">
+          <button 
+            className={`tab-button ${activeTab === 'corporate' ? 'active' : ''}`}
+            onClick={() => setActiveTab('corporate')}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Corporate Transformation
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'ai' ? 'active' : ''}`}
+            onClick={() => setActiveTab('ai')}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"></path>
+              <circle cx="12" cy="14" r="2"></circle>
+            </svg>
+            AI Apps
+          </button>
+        </div>
+
+        {/* Corporate Transformation Tab Content */}
+        {activeTab === 'corporate' && (
+          <div className="tab-content">
+            <div className="section-header">
+              <h2>Corporate Transformation</h2>
+              <p>Strategic initiatives at Fortune 100 scale</p>
+            </div>
+
+            {/* Initiative Sub-tabs */}
+            <div className="initiative-tabs">
+              {initiatives.map((init) => (
+                <button
+                  key={init.id}
+                  className={`initiative-tab ${activeInitiative === init.id ? 'active' : ''}`}
+                  onClick={() => setActiveInitiative(init.id)}
+                >
+                  <span className="initiative-tab-full">{init.label}</span>
+                  <span className="initiative-tab-short">{init.shortLabel}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* B2B2C Platform Initiative */}
+            {activeInitiative === 'platform' && (
+              <div className="initiative-content">
+                <div className="transformation-card featured">
+                  <div className="transformation-header">
+                    <div className="company-badge">Fortune 100 Chemical</div>
+                    <span className="initiative-status ready">Ready to Launch</span>
+                  </div>
+                  <h3>B2B2C Demand Generation Platform</h3>
+                  <p className="transformation-subtitle">From Market Outsider to Ecosystem Architect: A 4-Sided Digital Marketplace</p>
+                  
+                  {/* The Challenge */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🎯</span>
+                      The Challenge
+                    </h4>
+                    <p className="transformation-description">
+                      The company had virtually no presence in EMEA's roofing market. 94% of the market was locked by membrane manufacturers 
+                      through established channels and certification bodies. Traditional go-to-market was impossible , we were simply 
+                      too far from demand.
+                    </p>
+                    <div className="challenge-stats">
+                      <div className="stat-item negative">
+                        <span className="stat-number">7%</span>
+                        <span className="stat-label">Liquid membrane share in EMEA</span>
+                      </div>
+                      <div className="stat-item positive">
+                        <span className="stat-number">62%</span>
+                        <span className="stat-label">Same product share in North America</span>
+                      </div>
+                      <div className="stat-item neutral">
+                        <span className="stat-number">94%</span>
+                        <span className="stat-label">Market locked by incumbents</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* My Strategic Analysis */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🔍</span>
+                      My Strategic Analysis
+                    </h4>
+                    <p className="transformation-description">
+                      I conducted deep market research and identified a critical insight: the warehouse segment was underserved 
+                      and perfectly suited for disruption. These were rational, financially-driven global players who would 
+                      adopt any solution that optimized lifecycle costs.
+                    </p>
+                    <div className="market-opportunity">
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">345M m²</span>
+                        <span className="opportunity-label">European warehouse surface</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">207M m²</span>
+                        <span className="opportunity-label">Renovation market</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">351K MT</span>
+                        <span className="opportunity-label">Binder volume opportunity</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">60%</span>
+                        <span className="opportunity-label">Buildings over 10 years old</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* The Problem I Solved */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">💡</span>
+                      The Problem I Solved
+                    </h4>
+                    <div className="problem-box">
+                      <p>
+                        <strong>Industry reality:</strong> 60% of renovations require tear-off (€25/m²) + new insulation (€15-25/m²). 
+                        Before even considering waterproofing, costs start at <strong>€40/m² minimum</strong>.
+                      </p>
+                      <p>
+                        <strong>Root cause:</strong> Renovations only happen after leakages. Reactive, not preventive. 
+                        No tool existed for "just-in-time" renovation planning.
+                      </p>
+                      <p>
+                        <strong>My solution:</strong> A platform that bundles prevention tools, premium products, qualified contractors, 
+                        and insurance benefits, making proactive renovation financially attractive.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Target Customers */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🏢</span>
+                      Target Customers I Identified & Pursued
+                    </h4>
+                    <div className="customer-grid">
+                      <div className="customer-card">
+                        <span className="customer-name">Global Logistics Leaders</span>
+                        <span className="customer-stat">20+ MM m² portfolios</span>
+                        <span className="customer-note">Active business cases initiated</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">REITs</span>
+                        <span className="customer-stat">60+ MM m² globally</span>
+
+<span className="customer-note">World's largest logistics real estate</span>
                       </div>
                       <div className="customer-card">
                         <span className="customer-name">Private Equity</span>
