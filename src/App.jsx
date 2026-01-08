@@ -64,8 +64,10 @@ function App() {
 
   const initiatives = [
     { id: 'platform', label: 'B2B2C Platform', shortLabel: 'Platform' },
+      { id: 'plastics', label: 'Circular Plastics Initiative', shortLabel: 'Plastics' },
     { id: 'adherence', label: 'Adherence Marketplace', shortLabel: 'Adherence' },
     { id: 'rental', label: 'Sales-to-Rental Transformation', shortLabel: 'Rental Model' },
+    { id: 'labeling', label: 'Just-in-Time Labeling', shortLabel: 'Labeling' },
     { id: 'dct', label: 'Decentralized Clinical Trials', shortLabel: 'DCT' },
     { id: 'operations', label: 'Operational Excellence', shortLabel: 'Operations' }
   ];
@@ -337,8 +339,10 @@ function App() {
                       <div className="customer-card">
                         <span className="customer-name">REITs</span>
                         <span className="customer-stat">60+ MM m² globally</span>
-
-<span className="customer-note">World's largest logistics real estate</span>
+<span className="customer-note">
+  {"World's largest logistics real estate"}
+</span>
+                 
                       </div>
                       <div className="customer-card">
                         <span className="customer-name">Private Equity</span>
