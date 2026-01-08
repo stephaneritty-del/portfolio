@@ -936,7 +936,7 @@ I spent time understanding why: his team was tired of always fixing, never build
                       </div>
                       <div className="result-item">
                         <span className="result-number">5</span>
-                        <span className="result-text">Hot leads at launch</span>
+                        <span className="result-text">Qualified leads at launch ($6M, pending recognition)</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">✓</span>
