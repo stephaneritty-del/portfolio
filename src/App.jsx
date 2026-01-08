@@ -7,16 +7,45 @@ function App() {
   const [isVisible, setIsVisible] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
   const [activeTab, setActiveTab] = useState('corporate');
+  const [activeCompany, setActiveCompany] = useState('dow');
   const [activeInitiative, setActiveInitiative] = useState('platform');
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+  // Reset initiative when company changes
+  useEffect(() => {
+    if (activeCompany === 'dow') {
+      setActiveInitiative('platform');
+    } else {
+      setActiveInitiative('adherence');
+    }
+  }, [activeCompany]);
+
   const copyEmail = () => {
     navigator.clipboard.writeText('stephane.ritty@gmail.com');
     setEmailCopied(true);
     setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const companies = [
+    { id: 'dow', label: 'Dow Chemical', shortLabel: 'Dow' },
+    { id: 'thermo', label: 'Thermo Fisher', shortLabel: 'Thermo' }
+  ];
+
+  const initiativesByCompany = {
+    dow: [
+      { id: 'platform', label: 'B2B2C Platform', shortLabel: 'Platform' },
+      { id: 'plastics', label: 'Circular Plastics Initiative', shortLabel: 'Plastics' }
+    ],
+    thermo: [
+      { id: 'adherence', label: 'Adherence Marketplace', shortLabel: 'Adherence' },
+      { id: 'rental', label: 'Sales-to-Rental Transformation', shortLabel: 'Rental' },
+      { id: 'labeling', label: 'Just-in-Time Labeling', shortLabel: 'Labeling' },
+      { id: 'dct', label: 'Decentralized Clinical Trials', shortLabel: 'DCT' },
+      { id: 'operations', label: 'Operational Excellence', shortLabel: 'Operations' }
+    ]
   };
 
   const projects = [
@@ -60,14 +89,6 @@ function App() {
       status: "Debug",
       gradient: "from-rose-500 to-amber-500"
     }
-  ];
-
-  const initiatives = [
-    { id: 'platform', label: 'B2B2C Platform', shortLabel: 'Platform' },
-    { id: 'adherence', label: 'Adherence Marketplace', shortLabel: 'Adherence' },
-    { id: 'rental', label: 'Sales-to-Rental Transformation', shortLabel: 'Rental Model' },
-    { id: 'dct', label: 'Decentralized Clinical Trials', shortLabel: 'DCT' },
-    { id: 'operations', label: 'Operational Excellence', shortLabel: 'Operations' }
   ];
 
   return (
@@ -217,9 +238,23 @@ function App() {
               <p>Strategic initiatives at Fortune 100 scale</p>
             </div>
 
+            {/* Company Tabs */}
+            <div className="company-tabs">
+              {companies.map((company) => (
+                <button
+                  key={company.id}
+                  className={`company-tab ${activeCompany === company.id ? 'active' : ''}`}
+                  onClick={() => setActiveCompany(company.id)}
+                >
+                  <span className="company-tab-full">{company.label}</span>
+                  <span className="company-tab-short">{company.shortLabel}</span>
+                </button>
+              ))}
+            </div>
+
             {/* Initiative Sub-tabs */}
             <div className="initiative-tabs">
-              {initiatives.map((init) => (
+              {initiativesByCompany[activeCompany].map((init) => (
                 <button
                   key={init.id}
                   className={`initiative-tab ${activeInitiative === init.id ? 'active' : ''}`}
@@ -236,7 +271,7 @@ function App() {
               <div className="initiative-content">
                 <div className="transformation-card featured">
                   <div className="transformation-header">
-                    <div className="company-badge">Fortune 100 Chemical</div>
+                    <div className="company-badge dow">Dow Chemical</div>
                     <span className="initiative-status ready">Ready to Launch</span>
                   </div>
                   <h3>B2B2C Demand Generation Platform</h3>
@@ -605,19 +640,232 @@ function App() {
               </div>
             )}
 
+            {/* Circular Plastics Initiative */}
+            {activeInitiative === 'plastics' && (
+              <div className="initiative-content">
+                <div className="transformation-card featured">
+                  <div className="transformation-header">
+                    <div className="company-badge dow">Dow Chemical</div>
+                    <span className="initiative-status concept">Strategic Concept</span>
+                  </div>
+                  <h3>Circular Plastics Initiative</h3>
+                  <p className="transformation-subtitle">Bridging Plastic Waste and Construction: A Cross-Division Sustainability Play</p>
+                  
+                  {/* The Opportunity */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🌍</span>
+                      The Opportunity I Spotted
+                    </h4>
+                    <p className="transformation-description">
+                      I joined a Sustainability Academy cohort and saw a unique opportunity: leverage the B2B2C platform I built 
+                      into a new application that could make mechanical plastic recycling work at scale. This meant bridging 
+                      two Dow divisions: Plastics & Specialty Polymers (P&SP) and Construction Chemicals (DCC).
+                    </p>
+                    <p className="transformation-description">
+                      <strong>Nobody asked me to do this.</strong> I initiated it on top of my regular role because I saw a rare 
+                      opportunity to create strategic alignment between divisions while addressing one of the world's most pressing problems.
+                    </p>
+                  </div>
+
+                  {/* Why DCC */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🏗️</span>
+                      Why Construction Chemicals Had to Play
+                    </h4>
+                    <div className="vision-grid">
+                      <div className="vision-item">
+                        <span className="vision-title">Channel Access</span>
+                        <span className="vision-desc">Access to the biggest construction material players</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Application Know-How</span>
+                        <span className="vision-desc">Deep expertise in cement chemistry and 4 technologies</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Demand Generation</span>
+                        <span className="vision-desc">Digital platforms like Renufix to scale adoption</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Global Brand</span>
+                        <span className="vision-desc">Dow recognized as a partner for co-innovation</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* The Vision */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🎯</span>
+                      The Vision: Affordable Housing from Plastic Waste
+                    </h4>
+                    <div className="problem-box" style={{background: 'rgba(16, 185, 129, 0.08)', borderColor: 'rgba(16, 185, 129, 0.25)', borderLeftColor: '#10b981'}}>
+                      <p>
+                        <strong>Design goal:</strong> An affordable house, 80% based on locally recycled plastic waste.
+                      </p>
+                      <p>
+                        <strong>Design specs:</strong> Great living experience, waste management at its core, culturally appropriate, 
+                        healthy, durable, resilient, modular and scalable.
+                      </p>
+                      <p>
+                        <strong>Business model:</strong> Open innovation hub connecting recyclers, material scientists, construction 
+                        players, and demand generators. Proof of concept and demand generation as parallel tasks.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Potential Applications */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🧩</span>
+                      Applications I Mapped
+                    </h4>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Fiber Cement with Recycled PP</span>
+                        <span className="role-desc">Recycled polypropylene fibers in cement panels</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Low Density Prefab Walls</span>
+                        <span className="role-desc">Recycled PE in lightweight construction</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">3D Printed Structures</span>
+                        <span className="role-desc">Large scale printing with recycled PETG</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Improved Asphalt Emulsions</span>
+                        <span className="role-desc">Recycled plastics in road surfaces</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Recycled PU Insulation</span>
+                        <span className="role-desc">Second-life polyurethane insulation</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Running Tracks (Ecoground)</span>
+                        <span className="role-desc">Sports surfaces from recycled materials</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Goals */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">📊</span>
+                      Goals I Defined
+                    </h4>
+                    <div className="market-opportunity">
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">50%</span>
+                        <span className="opportunity-label">DCC innovation EBIT in 5 years</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">18 mo</span>
+                        <span className="opportunity-label">House prototype timeline</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">3 yr</span>
+                        <span className="opportunity-label">Ready to scale model</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">2 FTE</span>
+                        <span className="opportunity-label">Initial resource ask</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Team */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">👥</span>
+                      The Team I Assembled
+                    </h4>
+                    <p className="transformation-description">
+                      Through the Sustainability Academy, I was credited a cross-functional team to explore this opportunity:
+                    </p>
+                    <div className="customer-grid">
+                      <div className="customer-card">
+                        <span className="customer-name">Lynna Daniel</span>
+                        <span className="customer-stat">Process Safety Engineer</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">Miles McKee</span>
+                        <span className="customer-stat">Account Manager</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">Hui Lin</span>
+                        <span className="customer-stat">Associate Analytical Manager</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">Deboleena Chakraborty</span>
+                        <span className="customer-stat">Associate Research Scientist</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Outcome */}
+                  <div className="transformation-outcome">
+                    <p><strong>Outcome:</strong> The concept remained too advanced for the organization at the time. I couldn't push it higher 
+                    due to lack of time and competing priorities. However, I laid the foundation for cross-division sustainability strategy.</p>
+                    <p><strong>Current relevance:</strong> I still believe this approach is highly relevant today. The circular economy 
+                    for plastics needs demand generation tools, and construction is a perfect sink for recycled materials.</p>
+                  </div>
+
+                  {/* Personal Reflection */}
+                  <div className="personal-reflection">
+                    <h4>💡 Personal Note</h4>
+                    <p>
+                      "The future will be sustainable or won't be." I initiated this because I saw Dow as one of the unique places 
+                      where the plastic waste issue could be tackled at scale. Sometimes you have to plant seeds even when you know 
+                      you might not be around to see them grow.
+                    </p>
+                  </div>
+
+                  <div className="transformation-tags">
+                    <span className="tag">Sustainability</span>
+                    <span className="tag">Circular Economy</span>
+                    <span className="tag">Cross-Division Strategy</span>
+                    <span className="tag">Open Innovation</span>
+                    <span className="tag">Platform Extension</span>
+                    <span className="tag">Construction</span>
+                    <span className="tag">Plastic Recycling</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Sales-to-Rental Transformation */}
             {activeInitiative === 'rental' && (
               <div className="initiative-content">
                 <div className="coming-soon-card">
                   <div className="coming-soon-icon">🔄</div>
                   <h3>Sales-to-Rental Business Model Transformation</h3>
-                  <p className="coming-soon-subtitle">9-Month Strategic Pivot for Medical Devices in Clinical Trials</p>
+                  <p className="coming-soon-subtitle">Transforming a $40M Ancillaries Business Operating Model</p>
                   <div className="coming-soon-badge">
                     <span>Coming Soon</span>
                   </div>
                   <p className="coming-soon-desc">
-                    Full case study being prepared. This initiative transformed the business model from one-time sales 
-                    to recurring rental revenue for medical devices used in clinical trials.
+                    After 10 years of failed attempts, I led the transformation from sales to rental model. 
+                    Change management audit revealed deep organizational resistance across Accounting, Operations, and Business Leadership.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Just-in-Time Labeling */}
+            {activeInitiative === 'labeling' && (
+              <div className="initiative-content">
+                <div className="coming-soon-card">
+                  <div className="coming-soon-icon">🏷️</div>
+                  <h3>Just-in-Time Labeling</h3>
+                  <p className="coming-soon-subtitle">On-Demand Label Production for Clinical Trials</p>
+                  <div className="coming-soon-badge">
+                    <span>Coming Soon</span>
+                  </div>
+                  <p className="coming-soon-desc">
+                    Full case study being prepared. This initiative revolutionized label production for clinical trials 
+                    with a just-in-time approach, reducing waste and improving flexibility.
                   </p>
                 </div>
               </div>
@@ -646,7 +894,7 @@ function App() {
               <div className="initiative-content">
                 <div className="transformation-card featured">
                   <div className="transformation-header">
-                    <div className="company-badge">Fortune 100 Life Sciences</div>
+                    <div className="company-badge thermo">Thermo Fisher</div>
                     <span className="initiative-status ready">Launched, Unique in Market</span>
                   </div>
                   <h3>Medication Adherence Marketplace</h3>
@@ -732,20 +980,20 @@ function App() {
                     </h4>
                     <div className="market-opportunity">
                       <div className="opportunity-card">
+                        <span className="opportunity-number">$400M → $1.1B</span>
+                        <span className="opportunity-label">Market I identified (2020-2025)</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">22%</span>
+                        <span className="opportunity-label">CAGR</span>
+                      </div>
+                      <div className="opportunity-card">
                         <span className="opportunity-number">~$2M</span>
-                        <span className="opportunity-label">Saved per client per vendor qualification</span>
+                        <span className="opportunity-label">Saved per client per vendor</span>
                       </div>
                       <div className="opportunity-card">
                         <span className="opportunity-number">12-18 mo</span>
                         <span className="opportunity-label">Time saved per qualification</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">$20M</span>
-                        <span className="opportunity-label">Revenue line I created (Year 3)</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">1st</span>
-                        <span className="opportunity-label">Only CDMO with pre-qualified portfolio</span>
                       </div>
                     </div>
                     <p className="customer-insight">
