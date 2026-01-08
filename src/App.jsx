@@ -798,7 +798,7 @@ function App() {
                       </div>
                       <div className="vision-item">
                         <span className="vision-title">For Thermo Fisher</span>
-                        <span className="vision-desc">More touchpoints, recurring revenue, stickier relationships.</span>
+                        <span className="vision-desc">More touchpoints, recurring revenue, internal cross-selling, stickier relationships.</span>
                       </div>
                     </div>
                   </div>
@@ -810,7 +810,7 @@ function App() {
                       The Situation I Walked Into
                     </h4>
                     <p className="transformation-description">
-                      A $40M/year ancillaries business—the "Amazon of clinical trials"—supplying everything from pipettes to centrifuges. 
+                      A $40M/year ancillaries business — the "Amazon of clinical trials" — supplying everything from pipettes to centrifuges. 
                       For 10 years, leadership had tried to add a rental model. All attempts failed.
                     </p>
                     <p className="transformation-description">
@@ -828,7 +828,7 @@ function App() {
                       </div>
                       <div className="stat-item negative">
                         <span className="stat-number">0</span>
-                        <span className="stat-label">Documented processes</span>
+                        <span className="stat-label">Seriously Mapped Processes</span>
                       </div>
                     </div>
                   </div>
@@ -840,7 +840,7 @@ function App() {
                       The Resistance I Uncovered
                     </h4>
                     <p className="transformation-description">
-                      I ran a change management audit across all functions. The resistance was deep:
+                      I ran an immediate change management audit across all functions. The resistance was deep:
                     </p>
                     <div className="customer-grid">
                       <div className="customer-card">
@@ -876,9 +876,8 @@ function App() {
                     <div className="breakthrough-item">
                       <h5>1. Mapped the Entire Business Process</h5>
                       <p>
-                        Operations said "it's too complex." So I documented THE ENTIRE business process myself—Accounting, 
-                        Procurement, Operations, everything. This process map became a company standard, reused for other 
-                        projects including a site migration.
+                        Operations said "it's too complex." So I documented the entire business process myself: Accounting, Procurement, Operations, everything. 
+                        This process map became a company standard, reused for other projects including a site migration, and in the process, it gave me a deep understanding of the business from end to end.
                       </p>
                     </div>
 
@@ -888,9 +887,9 @@ function App() {
                         The Finance Director was the hardest blocker. Even the VP of Finance aligned with him. Nobody could counter his arguments.
                       </p>
                       <p>
-                        I spent time understanding WHY—his team was tired of always fixing, never building. I spent 4 hours 
-                        learning the operations system he claimed was "incompatible." Daily calls for 2 weeks. Mapped the 
-                        entire multi-site accounting system (a mess: zero harmonization, each site different).
+I spent time understanding why: his team was tired of always fixing, never building. 
+                        I spent four hours learning the operations system he claimed was ‘incompatible,’ followed by daily calls for two weeks. 
+                        I mapped the entire multi-site accounting system. Of course a mess, with zero harmonization; each site was different, typical for corporations that grow through acquisitions.
                       </p>
                       <p>
                         <strong>Result:</strong> 2 months later, he wanted HIS sites to be the pilot for rental. From detractor to net promoter.
@@ -900,11 +899,11 @@ function App() {
                     <div className="breakthrough-item">
                       <h5>3. Coached the Team Through Uncertainty</h5>
                       <p>
-                        Most team members weren't used to high uncertainty inside a stage-gate process. My approach: 
-                        "It's not because you don't know where you're going that you shouldn't start walking. We walk and discover the path."
+                      Most team members weren’t accustomed to high-uncertainty journeys. 
+                      My approach: ‘Just because you don’t know the destination doesn’t mean you shouldn’t start walking. We walk and discover the path.
                       </p>
                       <p>
-                        Later, managers told me they didn't recognize their people—more forward-thinking, more open to smart risks.
+                        Later, managers told me they didn't recognize their people, more forward-thinking, more open to smart risks and proactive.
                       </p>
                     </div>
 
@@ -915,7 +914,7 @@ function App() {
                         I built an assumption backlog, tested positioning with customers, and advocated for starting with vendor collaboration.
                       </p>
                       <p>
-                        I had to play influence—and sometimes maneuver around—key stakeholders to align everyone on a feasible roadmap.
+                        I had to play influence, and sometimes maneuver around, key stakeholders to align everyone on a feasible roadmap.
                       </p>
                     </div>
                   </div>
@@ -965,13 +964,13 @@ function App() {
                     </h4>
                     <div className="problem-box">
                       <p>
-                        <strong>Quality & Legal:</strong> Among the most complex—medical devices with worldwide shipments. Heavy regulatory requirements.
+                        <strong>Quality & Legal:</strong> Among the most complex, medical devices with worldwide shipments. Heavy regulatory requirements.
                       </p>
                       <p>
                         <strong>Agile Contracting:</strong> First time using agile in contracting. Operations driving contract states and vice versa.
                       </p>
                       <p>
-                        <strong>Leadership Pressure:</strong> New leadership pushing impossible goals with zero care for actual drivers.
+                        <strong>Leadership Pressure:</strong> New leadership pushing ambitious goals with little regard for actual operational drivers.
                       </p>
                     </div>
                   </div>
@@ -979,18 +978,18 @@ function App() {
                   {/* Outcome */}
                   <div className="transformation-outcome">
                     <p><strong>Outcome:</strong> Service launched and live. Pre-sales pipeline generated before go-live. 
-                    Service launch timed perfectly—before any customer kick-off.</p>
+                    Service launch timed perfectly, before any customer kick-off.</p>
                   </div>
 
                   {/* Personal Reflection */}
                   <div className="personal-reflection">
                     <h4>💡 Personal Note</h4>
                     <p>
-                      When the Finance Director blocked everything, I didn't escalate—I learned his entire system in 4 hours, 
+                      When the Finance Director blocked everything, I didn't escalate, I learned his entire system in 4 hours, 
                       mapped his multi-site accounting mess, and showed him I understood his pain. That's how you turn enemies into allies.
                     </p>
                     <p>
-                      I could have used the hammer—involved the Division President. But what would the outcome be? 
+                      I could have used the hammer, involved the Division President. But what would the outcome be? 
                       Job done faster, maybe. But morale at zero and risk of sabotage.
                     </p>
                   </div>
