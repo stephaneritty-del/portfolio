@@ -651,6 +651,14 @@ function App() {
                   <h3>Circular Plastics Initiative</h3>
                   <p className="transformation-subtitle">Bridging Plastic Waste and Construction: A Cross-Division Sustainability Play</p>
                   
+                  {/* CEO Quote */}
+                  <div className="case-section">
+                    <blockquote className="ceo-quote">
+                      <p>"Plastic waste is the sustainability issue of our time. We must do a better job of capturing and reusing plastic by scaling investments in collection, waste management, recycling technologies, and new end markets. Working together, we can create a circular world for plastics."</p>
+                      <cite><strong>Jim Fitterling</strong>, CEO of Dow</cite>
+                    </blockquote>
+                  </div>
+
                   {/* The Opportunity */}
                   <div className="case-section">
                     <h4 className="case-section-title">
@@ -658,39 +666,30 @@ function App() {
                       The Opportunity I Spotted
                     </h4>
                     <p className="transformation-description">
-                      I joined a Sustainability Academy cohort and saw a unique opportunity: leverage the B2B2C platform I built 
-                      into a new application that could make mechanical plastic recycling work at scale. This meant bridging 
-                      two Dow divisions: Plastics & Specialty Polymers (P&SP) and Construction Chemicals (DCC).
+                      I proposed a project to Dow's Sustainability Academy that was selected. The vision: solve two global problems with one solution.
                     </p>
-                    <p className="transformation-description">
-                      <strong>Nobody asked me to do this.</strong> I initiated it on top of my regular role because I saw a rare 
-                      opportunity to create strategic alignment between divisions while addressing one of the world's most pressing problems.
-                    </p>
+                    <div className="problem-box">
+                      <p>
+                        <strong>Problem 1:</strong> Plastic waste is a nightmare. It stays forever in nature, polluting oceans and ecosystems.
+                      </p>
+                      <p>
+                        <strong>Problem 2:</strong> Sand and raw material scarcity. The world needs construction that stands, but resources are depleting.
+                      </p>
+                      <p>
+                        <strong>My insight:</strong> Why not use plastic waste in construction materials? Solving both problems at once. And leverage the 4-sided platform I built (see B2B2C tab) as the central demand generation engine.
+                      </p>
+                    </div>
                   </div>
 
                   {/* Why DCC */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">🏗️</span>
-                      Why Construction Chemicals Had to Play
+                      Why Construction Chemicals Had to Lead
                     </h4>
-                    <div className="vision-grid">
-                      <div className="vision-item">
-                        <span className="vision-title">Channel Access</span>
-                        <span className="vision-desc">Access to the biggest construction material players</span>
-                      </div>
-                      <div className="vision-item">
-                        <span className="vision-title">Application Know-How</span>
-                        <span className="vision-desc">Deep expertise in cement chemistry and 4 technologies</span>
-                      </div>
-                      <div className="vision-item">
-                        <span className="vision-title">Demand Generation</span>
-                        <span className="vision-desc">Digital platforms like Renufix to scale adoption</span>
-                      </div>
-                      <div className="vision-item">
-                        <span className="vision-title">Global Brand</span>
-                        <span className="vision-desc">Dow recognized as a partner for co-innovation</span>
-                      </div>
+                    <div className="process-image">
+                      <img src="/HOW_DCC_CAN_LEAD.JPG" alt="How DCC can lead - 4 strategic roles: Channel, Enable, Cross-sell, Facilitate" className="case-study-image" />
+                      <p className="image-caption">Strategic framework: 4 roles DCC could play in the circular plastics ecosystem</p>
                     </div>
                   </div>
 
@@ -705,73 +704,11 @@ function App() {
                         <strong>Design goal:</strong> An affordable house, 80% based on locally recycled plastic waste.
                       </p>
                       <p>
-                        <strong>Design specs:</strong> Great living experience, waste management at its core, culturally appropriate, 
-                        healthy, durable, resilient, modular and scalable.
+                        <strong>Design specs:</strong> Great living experience, waste management at its core, culturally appropriate, healthy, durable, resilient, modular and scalable.
                       </p>
                       <p>
-                        <strong>Business model:</strong> Open innovation hub connecting recyclers, material scientists, construction 
-                        players, and demand generators. Proof of concept and demand generation as parallel tasks.
+                        <strong>Business model:</strong> This wasn't just about materials—it was about orchestrating the entire ecosystem: recyclers, material scientists, construction players, and demand generators using the digital platform as the hub. Proof of concept and demand generation as parallel tasks.
                       </p>
-                    </div>
-                  </div>
-
-                  {/* Potential Applications */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">🧩</span>
-                      Applications I Mapped
-                    </h4>
-                    <div className="roles-grid">
-                      <div className="role-card">
-                        <span className="role-title">Fiber Cement with Recycled PP</span>
-                        <span className="role-desc">Recycled polypropylene fibers in cement panels</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Low Density Prefab Walls</span>
-                        <span className="role-desc">Recycled PE in lightweight construction</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">3D Printed Structures</span>
-                        <span className="role-desc">Large scale printing with recycled PETG</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Improved Asphalt Emulsions</span>
-                        <span className="role-desc">Recycled plastics in road surfaces</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Recycled PU Insulation</span>
-                        <span className="role-desc">Second-life polyurethane insulation</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Running Tracks (Ecoground)</span>
-                        <span className="role-desc">Sports surfaces from recycled materials</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Goals */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">📊</span>
-                      Goals I Defined
-                    </h4>
-                    <div className="market-opportunity">
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">50%</span>
-                        <span className="opportunity-label">DCC innovation EBIT in 5 years</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">18 mo</span>
-                        <span className="opportunity-label">House prototype timeline</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">3 yr</span>
-                        <span className="opportunity-label">Ready to scale model</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">2 FTE</span>
-                        <span className="opportunity-label">Initial resource ask</span>
-                      </div>
                     </div>
                   </div>
 
@@ -779,35 +716,34 @@ function App() {
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">👥</span>
-                      The Team I Assembled
+                      The Team
                     </h4>
                     <p className="transformation-description">
-                      Through the Sustainability Academy, I was credited a cross-functional team to explore this opportunity:
+                      A cross-functional team from the Sustainability Academy cohort wanted to work on this project:
                     </p>
-                    <div className="customer-grid">
-                      <div className="customer-card">
-                        <span className="customer-name">Lynna Daniel</span>
-                        <span className="customer-stat">Process Safety Engineer</span>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Process Safety Engineer</span>
                       </div>
-                      <div className="customer-card">
-                        <span className="customer-name">Miles McKee</span>
-                        <span className="customer-stat">Account Manager</span>
+                      <div className="role-card">
+                        <span className="role-title">Account Manager</span>
                       </div>
-                      <div className="customer-card">
-                        <span className="customer-name">Hui Lin</span>
-                        <span className="customer-stat">Associate Analytical Manager</span>
+                      <div className="role-card">
+                        <span className="role-title">Associate Analytical Manager</span>
                       </div>
-                      <div className="customer-card">
-                        <span className="customer-name">Deboleena Chakraborty</span>
-                        <span className="customer-stat">Associate Research Scientist</span>
+                      <div className="role-card">
+                        <span className="role-title">Associate Research Scientist</span>
                       </div>
                     </div>
+                    <p className="transformation-description" style={{marginTop: '1rem'}}>
+                      I led the team, directing each member toward specific domains where they conducted state-of-the-art research.
+                    </p>
                   </div>
 
                   {/* Outcome */}
                   <div className="transformation-outcome">
                     <p><strong>Outcome:</strong> The concept remained too advanced for the organization at the time. I couldn't push it higher 
-                    due to lack of time and competing priorities. However, I laid the foundation for cross-division sustainability strategy.</p>
+                    due to lack of time and competing priorities. However, I laid the foundation for cross-division sustainability strategy between P&SP and DCC.</p>
                     <p><strong>Current relevance:</strong> I still believe this approach is highly relevant today. The circular economy 
                     for plastics needs demand generation tools, and construction is a perfect sink for recycled materials.</p>
                   </div>
