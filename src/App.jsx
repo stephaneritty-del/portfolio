@@ -64,10 +64,8 @@ function App() {
 
   const initiatives = [
     { id: 'platform', label: 'B2B2C Platform', shortLabel: 'Platform' },
-      { id: 'plastics', label: 'Circular Plastics Initiative', shortLabel: 'Plastics' },
     { id: 'adherence', label: 'Adherence Marketplace', shortLabel: 'Adherence' },
     { id: 'rental', label: 'Sales-to-Rental Transformation', shortLabel: 'Rental Model' },
-    { id: 'labeling', label: 'Just-in-Time Labeling', shortLabel: 'Labeling' },
     { id: 'dct', label: 'Decentralized Clinical Trials', shortLabel: 'DCT' },
     { id: 'operations', label: 'Operational Excellence', shortLabel: 'Operations' }
   ];
@@ -339,10 +337,7 @@ function App() {
                       <div className="customer-card">
                         <span className="customer-name">REITs</span>
                         <span className="customer-stat">60+ MM m² globally</span>
-<span className="customer-note">
-  {"World's largest logistics real estate"}
-</span>
-                 
+                        <span className="customer-note">World's largest logistics real estate</span>
                       </div>
                       <div className="customer-card">
                         <span className="customer-name">Private Equity</span>
@@ -610,214 +605,54 @@ function App() {
               </div>
             )}
 
-            {/* Circular Plastics Initiative */}
-            {activeInitiative === 'plastics' && (
+            {/* Sales-to-Rental Transformation */}
+            {activeInitiative === 'rental' && (
               <div className="initiative-content">
-                <div className="transformation-card featured">
-                  <div className="transformation-header">
-                    <div className="company-badge dow">Dow Chemical</div>
-                    <span className="initiative-status concept">Strategic Concept</span>
+                <div className="coming-soon-card">
+                  <div className="coming-soon-icon">🔄</div>
+                  <h3>Sales-to-Rental Business Model Transformation</h3>
+                  <p className="coming-soon-subtitle">9-Month Strategic Pivot for Medical Devices in Clinical Trials</p>
+                  <div className="coming-soon-badge">
+                    <span>Coming Soon</span>
                   </div>
-                  <h3>Circular Plastics Initiative</h3>
-                  <p className="transformation-subtitle">Bridging Plastic Waste and Construction: A Cross-Division Sustainability Play</p>
-                  
-                  {/* The Opportunity */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">🌍</span>
-                      The Opportunity I Spotted
-                    </h4>
-                    <p className="transformation-description">
-                      I joined a Sustainability Academy cohort and saw a unique opportunity: leverage the B2B2C platform I built 
-                      into a new application that could make mechanical plastic recycling work at scale. This meant bridging 
-                      two Dow divisions: Plastics & Specialty Polymers (P&SP) and Construction Chemicals (DCC).
-                    </p>
-                    <p className="transformation-description">
-                      <strong>Nobody asked me to do this.</strong> I initiated it on top of my regular role because I saw a rare 
-                      opportunity to create strategic alignment between divisions while addressing one of the world's most pressing problems.
-                    </p>
-                  </div>
-
-                  {/* Why DCC */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">🏗️</span>
-                      Why Construction Chemicals Had to Play
-                    </h4>
-                    <div className="vision-grid">
-                      <div className="vision-item">
-                        <span className="vision-title">Channel Access</span>
-                        <span className="vision-desc">Access to the biggest construction material players</span>
-                      </div>
-                      <div className="vision-item">
-                        <span className="vision-title">Application Know-How</span>
-                        <span className="vision-desc">Deep expertise in cement chemistry and 4 technologies</span>
-                      </div>
-                      <div className="vision-item">
-                        <span className="vision-title">Demand Generation</span>
-                        <span className="vision-desc">Digital platforms like Renufix to scale adoption</span>
-                      </div>
-                      <div className="vision-item">
-                        <span className="vision-title">Global Brand</span>
-                        <span className="vision-desc">Dow recognized as a partner for co-innovation</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* The Vision */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">🎯</span>
-                      The Vision: Affordable Housing from Plastic Waste
-                    </h4>
-                    <div className="problem-box" style={{background: 'rgba(16, 185, 129, 0.08)', borderColor: 'rgba(16, 185, 129, 0.25)', borderLeftColor: '#10b981'}}>
-                      <p>
-                        <strong>Design goal:</strong> An affordable house, 80% based on locally recycled plastic waste.
-                      </p>
-                      <p>
-                        <strong>Design specs:</strong> Great living experience, waste management at its core, culturally appropriate, 
-                        healthy, durable, resilient, modular and scalable.
-                      </p>
-                      <p>
-                        <strong>Business model:</strong> Open innovation hub connecting recyclers, material scientists, construction 
-                        players, and demand generators. Proof of concept and demand generation as parallel tasks.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Potential Applications */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">🧩</span>
-                      Applications I Mapped
-                    </h4>
-                    <div className="roles-grid">
-                      <div className="role-card">
-                        <span className="role-title">Fiber Cement with Recycled PP</span>
-                        <span className="role-desc">Recycled polypropylene fibers in cement panels</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Low Density Prefab Walls</span>
-                        <span className="role-desc">Recycled PE in lightweight construction</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">3D Printed Structures</span>
-                        <span className="role-desc">Large scale printing with recycled PETG</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Improved Asphalt Emulsions</span>
-                        <span className="role-desc">Recycled plastics in road surfaces</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Recycled PU Insulation</span>
-                        <span className="role-desc">Second-life polyurethane insulation</span>
-                      </div>
-                      <div className="role-card">
-                        <span className="role-title">Running Tracks (Ecoground)</span>
-                        <span className="role-desc">Sports surfaces from recycled materials</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Goals */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">📊</span>
-                      Goals I Defined
-                    </h4>
-                    <div className="market-opportunity">
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">50%</span>
-                        <span className="opportunity-label">DCC innovation EBIT in 5 years</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">18 mo</span>
-                        <span className="opportunity-label">House prototype timeline</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">3 yr</span>
-                        <span className="opportunity-label">Ready to scale model</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">2 FTE</span>
-                        <span className="opportunity-label">Initial resource ask</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Team */}
-                  <div className="case-section">
-                    <h4 className="case-section-title">
-                      <span className="section-icon">👥</span>
-                      The Team I Assembled
-                    </h4>
-                    <p className="transformation-description">
-                      Through the Sustainability Academy, I was credited a cross-functional team to explore this opportunity:
-                    </p>
-                    <div className="customer-grid">
-                      <div className="customer-card">
-                        <span className="customer-name">Lynna Daniel</span>
-                        <span className="customer-stat">Process Safety Engineer</span>
-                      </div>
-                      <div className="customer-card">
-                        <span className="customer-name">Miles McKee</span>
-                        <span className="customer-stat">Account Manager</span>
-                      </div>
-                      <div className="customer-card">
-                        <span className="customer-name">Hui Lin</span>
-                        <span className="customer-stat">Associate Analytical Manager</span>
-                      </div>
-                      <div className="customer-card">
-                        <span className="customer-name">Deboleena Chakraborty</span>
-                        <span className="customer-stat">Associate Research Scientist</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Outcome */}
-                  <div className="transformation-outcome">
-                    <p><strong>Outcome:</strong> The concept remained too advanced for the organization at the time. I couldn't push it higher 
-                    due to lack of time and competing priorities. However, I laid the foundation for cross-division sustainability strategy.</p>
-                    <p><strong>Current relevance:</strong> I still believe this approach is highly relevant today. The circular economy 
-                    for plastics needs demand generation tools, and construction is a perfect sink for recycled materials.</p>
-                  </div>
-
-                  {/* Personal Reflection */}
-                  <div className="personal-reflection">
-                    <h4>💡 Personal Note</h4>
-                    <p>
-                      "The future will be sustainable or won't be." I initiated this because I saw Dow as one of the unique places 
-                      where the plastic waste issue could be tackled at scale. Sometimes you have to plant seeds even when you know 
-                      you might not be around to see them grow.
-                    </p>
-                  </div>
-
-                  <div className="transformation-tags">
-                    <span className="tag">Sustainability</span>
-                    <span className="tag">Circular Economy</span>
-                    <span className="tag">Cross-Division Strategy</span>
-                    <span className="tag">Open Innovation</span>
-                    <span className="tag">Platform Extension</span>
-                    <span className="tag">Construction</span>
-                    <span className="tag">Plastic Recycling</span>
-                  </div>
+                  <p className="coming-soon-desc">
+                    Full case study being prepared. This initiative transformed the business model from one-time sales 
+                    to recurring rental revenue for medical devices used in clinical trials.
+                  </p>
                 </div>
               </div>
             )}
 
-            {/* ==================== THERMO FISHER INITIATIVES ==================== */}
+            {/* Decentralized Clinical Trials */}
+            {activeInitiative === 'dct' && (
+              <div className="initiative-content">
+                <div className="coming-soon-card">
+                  <div className="coming-soon-icon">🏥</div>
+                  <h3>Decentralized Clinical Trials</h3>
+                  <p className="coming-soon-subtitle">Bringing Clinical Trials to Patients' Homes</p>
+                  <div className="coming-soon-badge">
+                    <span>Coming Soon</span>
+                  </div>
+                  <p className="coming-soon-desc">
+                    Full case study being prepared. This initiative enabled remote patient monitoring and 
+                    decentralized trial execution, reducing site dependency and improving patient access.
+                  </p>
+                </div>
+              </div>
+            )}
 
-            {/* Adherence Marketplace */}
+            {/* Adherence Portfolio Strategy */}
             {activeInitiative === 'adherence' && (
               <div className="initiative-content">
                 <div className="transformation-card featured">
                   <div className="transformation-header">
-                    <div className="company-badge thermo">Thermo Fisher</div>
+                    <div className="company-badge">Fortune 100 Life Sciences</div>
                     <span className="initiative-status ready">Launched, Unique in Market</span>
                   </div>
                   <h3>Medication Adherence Marketplace</h3>
-                  <p className="transformation-subtitle">Turned a Twice-Failed Initiative Into a $20M Revenue Line in 9 Months</p>
+                  <p className="transformation-subtitle">Turned a Twice-Failed Initiative Into a $20M Revenue Line in 9 Months. Created an Entirely New Business from Strategy to Launch.</p>
                   
+                  {/* The Situation */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">🎯</span>
@@ -825,10 +660,12 @@ function App() {
                     </h4>
                     <p className="transformation-description">
                       Medication adherence technology had existed for 20+ years, yet no one had achieved mainstream adoption in clinical trials. 
-                      This initiative had been attempted twice before internally. The last attempt ended in a pilot with mixed results.
+                      This initiative had been attempted twice before internally. The last attempt ended in a pilot with mixed results, major operational 
+                      issues, and no clearly defined strategy.
                     </p>
                     <p className="transformation-description">
-                      Just as I joined, the Product Manager changed roles. It was an empty seat that I filled as <strong>Product Director and Program Lead</strong>.
+                      Just as I joined, the company and the project, the Product Manager changed roles. It was an empty seat that I filled. I assumed full ownership as <strong>Product Director and Program Lead</strong> for what 
+                      would become an entirely new revenue line.
                     </p>
                     <div className="challenge-stats">
                       <div className="stat-item negative">
@@ -837,27 +674,57 @@ function App() {
                       </div>
                       <div className="stat-item negative">
                         <span className="stat-number">~$2M</span>
-                        <span className="stat-label">Cost per vendor qualification</span>
+                        <span className="stat-label">Cost per vendor qualification (per pharma)</span>
                       </div>
                       <div className="stat-item neutral">
                         <span className="stat-number">12-18 mo</span>
-                        <span className="stat-label">Time per qualification</span>
+                        <span className="stat-label">Time per vendor qualification</span>
                       </div>
                     </div>
                   </div>
 
+                  {/* My Strategic Insight */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">💡</span>
                       My Strategic Insight: The Bottleneck Play
                     </h4>
                     <div className="problem-box">
-                      <p><strong>The industry problem:</strong> Each pharma had to qualify vendors individually. ~$2M and 12-18 months per vendor.</p>
-                      <p><strong>My solution:</strong> WE qualify all reliable vendors once. We become the strategic bottleneck.</p>
-                      <p><strong>The moat:</strong> Competition would need years to copy. First-mover advantage.</p>
+                      <p>
+                        <strong>The industry problem:</strong> Each pharma company had to qualify smart packaging vendors individually. 
+                        Cost: ~$2M and 12-18 months per vendor, per pharma. And that's for just ONE form factor (bottles, blisters, pouches).
+                      </p>
+                      <p>
+                        <strong>My solution:</strong> What if WE qualified all the reliable vendors once through a strict qualification process? 
+                        We invest to qualify 10+ suppliers, but that investment serves ALL pharma clients. We become the <strong>strategic bottleneck</strong>: 
+                        the only player in the market with a pre-qualified portfolio of all serious medication adherence technologies.
+                      </p>
+                      <p>
+                        <strong>The moat:</strong> Competition would need years to copy this approach. First-mover advantage with locked-in supplier relationships.
+                      </p>
                     </div>
                   </div>
 
+                  {/* Strategyzer Process */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🧪</span>
+                      De-risking with Strategyzer
+                    </h4>
+                    <p className="transformation-description">
+                      In parallel to building the business case, I ran a Strategyzer process with senior directors who had high-level understanding 
+                      of the ins and outs. This approach was validated by the VP of Product Management of the group, as it was new and carried risk 
+                      because tests needed to embed Legal. I brought Legal into all our test discoveries from the start. This allowed us to 
+                      systematically de-risk our remaining assumptions and sharpen our positioning and go-to-market strategy.
+                    </p>
+                    <div className="process-image">
+                      <img src="/Paralalalprocess.JPG" alt="Parallel Strategyzer process with stage-gate governance" className="case-study-image" />
+                      <p className="image-caption">Parallel process: Business Model Canvas feeding into agile test sprints alongside traditional stage-gate governance</p>
+                    </div>
+                  </div>
+
+                  {/* Market Analysis */}
+                  {/* Market Analysis */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">🔍</span>
@@ -865,24 +732,118 @@ function App() {
                     </h4>
                     <div className="market-opportunity">
                       <div className="opportunity-card">
-                        <span className="opportunity-number">$400M → $1.1B</span>
-                        <span className="opportunity-label">Market I identified (2020-2025)</span>
-                      </div>
-                      <div className="opportunity-card">
-                        <span className="opportunity-number">22%</span>
-                        <span className="opportunity-label">CAGR</span>
-                      </div>
-                      <div className="opportunity-card">
                         <span className="opportunity-number">~$2M</span>
-                        <span className="opportunity-label">Saved per client per vendor</span>
+                        <span className="opportunity-label">Saved per client per vendor qualification</span>
                       </div>
                       <div className="opportunity-card">
                         <span className="opportunity-number">12-18 mo</span>
                         <span className="opportunity-label">Time saved per qualification</span>
                       </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">$20M</span>
+                        <span className="opportunity-label">Revenue line I created (Year 3)</span>
+                      </div>
+                      <div className="opportunity-card">
+                        <span className="opportunity-number">1st</span>
+                        <span className="opportunity-label">Only CDMO with pre-qualified portfolio</span>
+                      </div>
+                    </div>
+                    <p className="customer-insight">
+                      <strong>Timing catalyst:</strong> COVID accelerated pharma digital adoption. FDA 2019 guidance encouraged smart technologies. 
+                      Decentralized clinical trials required remote monitoring. The window was NOW.
+                    </p>
+                  </div>
+
+                  {/* Customer Segmentation */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🎯</span>
+                      Customer Segmentation I Designed
+                    </h4>
+                    <div className="customer-grid">
+                      <div className="customer-card">
+                        <span className="customer-name">The Trusted Advisor</span>
+                        <span className="customer-stat">Large Pharma, Low Digital Maturity</span>
+                        <span className="customer-note">Fear change, need hand-holding, low price sensitivity</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">The Simplifier</span>
+                        <span className="customer-stat">Large Pharma, High Digital Maturity</span>
+                        <span className="customer-note">Know what they need, want one contract for pool of suppliers</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">E2E Full Package</span>
+                        <span className="customer-stat">Small Pharma/Biotech, Low Maturity</span>
+                        <span className="customer-note">Need everything, rely on experienced partners</span>
+                      </div>
+                      <div className="customer-card">
+                        <span className="customer-name">The Bundle Facilitator</span>
+                        <span className="customer-stat">Small Pharma/Biotech, High Maturity</span>
+                        <span className="customer-note">Know gaps, want specific services bundled</span>
+                      </div>
                     </div>
                   </div>
 
+                  {/* Supplier Portfolio */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🧩</span>
+                      Supplier Portfolio I Built
+                    </h4>
+                    <p className="transformation-description">
+                      I evaluated and qualified a strategic portfolio of reliable suppliers through a strict qualification process, covering all form factors and technology approaches:
+                    </p>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Aardex</span>
+                        <span className="role-desc">Platform + Bottles + Blisters (via Schreiner/WestRock). Strategic player with 100K+ patients measured.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Schreiner</span>
+                        <span className="role-desc">Smart blisters with conductive ink. Integrational complexity but broad design coverage.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">CMT</span>
+                        <span className="role-desc">Platform + Smart bottles. Pass-through operational model.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Med-Con</span>
+                        <span className="role-desc">Smart labels (QR-code) for any form factor. Low implementation complexity.</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Spencer Health</span>
+                        <span className="role-desc">Smart dispenser with integrated patient engagement. Added for large pouch request (11K+ patients).</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Value Proposition */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">✨</span>
+                      Value Proposition I Crafted
+                    </h4>
+                    <div className="vision-grid">
+                      <div className="vision-item">
+                        <span className="vision-title">Risk Reduction</span>
+                        <span className="vision-desc">Outsource supplier qualification and contracts to us</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Complete Offer</span>
+                        <span className="vision-desc">Cohesive, integrated portfolio at speed</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Convenience</span>
+                        <span className="vision-desc">Single interlocutor, simplified access to all solutions</span>
+                      </div>
+                      <div className="vision-item">
+                        <span className="vision-title">Customization</span>
+                        <span className="vision-desc">On-demand qualification, smart design advisory</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* What I Delivered */}
                   <div className="case-section">
                     <h4 className="case-section-title">
                       <span className="section-icon">✅</span>
@@ -891,102 +852,185 @@ function App() {
                     <div className="results-grid">
                       <div className="result-item">
                         <span className="result-number">3 mo</span>
-                        <span className="result-text">Complete business plan from zero knowledge</span>
+                        <span className="result-text">Complete business plan and strategy from zero knowledge and during my onboarding process</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">9 mo</span>
-                        <span className="result-text">From chaos to launched service</span>
+                        <span className="result-text">Total time from chaos to launched service</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">$20M</span>
-                        <span className="result-text">Year 3 revenue achieved</span>
+                        <span className="result-text">Year 3 revenue target achieved</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">1st</span>
-                        <span className="result-text">Only CDMO with pre-qualified portfolio</span>
-                      </div>
-                      <div className="result-item">
-                        <span className="result-number">5</span>
-                        <span className="result-text">Suppliers qualified</span>
+                        <span className="result-text">Only CDMO with pre-qualified portfolio in market</span>
                       </div>
                       <div className="result-item">
                         <span className="result-number">12</span>
-                        <span className="result-text">Cross-functional team led</span>
+                        <span className="result-text">Cross-functional team members led</span>
+                      </div>
+                      <div className="result-item">
+                        <span className="result-number">✓</span>
+                        <span className="result-text">Gross margin above division target</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="transformation-outcome">
-                    <p><strong>Outcome:</strong> Service launched. Unique positioning in market. $20M Year 3 revenue achieved.</p>
+                  {/* Tools I Built */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🛠️</span>
+                      Tools I Built
+                    </h4>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Lead Generation Web Page</span>
+                        <span className="role-desc">Built a dedicated landing page to capture and qualify inbound leads for the new service line</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Pricing Sensitivity Tool (VBA)</span>
+                        <span className="role-desc">Built a scenario modeling tool for sales to find optimal pricing per patient, phase, and protocol variables based on cost models and customer price sensitivity</span>
+                      </div>
+                    </div>
                   </div>
 
+                  {/* Organizational Legacy */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🏗️</span>
+                      Organizational Legacy
+                    </h4>
+                    <p className="transformation-description">
+                      Beyond the revenue, I built the organizational capability: the company now has the complete process infrastructure 
+                      to qualify new form factors rapidly and inexpensively, plus all the operational processes to run the business at scale.
+                    </p>
+                  </div>
+
+                  {/* Change Management */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🔄</span>
+                      Change Management Win
+                    </h4>
+                    <p className="transformation-description">
+                      I personally led change management activities, speaking with every stakeholder group. During this process, 
+                      I discovered that <strong>Accounting was systematically forgotten</strong> in the company's project processes. 
+                      I spotted early a critical risk: in large corporations, money doesn't flow as easily as people assume. 
+                      This insight prevented what would have been a significant operational issue post-launch.
+                    </p>
+                  </div>
+
+                  {/* Long-term Vision */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">🔮</span>
+                      Long-term Vision I Defined
+                    </h4>
+                    <p className="transformation-description">
+                      The roadmap I designed went beyond the initial marketplace. The long-term vision was to build a <strong>digital platform 
+                      where all data from all vendors flows into a unified system</strong>, enabling predictive adherence analytics using AI. 
+                      This would reduce operational costs of trials while achieving higher statistical power, making clinical trials more 
+                      science-based because patients actually take their drugs. Another marketplace play, another strategic moat.
+                    </p>
+                  </div>
+
+                  {/* My Roles */}
+                  <div className="case-section">
+                    <h4 className="case-section-title">
+                      <span className="section-icon">👤</span>
+                      Roles I Assumed (Not Assigned)
+                    </h4>
+                    <div className="roles-grid">
+                      <div className="role-card">
+                        <span className="role-title">Product Director</span>
+                        <span className="role-desc">Vision, strategy, market planning, portfolio architecture, service design, customer segmentation, go-to-market</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Program Lead</span>
+                        <span className="role-desc">Cross-functional team coordination across 12 stakeholders, vendor management, RFPs, contract negotiations</span>
+                      </div>
+                      <div className="role-card">
+                        <span className="role-title">Change Manager</span>
+                        <span className="role-desc">Stakeholder alignment, risk identification, process integration</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Outcome */}
+                  <div className="transformation-outcome">
+                    <p><strong>Outcome:</strong> Service launched. Unique positioning in market. Year 3 revenue target of $20M achieved despite missing Years 1-2 
+                    (industry adoption is notoriously slow). We became the only CDMO with a pre-qualified medication adherence portfolio.</p>
+                  </div>
+
+                  {/* Personal Reflection */}
                   <div className="personal-reflection">
                     <h4>💡 Personal Note</h4>
-                    <p>Sometimes the best way to lead is to simply start leading. I stepped in and delivered what two previous attempts could not.</p>
+                    <p>
+                      I wasn't asked to take over that level of ownership but when the Product Manager changed roles just as I joined, leaving an empty seat,
+                      I stepped in and delivered what two previous attempts could not. The "bottleneck" strategy was my insight. 
+                      In 3 months, during my onboarding process, I had the complete business plan. In 9 months, we launched. Sometimes the best way to lead is to simply start leading.
+                    </p>
+                  </div>
+
+                  {/* Lessons Learned */}
+                  <div className="lessons-learned">
+                    <h4>🎓 What I'd Do Differently</h4>
+                    <p>
+                      The strategy worked, but adoption was slower than projected. My regret: I couldn't convince leadership to invest more in 
+                      <strong> lead generation and channel strategy</strong>. Just because you're a big corporation doesn't mean traditional 
+                      go-to-market is optimal. New services need a tailored channel-to-market approach.
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="b2b-cta">
+                    <h4>🚀 Have a Product the Market Wants But No Clear Path to Market?</h4>
+                    <p>
+                      If you have a product or service the market is asking for but have no idea how to make the most out of it 
+                      and build a strategic moat, let's talk.
+                    </p>
+                    <div className="cta-offer">
+                      <p>
+                        <strong>I help turn market demand into defensible business positions.</strong><br/>
+                        New services need tailored channel-to-market approaches. I can help you find yours.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="transformation-note">
+                    <em>From chaos to $20M revenue line. Business plan in 3 months. Launched in 9 months. All while managing multiple other strategic programs.</em>
                   </div>
 
                   <div className="transformation-tags">
                     <span className="tag">New Business Creation</span>
                     <span className="tag">Marketplace</span>
                     <span className="tag">Portfolio Strategy</span>
+                    <span className="tag">Business Model Innovation</span>
                     <span className="tag">Strategyzer</span>
+                    <span className="tag">Vendor Management</span>
+                    <span className="tag">Change Management</span>
                     <span className="tag">Life Sciences</span>
+                    <span className="tag">Clinical Trials</span>
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Sales-to-Rental Transformation */}
-            {activeInitiative === 'rental' && (
-              <div className="initiative-content">
-                <div className="coming-soon-card">
-                  <div className="coming-soon-icon">🔄</div>
-                  <h3>Sales-to-Rental Business Model Transformation</h3>
-                  <p className="coming-soon-subtitle">Transforming a $40M Ancillaries Business Operating Model</p>
-                  <div className="coming-soon-badge"><span>Coming Soon</span></div>
-                  <p className="coming-soon-desc">
-                    After 10 years of failed attempts, I led the transformation from sales to rental model. 
-                    Change management audit revealed deep organizational resistance across Accounting, Operations, and Business Leadership.
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* Just-in-Time Labeling */}
-            {activeInitiative === 'labeling' && (
-              <div className="initiative-content">
-                <div className="coming-soon-card">
-                  <div className="coming-soon-icon">🏷️</div>
-                  <h3>Just-in-Time Labeling</h3>
-                  <p className="coming-soon-subtitle">On-Demand Label Production for Clinical Trials</p>
-                  <div className="coming-soon-badge"><span>Coming Soon</span></div>
-                  <p className="coming-soon-desc">Full case study being prepared.</p>
-                </div>
-              </div>
-            )}
-
-            {/* DCT */}
-            {activeInitiative === 'dct' && (
-              <div className="initiative-content">
-                <div className="coming-soon-card">
-                  <div className="coming-soon-icon">🏥</div>
-                  <h3>Decentralized Clinical Trials</h3>
-                  <p className="coming-soon-subtitle">Bringing Clinical Trials to Patients' Homes</p>
-                  <div className="coming-soon-badge"><span>Coming Soon</span></div>
-                  <p className="coming-soon-desc">Full case study being prepared.</p>
-                </div>
-              </div>
-            )}
-
-            {/* Operations */}
+            {/* Operational Excellence */}
             {activeInitiative === 'operations' && (
               <div className="initiative-content">
                 <div className="coming-soon-card">
                   <div className="coming-soon-icon">⚙️</div>
                   <h3>Operational Transformation</h3>
                   <p className="coming-soon-subtitle">Process Excellence & Project Delivery</p>
-                  <div className="coming-soon-badge"><span>Coming Soon</span></div>
-                  <p className="coming-soon-desc">Full case study being prepared.</p>
+                  <div className="coming-soon-badge">
+                    <span>Coming Soon</span>
+                  </div>
+                  <p className="coming-soon-desc">
+                    A collection of operational achievements: process optimization, project delivery excellence, 
+                    and organizational transformation initiatives.
+                  </p>
                 </div>
               </div>
             )}
@@ -1016,34 +1060,58 @@ function App() {
                       <h3>{project.title}</h3>
                       <span className="project-subtitle">{project.subtitle}</span>
                     </div>
-                    <span className={`status-badge ${project.status === 'Live' ? 'live' : project.status === 'Live Beta' ? 'beta' : project.status === 'Debug' ? 'debug' : 'dev'}`}>
-                      {project.status}
-                    </span>
+<span className={`status-badge ${project.status === 'Live' ? 'live' : project.status === 'Live Beta' ? 'beta' : project.status === 'Debug' ? 'debug' : 'dev'}`}>
+  {project.status}
+</span>
                   </div>
+
                   <p className="project-description">{project.description}</p>
+
                   <div className="project-tags">
-                    {project.tags.map((tag, i) => (<span key={i} className="tag">{tag}</span>))}
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="tag">{tag}</span>
+                    ))}
                   </div>
+
                   <div className="project-actions">
-                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link" onClick={(e) => e.stopPropagation()}>
-                      Launch App<ExternalLink size={16} />
+                    <a 
+                      href={project.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="project-link"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Launch App
+                      <ExternalLink size={16} />
                     </a>
                   </div>
                 </div>
               ))}
             </div>
 
+            {/* Live Demo Preview */}
             <div className="demo-preview">
               <div className="demo-header">
                 <h3>Live Demo: {projects[activeProject].title}</h3>
-                <a href={projects[activeProject].url} target="_blank" rel="noopener noreferrer" className="demo-expand">
-                  Open in new tab<ExternalLink size={16} />
+                <a 
+                  href={projects[activeProject].url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="demo-expand"
+                >
+                  Open in new tab
+                  <ExternalLink size={16} />
                 </a>
               </div>
               <div className="demo-frame">
                 <div className="phone-frame">
                   <div className="phone-screen">
-                    <iframe src={projects[activeProject].url} title={projects[activeProject].title} className="project-iframe" loading="lazy" />
+                    <iframe
+                      src={projects[activeProject].url}
+                      title={projects[activeProject].title}
+                      className="project-iframe"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -1056,14 +1124,23 @@ function App() {
       <section className="contact-section">
         <div className="contact-content">
           <h2>Let's Build Something Transformative</h2>
-          <p>Need a PMO lead who builds business moats, a product leader who de-risks million-dollar bets, or both in one?</p>
+          <p>
+            Need a PMO lead who builds business moats, a product leader who de-risks million-dollar bets, 
+            or both in one? Whether you're navigating Fortune 100 complexity or launching bold innovation, 
+            let's talk about turning vision into shipped revenue.
+          </p>
           <div className="contact-email-group">
-            <a href="mailto:stephane.ritty@gmail.com" className="contact-email">stephane.ritty@gmail.com</a>
-            <button onClick={copyEmail} className="copy-email-btn">{emailCopied ? <Check size={18} /> : <Copy size={18} />}</button>
+            <a href="mailto:stephane.ritty@gmail.com" className="contact-email">
+              stephane.ritty@gmail.com
+            </a>
+            <button onClick={copyEmail} className="copy-email-btn">
+              {emailCopied ? <Check size={18} /> : <Copy size={18} />}
+            </button>
           </div>
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="footer">
         <p>© 2025 Stephane Ritty. Crafted with purpose and precision.</p>
       </footer>
