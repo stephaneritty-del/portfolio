@@ -2328,3 +2328,31 @@ body {
   display: block;
   margin-bottom: 0.25rem;
 }
+
+/* CEO Quote */
+.ceo-quote {
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(185, 28, 28, 0.05));
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-left: 4px solid #dc2626;
+  border-radius: 0 12px 12px 0;
+  margin: 0;
+}
+
+.ceo-quote p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color-text);
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+}
+
+.ceo-quote cite {
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.ceo-quote cite strong {
+  color: #dc2626;
+}
