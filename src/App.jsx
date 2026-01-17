@@ -101,7 +101,7 @@ function App() {
       subtitle: "Discover Your Life Purpose",
       description: "An introspective journey to uncover your Ikigai , the Japanese concept of 'reason for being'. Through guided reflection, explore the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.",
       tags: ["AI Coach", "Self-Discovery", "Psychology", "React"],
-      url: "https://ikigai-pi-green.vercel.app",
+      url: "https://ikig.vercel.app/",
       status: "Debug",
       gradient: "from-rose-500 to-amber-500"
     }
