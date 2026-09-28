@@ -11,13 +11,9 @@ export default function Home() {
   return (
     <>
       <section className="home-hero">
-        <img
-          className="home-hero-photo"
-          src="/portrait.jpg"
-          alt="Stephane Ritty"
-          width="930"
-          height="1410"
-        />
+        <div className="home-hero-photo">
+          <img src="/portrait.jpg" alt="Stephane Ritty" width="930" height="1410" />
+        </div>
         <SiteHeader className="home-hero-header" />
         <div className="home-hero-content">
           <p className="kicker">{ROLE}</p>

@@ -127,39 +127,54 @@ a:focus-visible, button:focus-visible {
 .page-header { padding: 28px var(--pad); border-bottom: 1px solid var(--line); }
 
 /* ---------- Home hero ---------- */
+/* The hero is exactly one screen tall on any device (svh = the visible area,
+   without browser bars or the OS taskbar). Text and spacing scale with the
+   screen height so the numbers and buttons always fit above the fold. */
 
 .home-hero {
   display: grid;
   grid-template-columns: minmax(0, 43%) minmax(0, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
   grid-template-areas:
     "photo header"
     "photo content";
-  min-height: clamp(720px, 100vh, 1000px);
+  min-height: 100vh;
+  min-height: 100svh;
 }
 .home-hero-photo {
   grid-area: photo;
+  position: relative;
+  overflow: hidden;
+  background: #6E6E6C;
+}
+.home-hero-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 0%;
   display: block;
-  background: #6E6E6C;
 }
-.home-hero-header { grid-area: header; padding: 44px var(--pad) 0 clamp(32px, 5.5vw, 80px); }
+.home-hero-header {
+  grid-area: header;
+  padding: clamp(18px, 4.5vh, 44px) var(--pad) 0 clamp(32px, 5.5vw, 80px);
+}
 .home-hero-content {
   grid-area: content;
   align-self: end;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  padding: 48px var(--pad) 72px clamp(32px, 5.5vw, 80px);
+  gap: clamp(12px, 2.6vh, 32px);
+  padding: clamp(20px, 4vh, 48px) var(--pad) clamp(24px, 6vh, 72px) clamp(32px, 5.5vw, 80px);
 }
+.home-hero .display-xl { font-size: clamp(40px, min(6.6vw, 10.5vh), 100px); }
+.home-hero .lead { font-size: clamp(16px, min(1.5vw, 2.15vh), 20px); }
 
 .hero-proof {
   list-style: none;
   margin: 0;
-  padding: 20px 0 0;
+  padding: clamp(12px, 2vh, 20px) 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 16px 48px;
@@ -167,8 +182,12 @@ a:focus-visible, button:focus-visible {
   max-width: 640px;
 }
 .hero-proof li { display: flex; flex-direction: column; gap: 2px; }
-.hero-proof-value { font-family: var(--serif); font-size: 34px; line-height: 1.05; }
+.hero-proof-value { font-family: var(--serif); font-size: clamp(24px, 3.4vh, 34px); line-height: 1.05; }
 .hero-proof-label { font-size: 13px; color: var(--faint); }
+
+@media (max-height: 760px) and (min-width: 861px) {
+  .home-hero .btn { min-height: 46px; }
+}
 
 /* ---------- Bands ---------- */
 
@@ -592,9 +611,11 @@ a:focus-visible, button:focus-visible {
       "content";
     min-height: 0;
   }
-  .home-hero-header { padding: 20px var(--pad); }
-  .home-hero-photo { height: min(72vh, 560px); }
-  .home-hero-content { padding: 40px var(--pad) 56px; gap: 24px; }
+  .home-hero-header { padding: 18px var(--pad); }
+  /* Photo takes under half the screen so the headline shows on first view */
+  .home-hero-photo { height: 46vh; height: 46svh; max-height: 520px; }
+  .home-hero-content { padding: 28px var(--pad) 48px; gap: 20px; }
+  .home-hero .display-xl { font-size: clamp(40px, 11vw, 64px); }
   .transformation-visual { grid-template-columns: minmax(0, 1fr); }
   .model-arrow { transform: rotate(90deg); justify-self: center; }
 }
