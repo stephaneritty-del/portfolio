@@ -1,4 +1,5 @@
-// All the facts the site repeats live here, so a change is made once.
+// Every fact the site repeats lives here, so a change is made once.
+// Rule for this file: no fact goes in that Stephane hasn't provided.
 
 export const SITE_URL = 'https://stephaneritty.com';
 export const EMAIL = 'stephane.ritty@gmail.com';
@@ -6,159 +7,165 @@ export const LINKEDIN = 'https://www.linkedin.com/in/stephaneritty/';
 export const GITHUB = 'https://github.com/stephaneritty-del';
 
 // Put your CV in /public (e.g. public/stephane-ritty-cv.pdf) and set this to
-// '/stephane-ritty-cv.pdf'. While it's null, the CV button stays hidden.
+// '/stephane-ritty-cv.pdf'. While it's null, the CV link stays hidden.
 export const CV_URL = null;
 
 export const ROLE = 'Head of Product';
 
+// A real quote from Dow. Shown in the homepage Background section.
 export const TESTIMONIAL = {
   quote: 'Excellent forward thinking individual with entrepreneurial and strategic mindset!',
   name: 'Marco ten Bruggencate',
   title: 'Business President II&I, Dow'
 };
 
+// Three numbers under the homepage headline.
+export const heroFacts = [
+  ['$70M', 'new revenue in four years from the portfolio I ran'],
+  ['9 months', 'to launch a rental model after ten years of attempts'],
+  ['26 → 5 days', 'process time on a service built in three months']
+];
+
 // Case studies. `slug` is the page address: /work/<slug>
+// `line` is the one sentence shown in the homepage list.
 export const cases = [
   {
     slug: 'npi-portfolio',
     component: 'Portfolio',
-    kind: 'Functions',
     company: 'Thermo Fisher',
-    title: 'NPI Portfolio & Innovation Framework',
-    cardTitle: 'NPI portfolio and innovation framework',
-    cardText: 'Thermo Fisher. Led 5 project managers: 50% faster to launch, $70M in new revenue over 4 years.',
-    summary:
-      'With the PMO Director, I co-owned a new project framework: stage-gate governance plus a filter that routes projects by uncertainty. The most uncertain ones, new services, came into the NPI portfolio I led with a team of five project managers.',
-    role: 'NPI portfolio lead, co-owner of the PMO framework',
-    status: 'Implemented',
+    title: 'Running the new-service portfolio',
+    line: 'Five project managers, a stage-gate that sorted projects by what we didn’t know yet, and $70M of new revenue in four years.',
+    status: 'Operating model',
+    dek: 'How we decided which new services to build, which to reshape, and which to stop before the big spend.',
+    role: 'Led the NPI portfolio; co-owned the PMO framework with the PMO director',
     facts: [
-      ['$70M', 'new revenue over 4 years'],
-      ['50%', 'faster time-to-launch'],
+      ['$70M', 'new revenue in four years'],
+      ['50%', 'less time to launch'],
       ['88/100', 'employee engagement score'],
-      ['5', 'project managers led']
+      ['5', 'project managers']
     ],
     description:
-      'How Stephane Ritty led an NPI portfolio and a team of five project managers at Thermo Fisher: $70M in new revenue over 4 years, 50% faster time-to-launch.'
+      'How Stephane Ritty ran the new-service portfolio at Thermo Fisher: five project managers, $70M of new revenue in four years, time to launch halved.'
   },
   {
     slug: 'adherence-marketplace',
     component: 'Adherence',
-    kind: 'Products',
     company: 'Thermo Fisher',
-    title: 'Medication Adherence Marketplace',
-    cardTitle: 'Medication Adherence Marketplace',
-    cardText: 'Thermo Fisher. Launched in 9 months, then grew into a $20M revenue line within 3 years.',
-    summary:
-      'A pre-qualified marketplace of medication adherence technologies for clinical trials: one contract for pharma clients instead of a $2M, 12 to 18 month qualification per vendor. The first of its kind in the market.',
-    role: 'Product Director & Program Lead',
+    title: 'A marketplace for medication adherence',
+    line: 'Tried twice internally before I picked it up. Business plan in three months, launched in nine, $20M revenue in year three.',
     status: 'Launched',
+    dek: 'Every pharma company was paying about $2M and a year or more to qualify a single smart-packaging vendor. We qualified the vendors once, for all of them.',
+    role: 'Product director and program lead',
     facts: [
-      ['3 months', 'to a complete business plan'],
-      ['9 months', 'from mess to launch'],
-      ['$20M', 'revenue by year 3, target met'],
-      ['12', 'cross-functional team members led']
+      ['3 months', 'to the business plan'],
+      ['9 months', 'to launch'],
+      ['$20M', 'revenue in year three'],
+      ['12', 'people in the cross-functional team']
     ],
     description:
-      'How Stephane Ritty built a medication adherence marketplace at Thermo Fisher: launched in 9 months, $20M revenue by year 3.'
+      'A medication adherence marketplace at Thermo Fisher: tried twice before, launched in nine months, $20M revenue in year three.'
   },
   {
     slug: 'just-in-time-labeling',
     component: 'Jit',
-    kind: 'Services',
     company: 'Thermo Fisher',
-    title: 'Just-in-Time Labeling for Clinical Trials',
-    cardTitle: 'Just-in-Time Labeling',
-    cardText: 'Thermo Fisher. A service sold before it existed, built in 3 months: process time cut from 26 to 5 days, 99%+ on time.',
-    summary:
-      'Sales had sold Just-in-Time labeling for a 10-year clinical trial, worth over $30M, before the service existed. Pulled in as an emergency, I built it in three months and turned a looming reputational crisis into a new service line.',
+    title: 'Just-in-time labeling',
+    line: 'Sold into a ten-year clinical trial before the service existed. Built in three months; process time went from 26 days to 5.',
+    status: 'Launched',
+    dek: 'Sales closed a deal for a service we didn’t have. We had three months to make it real.',
     role: null,
-    status: 'Launched, new service line',
     facts: [
-      ['3 months', 'from emergency to service line'],
-      ['26 → 5 days', 'process time, 80% faster'],
+      ['3 months', 'from emergency to running service'],
+      ['26 → 5 days', 'process time'],
       ['99%+', 'on-time delivery'],
-      ['$30M+', 'business delivered instead of lost']
+      ['$30M+', 'business on the contract']
     ],
     description:
-      'How Stephane Ritty built a Just-in-Time labeling service for clinical trials at Thermo Fisher in 3 months: process time from 26 to 5 days, 99%+ on-time delivery.'
+      'A just-in-time labeling service for clinical trials, sold before it existed and built in three months: process time from 26 days to 5.'
   },
   {
     slug: 'rental-business-model',
     component: 'Rental',
-    kind: 'Services',
     company: 'Thermo Fisher',
-    title: 'Sales-to-Rental Business Model',
-    cardTitle: 'Rental business model',
-    cardText: 'Thermo Fisher. A rental offer for a sales-only business, piloted and launched in 9 months.',
-    summary:
-      'A rental offer for a business that had only ever sold. Ten years of attempts had stalled; this one launched in 9 months and its process became the company standard.',
-    role: null,
+    title: 'From selling equipment to renting it',
+    line: 'Ten years of attempts on a $40M business. Launched in nine months; the finance director who blocked it asked to run the pilot.',
     status: 'Launched',
+    dek: 'Clinical trials last from two months to five years. Nobody wants to buy a $50,000 centrifuge for a two-month study.',
+    role: null,
     facts: [
-      ['9 months', 'from mess to launch'],
-      ['5', 'hot leads at launch'],
-      ['2', 'vendors qualified'],
-      ['1', 'process that became company standard']
+      ['10 years', 'of earlier attempts'],
+      ['9 months', 'to launch'],
+      ['$40M', 'a year, the business it had to fit into'],
+      ['5', 'leads in the pipeline at launch']
     ],
     description:
-      'How Stephane Ritty launched a rental business model at Thermo Fisher in 9 months, after ten years of stalled attempts.'
+      'Adding rental to a $40M sales business at Thermo Fisher after ten years of failed attempts: launched in nine months.'
   },
   {
     slug: 'b2b2c-platform',
     component: 'Platform',
-    kind: 'Platforms',
     company: 'Dow',
-    title: 'B2B2C Demand Generation Platform',
-    cardTitle: 'B2B2C roofing marketplace',
-    cardText: 'Dow. Four sides: building owners, contractors, insurers and engineers, with 100+ contractors signed up.',
-    summary:
-      'A four-sided roofing marketplace connecting building owners, contractors, insurers and engineers, so a commodity supplier could own the demand instead of competing on price.',
-    role: 'Product Owner & Business Model Architect',
-    status: 'Built, ready to launch',
+    title: 'A roofing marketplace at Dow',
+    line: 'A four-sided platform to reach building owners in a market where Dow had almost no presence. Built and contracted; stopped by a restructuring before launch.',
+    status: 'Stopped before launch',
+    dek: 'Dow sold binders several steps away from the people who decide to renovate a roof. The platform was an attempt to close that distance.',
+    role: 'Strategy, business development and product owner',
     facts: [
-      ['4/4', 'stakeholder groups committed'],
       ['100+', 'qualified contractors in the pool'],
       ['~10', 'building owners ready to renovate'],
-      ['1', 'strategic partnership signed']
+      ['4 of 4', 'stakeholder groups committed'],
+      ['7% vs 62%', 'market share, Europe vs North America']
     ],
     description:
-      'How Stephane Ritty built a four-sided B2B2C roofing marketplace at Dow, from market insight to signed partners.'
+      'A four-sided roofing marketplace at Dow, built and contracted, then stopped by a restructuring before launch.'
   },
   {
     slug: 'circular-plastics',
     component: 'Plastics',
-    kind: 'Concepts',
     company: 'Dow',
-    title: 'Circular Plastics Initiative',
-    cardTitle: 'Circular Plastics Initiative',
-    cardText: 'Dow. Plastic waste as a construction material, a cross-division sustainability concept.',
-    summary:
-      'Plastic waste as a construction material: a cross-division concept linking Dow’s packaging and building businesses, developed with a team from the Sustainability Academy.',
-    role: 'Initiator & Team Lead',
+    title: 'Plastic waste as a building material',
+    line: 'A Sustainability Academy project with four colleagues. It never got past concept.',
     status: 'Concept',
+    dek: 'A project I proposed to Dow’s Sustainability Academy. It never got past concept, and I still think the idea is right.',
+    role: 'Proposed it and led the team',
     facts: [],
     description:
-      'Stephane Ritty’s cross-division concept at Dow for turning plastic waste into construction material.'
+      'A Dow Sustainability Academy concept for using recycled plastic waste in construction materials.'
   }
 ];
 
-// The homepage "What I build" grid, in this order.
-// Remove a slug here to take a case off the homepage; its page stays online.
-// The 2025 AI side projects are deliberately not on the homepage.
-export const homeCases = [
-  'npi-portfolio',
-  'adherence-marketplace',
-  'just-in-time-labeling',
-  'rental-business-model',
-  'b2b2c-platform',
-  'circular-plastics'
-];
-
-// The three numbers under the homepage headline.
-export const heroProof = [
-  ['$70M', 'new revenue over 4 years'],
-  ['50%', 'faster time-to-launch'],
-  ['5', 'project managers led']
+// "How I work" on the homepage: habits, each with the case that shows it.
+export const practices = [
+  {
+    title: 'Test the business model while the business case is still being written.',
+    text: 'On the adherence marketplace I ran Strategyzer tests with senior directors alongside the stage-gate business case. Some tests touched contracts, so Legal sat in from the start.',
+    slug: 'adherence-marketplace'
+  },
+  {
+    title: 'Sort projects by what you don’t know.',
+    text: 'With the PMO director we added a filter to stage-gate. Predictable projects kept the standard path. Uncertain ones came to my portfolio and ran on customer development, jobs-to-be-done and small assumption tests before any large spend.',
+    slug: 'npi-portfolio'
+  },
+  {
+    title: 'Learn the blocker’s system before arguing with him.',
+    text: 'The finance director said his systems couldn’t support rental. I spent four hours learning them, then two weeks of daily calls mapping the accounting of every site. Two months later he asked for his sites to run the pilot.',
+    slug: 'rental-business-model'
+  },
+  {
+    title: 'When time is the constraint, decide every day.',
+    text: 'For the labeling service I set up a daily steering committee with executives to fast-track decisions. Hiring, building a compliant packaging area and redesigning the process all ran in parallel.',
+    slug: 'just-in-time-labeling'
+  },
+  {
+    title: 'Find the department nobody invited.',
+    text: 'Before the adherence launch I found that Accounting was routinely left out of the project process. In a large company, money doesn’t move just because a contract is signed.',
+    slug: 'adherence-marketplace'
+  },
+  {
+    title: 'Write down what went wrong.',
+    text: 'Adherence adoption was slower than planned, and I lost the argument for more lead-generation budget. The Dow platform stopped before launch; I had underestimated the internal politics. Both are in the cases.',
+    slug: 'b2b2c-platform'
+  }
 ];
 
 // 2025 side projects, built on personal time while learning to build with AI.
@@ -195,36 +202,4 @@ export const apps = [
     status: 'Just for fun'
   }
   // Ikigai Finder (https://ikig.vercel.app/) is hidden until it works reliably.
-];
-
-// The homepage "Toolkit": methods, what they're for, and where they were used.
-// `used` lists case slugs; each becomes a link.
-export const toolkit = [
-  {
-    name: 'Customer Development',
-    by: 'Steve Blank',
-    what: 'Get out of the building: find out who the customer is and what they will pay for before building.',
-    used: ['npi-portfolio']
-  },
-  {
-    name: 'Jobs-to-be-Done',
-    what: 'Find the job the customer is really hiring the product to do.',
-    used: ['b2b2c-platform', 'npi-portfolio']
-  },
-  {
-    name: 'Business Model Canvas',
-    by: 'Strategyzer',
-    what: 'Design the whole business model on one page, then iterate it as evidence comes in.',
-    used: ['b2b2c-platform', 'adherence-marketplace']
-  },
-  {
-    name: 'Lean Startup',
-    what: 'Place rapid bets on the leap-of-faith assumptions first, then scale or kill early.',
-    used: ['npi-portfolio', 'adherence-marketplace']
-  },
-  {
-    name: 'Stage-gate with an uncertainty filter',
-    what: 'Keep governance, but send uncertain projects down an iterative track instead of a fixed plan.',
-    used: ['npi-portfolio']
-  }
 ];

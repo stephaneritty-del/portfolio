@@ -4,9 +4,10 @@ import CookieConsent from '../CookieConsent.jsx';
 export function ContactBand() {
   return (
     <section id="contact" className="contact-band">
-      <h2 className="display-md">
-        Something that needs <em>building?</em>
-      </h2>
+      <div className="contact-text">
+        <h2 className="display-md">Contact</h2>
+        <p className="lead">Email is the fastest way to reach me.</p>
+      </div>
       <div className="button-row">
         <a href={`mailto:${EMAIL}`} className="btn btn-accent">{EMAIL}</a>
         <a href={LINKEDIN} className="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>

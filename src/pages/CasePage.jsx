@@ -21,9 +21,9 @@ export default function CasePage({ slug }) {
       <SiteHeader className="page-header" />
       <main>
         <header className="case-hero">
-          <p className="kicker">{c.company} · {c.kind}</p>
+          <p className="kicker">{c.company}</p>
           <h1 className="display-lg">{c.title}</h1>
-          <p className="lead">{c.summary}</p>
+          <p className="lead">{c.dek}</p>
           <dl className="case-meta">
             {c.role && (
               <div>
@@ -48,7 +48,7 @@ export default function CasePage({ slug }) {
           )}
         </header>
 
-        <article className="case-body">
+        <article className="case-body prose">
           <Body />
         </article>
 

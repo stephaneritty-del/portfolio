@@ -10,9 +10,9 @@ export const routes = [
   {
     path: '/',
     file: 'index.html',
-    title: `Stephane Ritty, ${ROLE} | I turn chaos into revenue lines`,
+    title: `Stephane Ritty, ${ROLE}`,
     description:
-      'Head of Product Stephane Ritty builds products, services and platforms from zero: $70M in new revenue over 4 years from the NPI portfolio he led at Thermo Fisher.',
+      'Stephane Ritty, Head of Product. New services built inside Thermo Fisher and Dow, including a portfolio that brought $70M of new revenue in four years.',
     render: () => <Home />
   },
   ...cases.map((c) => ({

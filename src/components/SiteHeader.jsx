@@ -6,8 +6,9 @@ export default function SiteHeader({ className = '' }) {
     <header className={`site-header ${className}`}>
       <a href="/" className="site-name">Stephane Ritty</a>
       <nav className="site-nav" aria-label="Main">
-        <a href="/#build">Work</a>
-        <a href="/#about">About</a>
+        <a href="/#work">Work</a>
+        <a href="/#how">How I work</a>
+        <a href="/#contact">Contact</a>
         {CV_URL && (
           <a href={CV_URL} className="btn btn-outline btn-small">CV</a>
         )}

@@ -1,13 +1,10 @@
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter, { ContactBand } from '../components/SiteFooter.jsx';
-import ChaosLine from '../components/ChaosLine.jsx';
-import { EMAIL, ROLE, TESTIMONIAL, cases, homeCases, heroProof, toolkit } from '../content.js';
+import { EMAIL, ROLE, TESTIMONIAL, cases, heroFacts, practices } from '../content.js';
 
-const linkFor = (slug) => ({ href: `/work/${slug}`, label: cases.find((c) => c.slug === slug).cardTitle });
+const caseTitle = (slug) => cases.find((c) => c.slug === slug).title;
 
 export default function Home() {
-  const featured = homeCases.map((slug) => cases.find((c) => c.slug === slug));
-
   return (
     <>
       <section className="home-hero">
@@ -17,15 +14,14 @@ export default function Home() {
         <SiteHeader className="home-hero-header" />
         <div className="home-hero-content">
           <p className="kicker">{ROLE}</p>
-          <h1 className="display-xl">
-            I turn chaos into <em>revenue lines.</em>
-          </h1>
+          <h1 className="display-xl">I build new services inside companies that weren’t set up to run them.</h1>
           <p className="lead">
-            I see what others miss. Markets with zero presence, stalled initiatives, empty seats: I walk in,
-            build the strategy, assemble the team, and ship.
+            Mostly at Thermo Fisher, in clinical trial services: a marketplace that had failed twice, a rental model the
+            company had tried for ten years, a labeling service sales had sold before it existed. And at Dow, a roofing
+            platform to reach building owners in a market where Dow had almost no presence.
           </p>
-          <ul className="hero-proof" aria-label="Track record">
-            {heroProof.map(([value, label]) => (
+          <ul className="hero-proof" aria-label="Results">
+            {heroFacts.map(([value, label]) => (
               <li key={label}>
                 <span className="hero-proof-value">{value}</span>
                 <span className="hero-proof-label">{label}</span>
@@ -33,78 +29,63 @@ export default function Home() {
             ))}
           </ul>
           <div className="button-row">
-            <a href="#build" className="btn btn-light">See what I&apos;ve built</a>
-            <a href={`mailto:${EMAIL}`} className="btn btn-outline">Get in touch</a>
+            <a href="#work" className="btn btn-light">Read the cases</a>
+            <a href={`mailto:${EMAIL}`} className="btn btn-outline">Email me</a>
           </div>
         </div>
       </section>
 
       <main>
-        <section className="band band-line" aria-label="From chaos to a clean line">
-          <ChaosLine startLabel="Zero presence · stalled · empty seats" endLabel="Shipped." />
-        </section>
-
-        <section id="about" className="band band-center">
-          <p className="kicker">How I work</p>
-          <p className="display-lg statement">
-            Like a rugby forward, I go into the rucks no one wants, <em>so the team can move forward.</em>
-          </p>
-          <p className="statement-proof">
-            At Thermo Fisher, the finance director blocking the rental model became its first pilot site.
-          </p>
-        </section>
-
-        <section id="build" className="band">
-          <div className="section-head">
-            <h2 className="display-md">What I build</h2>
-            <p className="section-note">Product and innovation management, NPI portfolios, from zero to launch</p>
-          </div>
-          <div className="build-grid">
-            {featured.map((c) => (
-              <a key={c.slug} href={`/work/${c.slug}`} className="build-item">
-                <span className="kicker">{c.kind}</span>
-                <span className="build-title">{c.cardTitle}</span>
-                <span className="build-text">{c.cardText}</span>
-                <span className="build-more">Read the case</span>
-              </a>
+        <section id="work" className="band">
+          <h2 className="display-md section-title">Work</h2>
+          <ol className="work-list">
+            {cases.map((c) => (
+              <li key={c.slug}>
+                <a href={`/work/${c.slug}`} className="work-row">
+                  <span className="work-company">{c.company}</span>
+                  <span className="work-main">
+                    <span className="work-title">{c.title}</span>
+                    <span className="work-line">{c.line}</span>
+                  </span>
+                  <span className="work-status">{c.status}</span>
+                </a>
+              </li>
             ))}
-          </div>
+          </ol>
         </section>
 
-        <section id="toolkit" className="band">
-          <div className="section-head">
-            <h2 className="display-md">My toolkit</h2>
-            <p className="section-note">The methods I use to go from unknown to launched, and where I used them</p>
-          </div>
-          <ul className="toolkit">
-            {toolkit.map((t) => (
-              <li key={t.name} className="toolkit-row">
-                <div className="toolkit-name">
-                  <span className="toolkit-title">{t.name}</span>
-                  {t.by && <span className="toolkit-by">{t.by}</span>}
-                </div>
-                <p className="toolkit-what">{t.what}</p>
-                <p className="toolkit-used">
-                  {t.used.map((slug, i) => {
-                    const l = linkFor(slug);
-                    return (
-                      <span key={slug}>
-                        {i > 0 && ' · '}
-                        <a href={l.href}>{l.label}</a>
-                      </span>
-                    );
-                  })}
+        <section id="how" className="band">
+          <h2 className="display-md section-title">How I work</h2>
+          <ol className="practices">
+            {practices.map((p) => (
+              <li key={p.title} className="practice">
+                <h3 className="practice-title">{p.title}</h3>
+                <p className="practice-text">
+                  {p.text} <a href={`/work/${p.slug}`}>{caseTitle(p.slug)}</a>
                 </p>
               </li>
             ))}
-          </ul>
+          </ol>
         </section>
 
-        <section className="band band-center">
-          <blockquote className="quote">
+        <section id="background" className="band background">
+          <h2 className="display-md section-title">Background</h2>
+          <div className="background-text">
+            <p>
+              Product and innovation management, mostly in clinical trial services at Thermo Fisher and construction
+              chemicals at Dow. Today I&apos;m Head of Product.
+            </p>
+            <p>
+              The titles changed: product director, program lead, product owner, portfolio lead. The work sat in the
+              same place each time, between product, sales, operations, finance and legal, which is where new services
+              usually get stuck. On the Dow platform I negotiated with partner CEOs and also made the UX decisions
+              with the Scrum team.
+            </p>
+          </div>
+          <blockquote className="testimonial">
             <p>“{TESTIMONIAL.quote}”</p>
             <footer>
-              {TESTIMONIAL.name} · {TESTIMONIAL.title}
+              {TESTIMONIAL.name}, {TESTIMONIAL.title}
             </footer>
           </blockquote>
         </section>
