@@ -143,8 +143,10 @@ export const cases = [
 ];
 
 // "Building 0→1" on the homepage: an intro line, then observations with evidence.
-export const beyondProduct =
-  'A 0→1 doesn’t work because the product works. The customer, the economics, the team, the operations and the organization have to work too.';
+export const beyondProduct = [
+  'A 0→1 doesn’t work because the product works.',
+  'The customer, economics, team, operations and organization have to work too.'
+];
 
 export const principles = [
   {

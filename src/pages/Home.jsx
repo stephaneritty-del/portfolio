@@ -1,6 +1,6 @@
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter, { ContactBand } from '../components/SiteFooter.jsx';
-import { EMAIL, ROLE, apps, cases, heroFacts, beyondProduct, principles } from '../content.js';
+import { EMAIL, apps, cases, heroFacts, beyondProduct, principles } from '../content.js';
 
 const caseTitle = (slug) => cases.find((c) => c.slug === slug).title;
 
@@ -13,12 +13,15 @@ export default function Home() {
         </div>
         <SiteHeader className="home-hero-header" />
         <div className="home-hero-content">
-          <p className="kicker">{ROLE}</p>
+          <p className="kicker">0→1 Builder</p>
           <h1 className="display-xl">I build what doesn’t exist yet.</h1>
-          <p className="lead">
-            0→1 products, services and businesses, from the first idea to something that works. Inside Thermo Fisher
-            and Dow, or on my own, I run the whole thing: customer, business model, product, team, launch.
-          </p>
+          <div className="hero-lead">
+            <p className="lead">
+              0→1 products, services and businesses — from the first idea to something that works. I take ownership
+              beyond the product: customer, business model, product, team and launch.
+            </p>
+            <p className="lead">Inside Thermo Fisher and Dow, or on my own, I run the whole thing.</p>
+          </div>
           <ul className="hero-proof" aria-label="Results">
             {heroFacts.map(([value, label]) => (
               <li key={label}>
@@ -64,7 +67,9 @@ export default function Home() {
         <section id="independent" className="band">
           <div className="section-head">
             <h2 className="display-md">Independent 0→1</h2>
-            <p className="section-note">The environment changes. I still build. Small AI products I design and build myself.</p>
+            <p className="section-note">
+              <strong>The environment changes. I still build.</strong> Small AI products I design, build and ship myself.
+            </p>
           </div>
           <ol className="work-list">
             {apps.map((a) => (
@@ -89,11 +94,14 @@ export default function Home() {
         <section id="how" className="band">
           <div className="section-head section-head-stack">
             <h2 className="display-md">Building 0→1</h2>
-            <p className="lead">{beyondProduct}</p>
+            <p className="lead">
+              <strong>{beyondProduct[0]}</strong> {beyondProduct[1]}
+            </p>
           </div>
           <ol className="practices">
-            {principles.map((p) => (
+            {principles.map((p, i) => (
               <li key={p.title} className="practice">
+                <span className="practice-num">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="practice-title">{p.title}</h3>
                 <p className="practice-text">
                   {p.text} <a href={`/work/${p.slug}`}>{caseTitle(p.slug)}</a>
@@ -106,10 +114,11 @@ export default function Home() {
         <section id="background" className="band background">
           <h2 className="display-md section-title">Background</h2>
           <div className="background-text">
+            <p className="background-open">The titles changed. The work didn’t.</p>
             <p>
-              Product director, program lead, product owner, portfolio lead, now Head of Product. The titles changed;
-              the work didn’t: take something ambiguous and build it into something real. That meant working across
-              product, sales, operations, finance and legal, inside Thermo Fisher and Dow, and on my own.
+              Product director, program lead, product owner, portfolio lead, now Head of Product. Across Thermo Fisher,
+              Dow and my own projects, the job has stayed the same: take something ambiguous and build it into something
+              real.
             </p>
             <p className="rugby">
               Like a rugby forward, I go into the rucks no one wants, so the team can move forward.
