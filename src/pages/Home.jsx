@@ -3,10 +3,7 @@ import SiteFooter, { ContactBand } from '../components/SiteFooter.jsx';
 import ChaosLine from '../components/ChaosLine.jsx';
 import { EMAIL, ROLE, TESTIMONIAL, cases, homeCases, heroProof, toolkit } from '../content.js';
 
-const linkFor = (slug) =>
-  slug === 'ai-apps'
-    ? { href: '/ai-apps', label: 'AI apps' }
-    : { href: `/work/${slug}`, label: cases.find((c) => c.slug === slug).cardTitle };
+const linkFor = (slug) => ({ href: `/work/${slug}`, label: cases.find((c) => c.slug === slug).cardTitle });
 
 export default function Home() {
   const featured = homeCases.map((slug) => cases.find((c) => c.slug === slug));
@@ -75,12 +72,6 @@ export default function Home() {
                 <span className="build-more">Read the case</span>
               </a>
             ))}
-            <a href="/ai-apps" className="build-item">
-              <span className="kicker">AI apps</span>
-              <span className="build-title">VitalEat, WineCard, MissionMot</span>
-              <span className="build-text">Built hands-on, from idea to live product. Still shipping.</span>
-              <span className="build-more">Try them</span>
-            </a>
           </div>
         </section>
 

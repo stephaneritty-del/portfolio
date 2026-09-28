@@ -499,25 +499,42 @@ a:focus-visible, button:focus-visible {
 
 /* ---------- AI apps page ---------- */
 
-.apps-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.apps-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 48px 40px;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 80px;
+  align-items: start;
 }
+.apps-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 48px; }
 .app-item { display: flex; flex-direction: column; gap: 12px; padding-top: 24px; border-top: 1px solid var(--line-strong); }
+.app-item.is-active { border-top-color: var(--accent); }
 .app-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
 .app-title { margin: 0; font-family: var(--serif); font-size: 32px; font-weight: 400; }
 .app-status { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
 .app-subtitle { margin: 0; font-size: 16px; }
-.app-text { margin: 0; font-size: 16px; line-height: 1.55; color: var(--faint); }
+.app-text { margin: 0; max-width: 38em; font-size: 16px; line-height: 1.55; color: var(--faint); }
 .app-tags { margin: 0 0 8px; font-size: 13px; color: var(--faint); }
-.app-demo { margin-top: 80px; }
-.app-demo-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
-.app-demo-head a { font-size: 15px; color: var(--accent); }
-.app-demo iframe { display: block; width: 100%; height: 720px; border: 1px solid var(--line-strong); background: #fff; }
+
+/* The live demo sits in a phone frame, since the apps are built for phones. */
+.app-demo { position: sticky; top: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.phone {
+  width: 390px;
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 52px;
+  background: #0E0D0C;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+.phone-screen {
+  height: 780px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #fff;
+}
+.phone-screen iframe { display: block; width: 100%; height: 100%; border: 0; }
+.app-demo-caption { margin: 0; font-size: 14px; color: var(--faint); text-align: center; }
+.app-demo-caption a { color: var(--accent); }
 
 /* ---------- Cookie banner ---------- */
 
@@ -561,7 +578,8 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 1100px) {
   .build-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .apps-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .apps-layout { grid-template-columns: minmax(0, 1fr); gap: 64px; }
+  .app-demo { position: static; }
 }
 
 @media (max-width: 860px) {
@@ -579,8 +597,6 @@ a:focus-visible, button:focus-visible {
   .home-hero-content { padding: 40px var(--pad) 56px; gap: 24px; }
   .transformation-visual { grid-template-columns: minmax(0, 1fr); }
   .model-arrow { transform: rotate(90deg); justify-self: center; }
-  .apps-list { grid-template-columns: minmax(0, 1fr); }
-  .app-demo iframe { height: 600px; }
 }
 
 @media (max-width: 560px) {
@@ -591,6 +607,8 @@ a:focus-visible, button:focus-visible {
   .problem-box, .personal-reflection, .lessons-learned, .transformation-outcome { padding: 24px 20px; }
   .cookie-banner { flex-direction: column; align-items: stretch; }
   .cookie-banner-actions .cookie-btn { flex: 1; }
+  .phone { padding: 8px; border-radius: 40px; }
+  .phone-screen { height: min(78vh, 700px); border-radius: 32px; }
   .btn { width: 100%; }
   .site-nav .btn { width: auto; }
   .button-row { width: 100%; }

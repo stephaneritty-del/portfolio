@@ -25,8 +25,9 @@ export const routes = [
   {
     path: '/ai-apps',
     file: 'ai-apps.html',
-    title: 'AI apps | Stephane Ritty',
-    description: 'VitalEat, WineCard Selector and MissionMot: AI apps Stephane Ritty designed and built himself, from idea to live product.',
+    title: 'Side projects (2025) | Stephane Ritty',
+    description: 'Personal-time experiments from 2025, when Stephane Ritty started building with AI.',
+    noindex: true,
     render: () => <AppsPage />
   }
 ];

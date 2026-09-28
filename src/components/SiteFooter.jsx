@@ -24,6 +24,7 @@ export default function SiteFooter() {
           <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href={`mailto:${EMAIL}`}>Email</a>
+          <a href="/ai-apps">Side projects (2025)</a>
         </nav>
       </footer>
       <CookieConsent />

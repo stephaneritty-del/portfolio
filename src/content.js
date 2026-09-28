@@ -142,15 +142,16 @@ export const cases = [
   }
 ];
 
-// The homepage "What I build" grid, in this order (plus the AI apps tile last).
+// The homepage "What I build" grid, in this order.
 // Remove a slug here to take a case off the homepage; its page stays online.
-// Circular Plastics (a concept) is off the homepage but keeps its own page.
+// The 2025 AI side projects are deliberately not on the homepage.
 export const homeCases = [
   'npi-portfolio',
   'adherence-marketplace',
   'just-in-time-labeling',
   'rental-business-model',
-  'b2b2c-platform'
+  'b2b2c-platform',
+  'circular-plastics'
 ];
 
 // The three numbers under the homepage headline.
@@ -160,6 +161,8 @@ export const heroProof = [
   ['5', 'project managers led']
 ];
 
+// 2025 side projects, built on personal time while learning to build with AI.
+// Shown only on /ai-apps (linked from the footer), framed as past experiments.
 export const apps = [
   {
     id: 'vitaleat',
@@ -169,7 +172,7 @@ export const apps = [
       "An intelligent nutrition companion that helps identify food intolerances through seamless intake tracking. It learns your body's responses to different foods, stress levels, and sleep patterns.",
     tags: ['AI/ML', 'Health tech', 'Voice interface'],
     url: 'https://vitaleat.vercel.app',
-    status: 'Prototype'
+    status: 'The serious one'
   },
   {
     id: 'winecard',
@@ -179,7 +182,7 @@ export const apps = [
       'Snap a photo of any wine card or bottle and instantly get the information you need. Made for restaurant dining and wine shopping.',
     tags: ['Computer vision', 'Web scraping', 'API integration'],
     url: 'https://winecardselctor.vercel.app',
-    status: 'Live beta'
+    status: 'Just for fun'
   },
   {
     id: 'missionmot',
@@ -189,13 +192,13 @@ export const apps = [
       'A party game where each player takes on a character and has to steer the others into saying rare, assigned words during dinner.',
     tags: ['Game design', 'Social', 'Real-time'],
     url: 'https://missionmot.vercel.app',
-    status: 'Live'
+    status: 'Just for fun'
   }
   // Ikigai Finder (https://ikig.vercel.app/) is hidden until it works reliably.
 ];
 
 // The homepage "Toolkit": methods, what they're for, and where they were used.
-// `used` lists case slugs (or 'ai-apps'); each becomes a link.
+// `used` lists case slugs; each becomes a link.
 export const toolkit = [
   {
     name: 'Customer Development',
@@ -223,10 +226,5 @@ export const toolkit = [
     name: 'Stage-gate with an uncertainty filter',
     what: 'Keep governance, but send uncertain projects down an iterative track instead of a fixed plan.',
     used: ['npi-portfolio']
-  },
-  {
-    name: 'Building with AI',
-    what: 'Prototype and ship real products hands-on, from idea to live app.',
-    used: ['ai-apps']
   }
 ];
