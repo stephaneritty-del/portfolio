@@ -28,17 +28,14 @@ npm run dev
 npm run build
 ```
 
-## ⚙️ How the build works
+## ⚙️ How the site is built
 
-`npm run build` does three things:
+- `src/content.js` holds every fact the site repeats (email, CV link, case studies, AI apps).
+- `src/routes.jsx` lists every page: the homepage, one page per case study (`/work/<slug>`), `/ai-apps` and a 404 page.
+- `npm run build` builds the app, then `prerender.js` renders each page to its own HTML file with its own title and share tags. Google, LinkedIn and AI tools read real content, and `vercel.json` serves them at clean URLs.
+- In the browser, `src/main.jsx` finds the matching page and attaches React to the pre-rendered HTML.
 
-1. `vite build` builds the normal client app into `dist/`.
-2. `vite build --ssr src/entry-server.jsx` builds a version of the app that can run in Node.
-3. `node prerender.js` renders the app to HTML and writes it into `dist/index.html`.
-
-The result: the page ships with all its text already in the HTML, so Google, LinkedIn previews and AI tools can read it. In the browser, `src/main.jsx` attaches React to that HTML ("hydration").
-
-Keep tab panels rendered with `hidden={...}` rather than `{cond && (...)}`, otherwise hidden panels disappear from the HTML again.
+To add a case study: add an entry to `cases` in `src/content.js`, a content component in `src/cases/`, register it in `src/pages/CasePage.jsx`, and add the URL to `public/sitemap.xml`.
 
 ## 🌐 Deploy to Vercel (Recommended - FREE)
 
