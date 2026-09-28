@@ -12,12 +12,11 @@ export default function AppsPage() {
       <SiteHeader className="page-header" />
       <main>
         <header className="case-hero">
-          <p className="kicker">Side projects · 2025</p>
-          <h1 className="display-lg">Where I started <em>building with AI.</em></h1>
+          <p className="kicker">Independent 0→1</p>
+          <h1 className="display-lg">The environment changes. <em>I still build.</em></h1>
           <p className="lead">
-            Experiments from 2025, built on personal time while I was learning. VitalEat is the serious one; the
-            other two were just for fun. I&apos;d build all of them very differently today, but they&apos;re where it
-            started.
+            Small AI products I design and build myself, from idea to working product, without an organization around
+            them. Open any of them in the phone.
           </p>
         </header>
 

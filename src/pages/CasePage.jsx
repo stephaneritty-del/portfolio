@@ -21,10 +21,14 @@ export default function CasePage({ slug }) {
       <SiteHeader className="page-header" />
       <main>
         <header className="case-hero">
-          <p className="kicker">{c.company}</p>
+          <p className="kicker">{c.company} · {c.type}</p>
           <h1 className="display-lg">{c.title}</h1>
           <p className="lead">{c.dek}</p>
           <dl className="case-meta">
+            <div className="case-owned">
+              <dt>What I owned</dt>
+              <dd>{c.owned}</dd>
+            </div>
             {c.role && (
               <div>
                 <dt>Role</dt>

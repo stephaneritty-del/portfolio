@@ -12,16 +12,12 @@ export const CV_URL = null;
 
 export const ROLE = 'Head of Product';
 
-// A real quote from Dow. Shown in the homepage Background section.
-export const TESTIMONIAL = {
-  quote: 'Excellent forward thinking individual with entrepreneurial and strategic mindset!',
-  name: 'Marco ten Bruggencate',
-  title: 'Business President II&I, Dow'
-};
+// Marco ten Bruggencate's quote was removed from the site on 28 Sept.
+// To restore it, see .todo.md.
 
 // Three numbers under the homepage headline.
 export const heroFacts = [
-  ['$70M', 'new revenue in four years from the portfolio I ran'],
+  ['$70M', 'new revenue in four years, from the portfolio I ran'],
   ['9 months', 'to launch a rental model after ten years of attempts'],
   ['26 → 5 days', 'process time on a service built in three months']
 ];
@@ -31,6 +27,8 @@ export const heroFacts = [
 export const cases = [
   {
     slug: 'npi-portfolio',
+    type: 'New operating model',
+    owned: 'Portfolio decisions, the PMO framework (with the PMO director), a team of five project managers',
     component: 'Portfolio',
     company: 'Thermo Fisher',
     title: 'Running the new-service portfolio',
@@ -49,6 +47,8 @@ export const cases = [
   },
   {
     slug: 'adherence-marketplace',
+    type: 'New business',
+    owned: 'Business plan, vendor qualification, customer segmentation, pricing model, launch',
     component: 'Adherence',
     company: 'Thermo Fisher',
     title: 'A marketplace for medication adherence',
@@ -67,6 +67,8 @@ export const cases = [
   },
   {
     slug: 'just-in-time-labeling',
+    type: 'New service',
+    owned: 'Business model, operating process, hiring, a compliant packaging area, daily executive steering',
     component: 'Jit',
     company: 'Thermo Fisher',
     title: 'Just-in-time labeling',
@@ -85,6 +87,8 @@ export const cases = [
   },
   {
     slug: 'rental-business-model',
+    type: 'New business model',
+    owned: 'Business process, accounting integration, vendor contracts (MSAs and SOWs), financial model and pricing, pilot',
     component: 'Rental',
     company: 'Thermo Fisher',
     title: 'From selling equipment to renting it',
@@ -103,6 +107,8 @@ export const cases = [
   },
   {
     slug: 'b2b2c-platform',
+    type: 'Platform',
+    owned: 'Market strategy, business model, partner negotiations, product owner for version one, UX decisions',
     component: 'Platform',
     company: 'Dow',
     title: 'A roofing marketplace at Dow',
@@ -114,13 +120,15 @@ export const cases = [
       ['100+', 'qualified contractors in the pool'],
       ['~10', 'building owners ready to renovate'],
       ['4 of 4', 'stakeholder groups committed'],
-      ['7% vs 62%', 'market share, Europe vs North America']
+      ['7% vs 62%', 'liquid membranes’ share, Europe vs North America']
     ],
     description:
       'A four-sided roofing marketplace at Dow, built and contracted, then stopped by a restructuring before launch.'
   },
   {
     slug: 'circular-plastics',
+    type: 'Concept',
+    owned: 'The proposal, and a team of four from the Sustainability Academy',
     component: 'Plastics',
     company: 'Dow',
     title: 'Plastic waste as a building material',
@@ -134,16 +142,19 @@ export const cases = [
   }
 ];
 
-// "How I work" on the homepage: habits, each with the case that shows it.
-export const practices = [
+// "Building 0→1" on the homepage: an intro line, then observations with evidence.
+export const beyondProduct =
+  'A 0→1 doesn’t work because the product works. The customer, the economics, the team, the operations and the organization have to work too.';
+
+export const principles = [
   {
-    title: 'Test the business model while the business case is still being written.',
+    title: 'Start before the business case is finished.',
     text: 'On the adherence marketplace I ran Strategyzer tests with senior directors alongside the stage-gate business case. Some tests touched contracts, so Legal sat in from the start.',
     slug: 'adherence-marketplace'
   },
   {
     title: 'Sort projects by what you don’t know.',
-    text: 'With the PMO director we added a filter to stage-gate. Predictable projects kept the standard path. Uncertain ones came to my portfolio and ran on customer development, jobs-to-be-done and small assumption tests before any large spend.',
+    text: 'With the PMO director we added a filter to stage-gate. Predictable projects kept the standard path. Uncertain ones came to my portfolio and were tested in small steps before any large spend.',
     slug: 'npi-portfolio'
   },
   {
@@ -152,54 +163,54 @@ export const practices = [
     slug: 'rental-business-model'
   },
   {
-    title: 'When time is the constraint, decide every day.',
-    text: 'For the labeling service I set up a daily steering committee with executives to fast-track decisions. Hiring, building a compliant packaging area and redesigning the process all ran in parallel.',
-    slug: 'just-in-time-labeling'
-  },
-  {
     title: 'Find the department nobody invited.',
-    text: 'Before the adherence launch I found that Accounting was routinely left out of the project process. In a large company, money doesn’t move just because a contract is signed.',
+    text: 'Before the adherence launch I found that Accounting had been left out of the project process. A signed contract doesn’t make money move.',
     slug: 'adherence-marketplace'
   },
   {
+    title: 'When time is the constraint, decide every day.',
+    text: 'For the labeling service I set up a daily steering committee with executives. Hiring, a compliant packaging area and a new process ran in parallel instead of waiting on each other.',
+    slug: 'just-in-time-labeling'
+  },
+  {
     title: 'Write down what went wrong.',
-    text: 'Adherence adoption was slower than planned, and I lost the argument for more lead-generation budget. The Dow platform stopped before launch; I had underestimated the internal politics. Both are in the cases.',
+    text: 'Adherence adoption was slower than planned, and I lost the argument for more lead-generation budget. The Dow platform stopped before launch; I had underestimated the internal politics.',
     slug: 'b2b2c-platform'
   }
 ];
 
-// 2025 side projects, built on personal time while learning to build with AI.
-// Shown only on /ai-apps (linked from the footer), framed as past experiments.
+// Independent 0→1: small AI products Stephane designs and builds himself.
+// Shown on the homepage (Work) and on /ai-apps.
 export const apps = [
   {
     id: 'vitaleat',
     title: 'VitalEat',
     subtitle: 'AI-powered food intolerance tracker',
     description:
-      "An intelligent nutrition companion that helps identify food intolerances through seamless intake tracking. It learns your body's responses to different foods, stress levels, and sleep patterns.",
+      'Log meals by voice. It looks for patterns between what you eat, stress and sleep, to help find food intolerances.',
     tags: ['AI/ML', 'Health tech', 'Voice interface'],
     url: 'https://vitaleat.vercel.app',
-    status: 'The serious one'
+    status: 'Prototype'
   },
   {
     id: 'winecard',
     title: 'WineCard Selector',
     subtitle: 'Your pocket sommelier',
     description:
-      'Snap a photo of any wine card or bottle and instantly get the information you need. Made for restaurant dining and wine shopping.',
+      'Photograph a wine list or a bottle and get what you need to choose. Built for restaurants and wine shops.',
     tags: ['Computer vision', 'Web scraping', 'API integration'],
     url: 'https://winecardselctor.vercel.app',
-    status: 'Just for fun'
+    status: 'Live beta'
   },
   {
     id: 'missionmot',
     title: 'MissionMot',
     subtitle: 'Social dinner game',
     description:
-      'A party game where each player takes on a character and has to steer the others into saying rare, assigned words during dinner.',
+      'A dinner-party game. Each player gets a character and a rare word, and has to get the others to say it.',
     tags: ['Game design', 'Social', 'Real-time'],
     url: 'https://missionmot.vercel.app',
-    status: 'Just for fun'
+    status: 'Live'
   }
   // Ikigai Finder (https://ikig.vercel.app/) is hidden until it works reliably.
 ];

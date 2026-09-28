@@ -10,9 +10,9 @@ export const routes = [
   {
     path: '/',
     file: 'index.html',
-    title: `Stephane Ritty, ${ROLE}`,
+    title: `Stephane Ritty, ${ROLE} | I build what doesn’t exist yet`,
     description:
-      'Stephane Ritty, Head of Product. New services built inside Thermo Fisher and Dow, including a portfolio that brought $70M of new revenue in four years.',
+      'Stephane Ritty, Head of Product. 0→1 products, services and businesses: $70M of new revenue in four years at Thermo Fisher, a service built in three months, AI products built hands-on.',
     render: () => <Home />
   },
   ...cases.map((c) => ({
@@ -25,9 +25,8 @@ export const routes = [
   {
     path: '/ai-apps',
     file: 'ai-apps.html',
-    title: 'Side projects (2025) | Stephane Ritty',
-    description: 'Personal-time experiments from 2025, when Stephane Ritty started building with AI.',
-    noindex: true,
+    title: 'AI products | Stephane Ritty',
+    description: 'Independent 0→1: small AI products Stephane Ritty designs and builds himself. VitalEat, WineCard Selector and MissionMot.',
     render: () => <AppsPage />
   }
 ];
