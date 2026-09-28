@@ -93,14 +93,8 @@ body {
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: var(--transition);
-}
-
-.hero.visible {
-  opacity: 1;
-  transform: translateY(0);
+  /* No JS-gated fade here any more: the hero used to stay invisible until
+     React set a "visible" class. Its children already animate in with CSS. */
 }
 
 .status-badge.debug {
@@ -2587,4 +2581,114 @@ body {
 
 [data-theme="light"] .process-image img {
   border: 1px solid var(--color-border);
+}
+
+
+/* ------------------------------------------------------------------ */
+/* Added in the September 2026 rebuild                                  */
+/* ------------------------------------------------------------------ */
+
+/* Tab panels use the `hidden` attribute; make sure no class overrides it */
+[hidden] {
+  display: none !important;
+}
+
+/* Theme toggle: both icons are in the markup, CSS picks one */
+.theme-icon-sun { display: none; }
+[data-theme="dark"] .theme-icon-sun { display: block; }
+[data-theme="dark"] .theme-icon-moon { display: none; }
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Cookie consent banner */
+.cookie-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1100;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cookie-banner p {
+  flex: 1;
+  margin: 0;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.cookie-btn-secondary {
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.cookie-btn-secondary:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-muted);
+}
+
+.cookie-btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.cookie-btn-primary:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+@media (max-width: 520px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cookie-banner-actions .cookie-btn {
+    flex: 1;
+  }
+}
+
+/* Respect visitors who turn off animations in their OS settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
