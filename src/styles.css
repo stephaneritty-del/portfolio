@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------
    stephaneritty.com: portrait editorial (direction C)
-   Fonts are loaded in index.html (Bodoni Moda + Figtree).
+   Fonts are loaded in index.html (Newsreader + Figtree).
    ------------------------------------------------------------------ */
 
 :root {
@@ -14,7 +14,7 @@
   --accent: #D9B77E;
   --warm: #E3957A;
 
-  --serif: 'Bodoni Moda', Didot, 'Bodoni 72', 'Bodoni MT', Georgia, serif;
+  --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --sans: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --pad: clamp(20px, 6vw, 88px);
@@ -53,11 +53,11 @@ a:focus-visible, button:focus-visible {
 
 .display-xl, .display-lg, .display-md, .display-sm {
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   text-wrap: balance;
 }
-.display-xl { font-size: clamp(52px, 7vw, 100px); line-height: 1; letter-spacing: -0.025em; }
+.display-xl { font-size: clamp(52px, 7vw, 100px); line-height: 1.02; letter-spacing: -0.02em; }
 .display-lg { font-size: clamp(38px, 5vw, 72px); line-height: 1.08; letter-spacing: -0.02em; }
 .display-md { font-size: clamp(30px, 3.6vw, 56px); line-height: 1.1; letter-spacing: -0.015em; }
 .display-sm { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.2; }
@@ -633,6 +633,15 @@ a:focus-visible, button:focus-visible {
   .btn { width: 100%; }
   .site-nav .btn { width: auto; }
   .button-row { width: 100%; }
+}
+
+/* Headline font (Newsreader) at a medium weight everywhere it's used,
+   so it stays solid and easy to read on phones and computers alike. */
+.site-name, .build-title, .toolkit-title, .chaos-end, .quote p,
+.case-fact-value, .hero-proof-value, .case-section-title, .case-body h4, .case-body h5,
+.stat-number, .opportunity-number, .result-number, .customer-insight,
+.transformation-note, .ceo-quote p, .app-title, .model-arrow {
+  font-weight: 500;
 }
 
 @media (prefers-reduced-motion: reduce) {
