@@ -28,6 +28,18 @@ npm run dev
 npm run build
 ```
 
+## ⚙️ How the build works
+
+`npm run build` does three things:
+
+1. `vite build` builds the normal client app into `dist/`.
+2. `vite build --ssr src/entry-server.jsx` builds a version of the app that can run in Node.
+3. `node prerender.js` renders the app to HTML and writes it into `dist/index.html`.
+
+The result: the page ships with all its text already in the HTML, so Google, LinkedIn previews and AI tools can read it. In the browser, `src/main.jsx` attaches React to that HTML ("hydration").
+
+Keep tab panels rendered with `hidden={...}` rather than `{cond && (...)}`, otherwise hidden panels disappear from the HTML again.
+
 ## 🌐 Deploy to Vercel (Recommended - FREE)
 
 ### Option 1: Deploy via Vercel CLI (Fastest)

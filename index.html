@@ -1,64 +1,87 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Stephane Ritty - Turns Chaos Into Revenue Lines" />
+    <title>Stephane Ritty | I Turn Chaos Into Revenue Lines</title>
+    <meta name="description" content="Stephane Ritty builds new revenue lines inside large companies: a $20M marketplace at Thermo Fisher in 9 months, a B2B2C platform at Dow." />
     <meta name="author" content="Stephane Ritty" />
-    <title>Stephane Ritty | I Turn Chaos Into Revenue Lines </title>
+    <link rel="canonical" href="https://stephaneritty.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#059669" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MP6KTWMN7Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Open Graph / LinkedIn / Slack previews -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://stephaneritty.com/" />
+    <meta property="og:site_name" content="Stephane Ritty" />
+    <meta property="og:title" content="Stephane Ritty | I Turn Chaos Into Revenue Lines" />
+    <meta property="og:description" content="$20M revenue line in 9 months at Thermo Fisher. A 4-sided B2B2C platform at Dow. Case studies and AI apps, from strategy to launch." />
+    <meta property="og:image" content="https://stephaneritty.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Stephane Ritty: I turn chaos into revenue lines" />
+    <meta property="profile:first_name" content="Stephane" />
+    <meta property="profile:last_name" content="Ritty" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stephane Ritty | I Turn Chaos Into Revenue Lines" />
+    <meta name="twitter:description" content="$20M revenue line in 9 months at Thermo Fisher. A 4-sided B2B2C platform at Dow. Strategy to launch." />
+    <meta name="twitter:image" content="https://stephaneritty.com/og-image.jpg" />
 
-  // Basic config
-  gtag('config', 'G-MP6KTWMN7Y');
-</script>
+    <!-- Structured data: tells Google who this page is about -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stephane Ritty",
+      "url": "https://stephaneritty.com/",
+      "image": "https://stephaneritty.com/Stephane.jpg",
+      "email": "mailto:stephane.ritty@gmail.com",
+      "description": "Builds new revenue lines and platforms inside large companies, from strategy to launch. Past work at Thermo Fisher and Dow.",
+      "sameAs": [
+        "https://www.linkedin.com/in/stephaneritty/",
+        "https://github.com/stephaneritty-del"
+      ]
+    }
+    </script>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WTCF7TTR');</script>
-<!-- End Google Tag Manager -->
+    <!-- Apply saved theme before first paint (avoids a flash of the wrong theme) -->
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
 
-<script>
-  // Helper: check cookie
-  function getCookie(name) {
-    return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
-  }
+    <!-- Analytics: nothing loads until the visitor accepts the cookie banner -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.loadAnalytics = function () {
+        if (window.__analyticsLoaded) return;
+        window.__analyticsLoaded = true;
 
-  // Only load GA if consent was already given
-  if (getCookie('cookie_consent') === 'accepted') {
-    loadGA();
-  }
+        // Google Analytics 4
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-MP6KTWMN7Y';
+        document.head.appendChild(ga);
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-MP6KTWMN7Y');
 
-  function loadGA() {
-    const s = document.createElement('script');
-    s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MP6KTWMN7Y";
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', 'G-MP6KTWMN7Y');
-  }
-</script>
-
-    
+        // Google Tag Manager
+        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var gtm = document.createElement('script');
+        gtm.async = true;
+        gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WTCF7TTR';
+        document.head.appendChild(gtm);
+      };
+      if (document.cookie.split('; ').indexOf('cookie_consent=accepted') !== -1) {
+        window.loadAnalytics();
+      }
+    </script>
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTCF7TTR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
