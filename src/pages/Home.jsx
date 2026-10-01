@@ -16,7 +16,7 @@ export default function Home() {
         <div className="home-hero-content">
           <p className="kicker">0→1 Builder</p>
           <h1 className="display-xl">
-            I build what doesn’t exist yet<span className="title-dot">.<span className="dot-anchor" /></span>
+            Before it's a business, it's a mess. That's where I start.<span className="title-dot">.<span className="dot-anchor" /></span>
           </h1>
           <div className="hero-lead">
             <p className="lead">
