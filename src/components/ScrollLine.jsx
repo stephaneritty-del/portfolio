@@ -9,6 +9,22 @@ import { useEffect, useRef, useState } from 'react';
 
 const DESKTOP = '(min-width: 861px)';
 
+// Keep the whole hero (headline, text, numbers, buttons) inside one screen on
+// desktop, whatever the headline length: shrink type and spacing step by step
+// until it fits.
+function fitHero() {
+  const hero = document.querySelector('.home-hero');
+  if (!hero) return;
+  hero.style.setProperty('--hero-scale', '1');
+  if (!window.matchMedia(DESKTOP).matches) return;
+  const limit = window.innerHeight + 1;
+  let scale = 1;
+  while (hero.offsetHeight > limit && scale > 0.5) {
+    scale -= 0.04;
+    hero.style.setProperty('--hero-scale', scale.toFixed(2));
+  }
+}
+
 function buildPaths() {
   const anchor = document.querySelector('.dot-anchor');
   const dot = document.querySelector('.title-dot');
@@ -73,7 +89,10 @@ export default function ScrollLine() {
     let raf = 0;
     const rebuild = () => {
       cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => setGeo(mq.matches ? buildPaths() : null));
+      raf = requestAnimationFrame(() => {
+        fitHero();
+        setGeo(mq.matches ? buildPaths() : null);
+      });
     };
     rebuild();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(rebuild);
