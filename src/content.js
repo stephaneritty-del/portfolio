@@ -187,9 +187,9 @@ export const apps = [
   {
     id: 'vitaleat',
     title: 'VitalEat',
-    subtitle: 'AI-powered food intolerance tracker',
+    subtitle: 'Food intolerance finder for new parents',
     description:
-      'Log meals by voice. It looks for patterns between what you eat, stress and sleep, to help find food intolerances.',
+      'Our baby was allergic to dairy, and it took us four months to find out. Four horrible months. I built VitalEat so new parents can spot a food intolerance sooner: log meals by voice, and it looks for patterns between food, symptoms, stress and sleep.',
     tags: ['AI/ML', 'Health tech', 'Voice interface'],
     url: 'https://vitaleat.vercel.app',
     status: 'Prototype'
@@ -199,7 +199,7 @@ export const apps = [
     title: 'WineCard Selector',
     subtitle: 'Your pocket sommelier',
     description:
-      'Photograph a wine list or a bottle and get what you need to choose. Built for restaurants and wine shops.',
+      'A restaurant wine list gives you names, vintages and prices, but not what you need to choose. Photograph the list or a bottle and get the information that helps you decide.',
     tags: ['Computer vision', 'Web scraping', 'API integration'],
     url: 'https://winecardselctor.vercel.app',
     status: 'Live beta'
@@ -213,6 +213,15 @@ export const apps = [
     tags: ['Game design', 'Social', 'Real-time'],
     url: 'https://missionmot.vercel.app',
     status: 'Live'
+  },
+  {
+    id: 'lumi',
+    title: 'Lumi',
+    subtitle: 'Ikigai coach',
+    description:
+      'Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you’re good at, what the world needs and what you can be paid for.',
+    tags: ['AI coach', 'Self-discovery'],
+    url: 'https://ikig.vercel.app/',
+    status: 'Prototype'
   }
-  // Ikigai Finder (https://ikig.vercel.app/) is hidden until it works reliably.
 ];

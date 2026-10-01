@@ -1,5 +1,6 @@
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter, { ContactBand } from '../components/SiteFooter.jsx';
+import ScrollLine from '../components/ScrollLine.jsx';
 import { EMAIL, apps, cases, heroFacts, beyondProduct, principles } from '../content.js';
 
 const caseTitle = (slug) => cases.find((c) => c.slug === slug).title;
@@ -14,7 +15,9 @@ export default function Home() {
         <SiteHeader className="home-hero-header" />
         <div className="home-hero-content">
           <p className="kicker">0→1 Builder</p>
-          <h1 className="display-xl">I build what doesn’t exist yet.</h1>
+          <h1 className="display-xl">
+            I build what doesn’t exist yet<span className="title-dot">.<span className="dot-anchor" /></span>
+          </h1>
           <div className="hero-lead">
             <p className="lead">
               0→1 products, services and businesses — from the first idea to something that works. I take ownership
@@ -38,7 +41,8 @@ export default function Home() {
       </section>
 
       <main>
-        <section id="work" className="band">
+        <section id="work" className="band work-band">
+          <p id="shipped-mark" className="shipped-mark">Shipped.</p>
           <div className="section-head">
             <h2 className="display-md">Corporate 0→1</h2>
             <p className="section-note">
@@ -130,6 +134,7 @@ export default function Home() {
       </main>
 
       <SiteFooter />
+      <ScrollLine />
     </>
   );
 }

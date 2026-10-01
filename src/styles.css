@@ -216,6 +216,38 @@ a:focus-visible, button:focus-visible {
 .section-note { margin: 0; font-size: 15px; color: var(--faint); }
 .section-note strong, .section-head .lead strong { color: var(--text); font-weight: 600; }
 
+/* ---------- The line from the headline's dot to "Shipped." ---------- */
+
+.title-dot { color: var(--accent); }
+.dot-anchor { display: inline-block; width: 0; height: 0; vertical-align: baseline; }
+
+.scroll-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+.scroll-line svg { display: block; overflow: visible; }
+.scroll-line path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.scroll-line-scribble { stroke: #7A746A; stroke-width: 1.6; }
+.scroll-line-clean { stroke: var(--accent); stroke-width: 2.5; }
+
+.work-band { padding-top: clamp(96px, 12vw, 176px); }
+.shipped-mark {
+  width: fit-content;
+  margin: 0 0 clamp(28px, 3vw, 44px);
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(26px, 2.8vw, 38px);
+  line-height: 1;
+  transition: opacity .5s ease;
+}
+.shipped-mark.is-waiting { opacity: 0.18; }
+.shipped-mark.is-waiting.is-shipped { opacity: 1; }
+
 /* ---------- Homepage sections ---------- */
 
 .section-title { margin-bottom: clamp(32px, 4vw, 56px); }
