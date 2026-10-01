@@ -165,11 +165,13 @@ a:focus-visible, button:focus-visible {
   align-self: end;
   display: flex;
   flex-direction: column;
-  gap: clamp(12px, 2.6vh, 32px);
-  padding: clamp(20px, 4vh, 48px) var(--pad) clamp(24px, 6vh, 72px) clamp(32px, 5.5vw, 80px);
+  gap: calc(clamp(12px, 2.6vh, 32px) * var(--hero-scale, 1));
+  padding: clamp(20px, 4vh, 48px) var(--pad) calc(clamp(24px, 6vh, 72px) * var(--hero-scale, 1)) clamp(32px, 5.5vw, 80px);
 }
-.home-hero .display-xl { font-size: clamp(40px, min(6.6vw, 10.5vh), 100px); }
-.home-hero .lead { font-size: clamp(16px, min(1.5vw, 2.15vh), 20px); max-width: 36em; }
+/* --hero-scale is lowered by ScrollLine.jsx when the hero would be taller than the screen,
+   so the buttons always stay in the first view on desktop. */
+.home-hero .display-xl { font-size: calc(clamp(40px, min(6.6vw, 10.5vh), 100px) * var(--hero-scale, 1)); }
+.home-hero .lead { font-size: calc(clamp(16px, min(1.5vw, 2.15vh), 20px) * max(var(--hero-scale, 1), 0.85)); max-width: 36em; }
 .hero-lead { display: flex; flex-direction: column; gap: clamp(6px, 1.2vh, 12px); }
 
 .hero-proof {
