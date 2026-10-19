@@ -1,5 +1,5 @@
 // Every fact the site repeats lives here, so a change is made once.
-// Rule for this file: no fact goes in that Stephane hasn't provided.
+// Rule for this file: no fact goes in that Stephane hasn\'t provided.
 
 export const SITE_URL = 'https://stephaneritty.com';
 export const EMAIL = 'stephane.ritty@gmail.com';
@@ -7,12 +7,12 @@ export const LINKEDIN = 'https://www.linkedin.com/in/stephaneritty/';
 export const GITHUB = 'https://github.com/stephaneritty-del';
 
 // Put your CV in /public (e.g. public/stephane-ritty-cv.pdf) and set this to
-// '/stephane-ritty-cv.pdf'. While it's null, the CV link stays hidden.
+// '/stephane-ritty-cv.pdf'. While it\'s null, the CV link stays hidden.
 export const CV_URL = null;
 
 export const ROLE = 'Head of Product';
 
-// Marco ten Bruggencate's quote was removed from the site on 28 Sept.
+// Marco ten Bruggencate\'s quote was removed from the site on 28 Sept.
 // To restore it, see .todo.md.
 
 // Three numbers under the homepage headline.
@@ -32,7 +32,7 @@ export const cases = [
     component: 'Portfolio',
     company: 'Thermo Fisher',
     title: 'Running the new-service portfolio',
-    line: 'Five project managers, a stage-gate that sorted projects by what we didn't know yet, and $70M of new revenue in four years.',
+    line: 'Five project managers, a stage-gate that sorted projects by what we didn\'t know yet, and $70M of new revenue in four years.',
     status: 'Operating model',
     dek: 'How we decided which new services to build, which to reshape, and which to stop before the big spend.',
     role: 'Led the NPI portfolio; co-owned the PMO framework with the PMO director',
@@ -74,7 +74,7 @@ export const cases = [
     title: 'Just-in-time labeling',
     line: 'Sold into a ten-year clinical trial before the service existed. Built in three months; process time went from 26 days to 5.',
     status: 'Launched',
-    dek: 'Sales closed a deal for a service we didn't have. We had three months to make it real.',
+    dek: 'Sales closed a deal for a service we didn\'t have. We had three months to make it real.',
     role: null,
     facts: [
       ['3 months', 'from emergency to running service'],
@@ -120,7 +120,7 @@ export const cases = [
       ['100+', 'qualified contractors in the pool'],
       ['~10', 'building owners ready to renovate'],
       ['4 of 4', 'stakeholder groups committed'],
-      ['7% vs 62%', 'liquid membranes' share, Europe vs North America']
+      ['7% vs 62%', 'liquid membranes\' share, Europe vs North America']
     ],
     description:
       'A four-sided roofing marketplace at Dow, built and contracted, then stopped by a restructuring before launch.'
@@ -134,7 +134,7 @@ export const cases = [
     title: 'Plastic waste as a building material',
     line: 'A Sustainability Academy project with four colleagues. It never got past concept.',
     status: 'Concept',
-    dek: 'A project I proposed to Dow's Sustainability Academy. It never got past concept, and I still think the idea is right.',
+    dek: 'A project I proposed to Dow\'s Sustainability Academy. It never got past concept, and I still think the idea is right.',
     role: 'Proposed it and led the team',
     facts: [],
     description:
@@ -144,7 +144,7 @@ export const cases = [
 
 // "Building 0→1" on the homepage: an intro line, then observations with evidence.
 export const beyondProduct = [
-  'A 0→1 doesn't work because the product works.',
+  'A 0→1 doesn\'t work because the product works.',
   'The customer, economics, team, operations and organization have to work too.'
 ];
 
@@ -155,18 +155,18 @@ export const principles = [
     slug: 'adherence-marketplace'
   },
   {
-    title: 'Sort projects by what you don't know.',
+    title: 'Sort projects by what you don\'t know.',
     text: 'With the PMO director we added a filter to stage-gate. Predictable projects kept the standard path. Uncertain ones came to my portfolio and were tested in small steps before any large spend.',
     slug: 'npi-portfolio'
   },
   {
-    title: 'Learn the blocker's system before arguing with him.',
-    text: 'The finance director said his systems couldn't support rental. I spent four hours learning them, then two weeks of daily calls mapping the accounting of every site. Two months later he asked for his sites to run the pilot.',
+    title: 'Learn the blocker\'s system before arguing with him.',
+    text: 'The finance director said his systems couldn\'t support rental. I spent four hours learning them, then two weeks of daily calls mapping the accounting of every site. Two months later he asked for his sites to run the pilot.',
     slug: 'rental-business-model'
   },
   {
     title: 'Find the department nobody invited.',
-    text: 'Before the adherence launch I found that Accounting had been left out of the project process. A signed contract doesn't make money move.',
+    text: 'Before the adherence launch I found that Accounting had been left out of the project process. A signed contract doesn\'t make money move.',
     slug: 'adherence-marketplace'
   },
   {
@@ -213,7 +213,7 @@ export const apps = [
     title: '++ Invasion',
     subtitle: 'Co-created with my son',
     description:
-      'A fun game I built with my son. We're continuing to develop it together, combining game design with a father-son project.',
+      'A fun game I built with my son. We\'re continuing to develop it together, combining game design with a father-son project.',
     tags: ['Game design', 'Multiplayer', 'Family project'],
     url: 'https://plusplusinvasion.vercel.app/',
     video: null, // Add gameplay video here to catch attention!
@@ -224,7 +224,7 @@ export const apps = [
     title: 'Ressentis',
     subtitle: 'Emotion tracker & journal',
     description:
-      'It's not always easy to name what you feel. Ressentis helps you record your emotions, identify them correctly, work through difficult moments, and get recaps to understand your emotional patterns.',
+      'It\'s not always easy to name what you feel. Ressentis helps you record your emotions, identify them correctly, work through difficult moments, and get recaps to understand your emotional patterns.',
     tags: ['AI', 'Mental health', 'Journaling'],
     url: 'https://ressentis.vercel.app/',
     video: null,
@@ -256,7 +256,7 @@ export const apps = [
     title: 'Lumi',
     subtitle: 'Ikigai coach',
     description:
-      'Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you're good at, what the world needs and what you can be paid for.',
+      'Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you\'re good at, what the world needs and what you can be paid for.',
     tags: ['AI coach', 'Self-discovery'],
     url: 'https://ikig.vercel.app/',
     video: null,
