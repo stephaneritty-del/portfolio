@@ -32,7 +32,7 @@ export const cases = [
     component: 'Portfolio',
     company: 'Thermo Fisher',
     title: 'Running the new-service portfolio',
-    line: 'Five project managers, a stage-gate that sorted projects by what we didn’t know yet, and $70M of new revenue in four years.',
+    line: 'Five project managers, a stage-gate that sorted projects by what we didn't know yet, and $70M of new revenue in four years.',
     status: 'Operating model',
     dek: 'How we decided which new services to build, which to reshape, and which to stop before the big spend.',
     role: 'Led the NPI portfolio; co-owned the PMO framework with the PMO director',
@@ -74,7 +74,7 @@ export const cases = [
     title: 'Just-in-time labeling',
     line: 'Sold into a ten-year clinical trial before the service existed. Built in three months; process time went from 26 days to 5.',
     status: 'Launched',
-    dek: 'Sales closed a deal for a service we didn’t have. We had three months to make it real.',
+    dek: 'Sales closed a deal for a service we didn't have. We had three months to make it real.',
     role: null,
     facts: [
       ['3 months', 'from emergency to running service'],
@@ -120,7 +120,7 @@ export const cases = [
       ['100+', 'qualified contractors in the pool'],
       ['~10', 'building owners ready to renovate'],
       ['4 of 4', 'stakeholder groups committed'],
-      ['7% vs 62%', 'liquid membranes’ share, Europe vs North America']
+      ['7% vs 62%', 'liquid membranes' share, Europe vs North America']
     ],
     description:
       'A four-sided roofing marketplace at Dow, built and contracted, then stopped by a restructuring before launch.'
@@ -134,7 +134,7 @@ export const cases = [
     title: 'Plastic waste as a building material',
     line: 'A Sustainability Academy project with four colleagues. It never got past concept.',
     status: 'Concept',
-    dek: 'A project I proposed to Dow’s Sustainability Academy. It never got past concept, and I still think the idea is right.',
+    dek: 'A project I proposed to Dow's Sustainability Academy. It never got past concept, and I still think the idea is right.',
     role: 'Proposed it and led the team',
     facts: [],
     description:
@@ -144,7 +144,7 @@ export const cases = [
 
 // "Building 0→1" on the homepage: an intro line, then observations with evidence.
 export const beyondProduct = [
-  'A 0→1 doesn’t work because the product works.',
+  'A 0→1 doesn't work because the product works.',
   'The customer, economics, team, operations and organization have to work too.'
 ];
 
@@ -155,18 +155,18 @@ export const principles = [
     slug: 'adherence-marketplace'
   },
   {
-    title: 'Sort projects by what you don’t know.',
+    title: 'Sort projects by what you don't know.',
     text: 'With the PMO director we added a filter to stage-gate. Predictable projects kept the standard path. Uncertain ones came to my portfolio and were tested in small steps before any large spend.',
     slug: 'npi-portfolio'
   },
   {
-    title: 'Learn the blocker’s system before arguing with him.',
-    text: 'The finance director said his systems couldn’t support rental. I spent four hours learning them, then two weeks of daily calls mapping the accounting of every site. Two months later he asked for his sites to run the pilot.',
+    title: 'Learn the blocker's system before arguing with him.',
+    text: 'The finance director said his systems couldn't support rental. I spent four hours learning them, then two weeks of daily calls mapping the accounting of every site. Two months later he asked for his sites to run the pilot.',
     slug: 'rental-business-model'
   },
   {
     title: 'Find the department nobody invited.',
-    text: 'Before the adherence launch I found that Accounting had been left out of the project process. A signed contract doesn’t make money move.',
+    text: 'Before the adherence launch I found that Accounting had been left out of the project process. A signed contract doesn't make money move.',
     slug: 'adherence-marketplace'
   },
   {
@@ -187,79 +187,79 @@ export const principles = [
 // Order: Best apps first, experimental ones last
 export const apps = [
   {
-    id: ‘vitaleat’,
-    title: ‘VitalEat’,
-    subtitle: ‘Food intolerance finder for new parents’,
+    id: 'vitaleat',
+    title: 'VitalEat',
+    subtitle: 'Food intolerance finder for new parents',
     description:
-      ‘Our baby was allergic to dairy, and it took us four months to find out. Four horrible months. I built VitalEat so new parents can spot a food intolerance sooner: log meals by voice, and it looks for patterns between food, symptoms, stress and sleep.’,
-    tags: [‘AI/ML’, ‘Health tech’, ‘Voice interface’],
-    url: ‘https://vitaleat.vercel.app’,
-    video: null, // Add video URL here (e.g., ‘/videos/vitaleat-demo.mp4’)
-    status: ‘Prototype’
+      'Our baby was allergic to dairy, and it took us four months to find out. Four horrible months. I built VitalEat so new parents can spot a food intolerance sooner: log meals by voice, and it looks for patterns between food, symptoms, stress and sleep.',
+    tags: ['AI/ML', 'Health tech', 'Voice interface'],
+    url: 'https://vitaleat.vercel.app',
+    video: null, // Add video URL here (e.g., '/videos/vitaleat-demo.mp4')
+    status: 'Prototype'
   },
   {
-    id: ‘plusplus’,
-    title: ‘++ Invasion’,
-    subtitle: ‘Co-created with my son’,
+    id: 'plusplus',
+    title: '++ Invasion',
+    subtitle: 'Co-created with my son',
     description:
-      ‘A fun game I built with my son. We’re continuing to develop it together, combining game design with a father-son project.’,
-    tags: [‘Game design’, ‘Multiplayer’, ‘Family project’],
-    url: ‘https://plusplusinvasion.vercel.app/’,
+      'A fun game I built with my son. We're continuing to develop it together, combining game design with a father-son project.',
+    tags: ['Game design', 'Multiplayer', 'Family project'],
+    url: 'https://plusplusinvasion.vercel.app/',
     video: null, // Add gameplay video here to catch attention!
-    status: ‘In development’
+    status: 'In development'
   },
   {
-    id: ‘ressentis’,
-    title: ‘Ressentis’,
-    subtitle: ‘Emotion tracker & journal’,
+    id: 'ressentis',
+    title: 'Ressentis',
+    subtitle: 'Emotion tracker & journal',
     description:
-      ‘It’s not always easy to name what you feel. Ressentis helps you record your emotions, identify them correctly, work through difficult moments, and get recaps to understand your emotional patterns.’,
-    tags: [‘AI’, ‘Mental health’, ‘Journaling’],
-    url: ‘https://ressentis.vercel.app/’,
+      'It's not always easy to name what you feel. Ressentis helps you record your emotions, identify them correctly, work through difficult moments, and get recaps to understand your emotional patterns.',
+    tags: ['AI', 'Mental health', 'Journaling'],
+    url: 'https://ressentis.vercel.app/',
     video: null,
-    status: ‘Prototype’
+    status: 'Prototype'
   },
   // {
-  //   id: ‘factuai’,
-  //   title: ‘FactuAI’,
-  //   subtitle: ‘TBD’,
-  //   description: ‘TBD’,
-  //   tags: [‘AI’, ‘TBD’],
-  //   url: ‘https://factuai.vercel.app/’,
+  //   id: 'factuai',
+  //   title: 'FactuAI',
+  //   subtitle: 'TBD',
+  //   description: 'TBD',
+  //   tags: ['AI', 'TBD'],
+  //   url: 'https://factuai.vercel.app/',
   //   video: null,
-  //   status: ‘Coming soon’
+  //   status: 'Coming soon'
   // },
   {
-    id: ‘winecard’,
-    title: ‘WineCard Selector’,
-    subtitle: ‘Your pocket sommelier’,
+    id: 'winecard',
+    title: 'WineCard Selector',
+    subtitle: 'Your pocket sommelier',
     description:
-      ‘A restaurant wine list gives you names, vintages and prices, but not what you need to choose. Photograph the list or a bottle and get the information that helps you decide.’,
-    tags: [‘Computer vision’, ‘Web scraping’, ‘API integration’],
-    url: ‘https://winecardselctor.vercel.app’,
+      'A restaurant wine list gives you names, vintages and prices, but not what you need to choose. Photograph the list or a bottle and get the information that helps you decide.',
+    tags: ['Computer vision', 'Web scraping', 'API integration'],
+    url: 'https://winecardselctor.vercel.app',
     video: null,
-    status: ‘Live beta’
+    status: 'Live beta'
   },
   {
-    id: ‘lumi’,
-    title: ‘Lumi’,
-    subtitle: ‘Ikigai coach’,
+    id: 'lumi',
+    title: 'Lumi',
+    subtitle: 'Ikigai coach',
     description:
-      ‘Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you’re good at, what the world needs and what you can be paid for.’,
-    tags: [‘AI coach’, ‘Self-discovery’],
-    url: ‘https://ikig.vercel.app/’,
+      'Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you're good at, what the world needs and what you can be paid for.',
+    tags: ['AI coach', 'Self-discovery'],
+    url: 'https://ikig.vercel.app/',
     video: null,
-    status: ‘Prototype’
+    status: 'Prototype'
   },
   {
-    id: ‘missionmot’,
-    title: ‘MissionMot’,
-    subtitle: ‘Social dinner game’,
+    id: 'missionmot',
+    title: 'MissionMot',
+    subtitle: 'Social dinner game',
     description:
-      ‘A dinner-party game. Each player gets a character and a rare word, and has to get the others to say it.’,
-    tags: [‘Game design’, ‘Social’, ‘Real-time’],
-    url: ‘https://missionmot.vercel.app’,
+      'A dinner-party game. Each player gets a character and a rare word, and has to get the others to say it.',
+    tags: ['Game design', 'Social', 'Real-time'],
+    url: 'https://missionmot.vercel.app',
     video: null,
-    status: ‘Live’
+    status: 'Live'
   }
 ];
