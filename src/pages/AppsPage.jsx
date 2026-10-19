@@ -41,6 +41,7 @@ export default function AppsPage() {
                 <p className="app-subtitle">{a.subtitle}</p>
                 <p className="app-text">{a.description}</p>
                 <p className="app-tags">{a.tags.join(' · ')}</p>
+                {a.url && (
                 <div className="button-row">
                   <button
                     type="button"
@@ -54,6 +55,7 @@ export default function AppsPage() {
                     Play now →
                   </a>
                 </div>
+                )}
               </li>
             ))}
           </ul>
@@ -88,7 +90,7 @@ export default function AppsPage() {
                     src={app.url}
                     title={`${app.title} live demo`}
                     loading="lazy"
-                    allow="camera; microphone"
+                    allow="camera; microphone; accelerometer; gyroscope; autoplay; fullscreen"
                   />
                 )}
               </div>
