@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { matchRoute } from './routes.jsx'
+import { inject } from '@vercel/analytics'
 import './styles.css'
 
 const container = document.getElementById('root')
@@ -14,3 +15,6 @@ if (container.hasChildNodes()) {
 } else {
   ReactDOM.createRoot(container).render(app)
 }
+
+// Cookieless page-view counting (no consent banner needed)
+inject()

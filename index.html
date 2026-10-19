@@ -50,34 +50,6 @@
       ]
     }
     </script>
-
-    <!-- Analytics: nothing loads until the visitor accepts the cookie banner -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      window.loadAnalytics = function () {
-        if (window.__analyticsLoaded) return;
-        window.__analyticsLoaded = true;
-
-        // Google Analytics 4
-        var ga = document.createElement('script');
-        ga.async = true;
-        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-MP6KTWMN7Y';
-        document.head.appendChild(ga);
-        window.gtag = function () { window.dataLayer.push(arguments); };
-        window.gtag('js', new Date());
-        window.gtag('config', 'G-MP6KTWMN7Y');
-
-        // Google Tag Manager
-        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var gtm = document.createElement('script');
-        gtm.async = true;
-        gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WTCF7TTR';
-        document.head.appendChild(gtm);
-      };
-      if (document.cookie.split('; ').indexOf('cookie_consent=accepted') !== -1) {
-        window.loadAnalytics();
-      }
-    </script>
   </head>
 
   <body>

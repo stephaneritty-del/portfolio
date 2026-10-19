@@ -355,6 +355,7 @@ a:focus-visible, button:focus-visible {
   color: var(--faint);
 }
 .site-footer p { margin: 0; }
+.site-footer .footer-note { flex-basis: 100%; font-size: 13px; }
 .site-footer nav { display: flex; gap: 24px; }
 .site-footer a:hover { color: var(--accent); }
 
@@ -588,44 +589,6 @@ a:focus-visible, button:focus-visible {
 .app-demo-caption { margin: 0; font-size: 14px; color: var(--faint); text-align: center; }
 .app-demo-caption a { color: var(--accent); }
 
-/* ---------- Cookie banner ---------- */
-
-.cookie-banner {
-  position: fixed;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 1100;
-  max-width: 560px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  background: var(--bg-raised);
-  color: var(--text);
-  border: 1px solid var(--line-strong);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-.cookie-banner p { flex: 1; margin: 0; }
-.cookie-banner-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
-.cookie-btn {
-  min-height: 44px;
-  padding: 0 1rem;
-  font-family: var(--sans);
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  border: 1px solid var(--line-strong);
-  background: transparent;
-  color: var(--muted);
-}
-.cookie-btn-secondary:hover { color: var(--text); border-color: var(--text); }
-.cookie-btn-primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.cookie-btn-primary:hover { background: var(--text); border-color: var(--text); }
-
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
@@ -660,8 +623,6 @@ a:focus-visible, button:focus-visible {
   .site-name { font-size: 19px; }
   .site-nav { gap: 18px; font-size: 14px; }
   .problem-box, .personal-reflection, .lessons-learned, .transformation-outcome { padding: 24px 20px; }
-  .cookie-banner { flex-direction: column; align-items: stretch; }
-  .cookie-banner-actions .cookie-btn { flex: 1; }
   .phone { padding: 8px; border-radius: 40px; }
   .phone-screen { height: min(78vh, 700px); border-radius: 32px; }
   .btn { width: 100%; }

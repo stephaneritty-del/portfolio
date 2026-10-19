@@ -1,5 +1,4 @@
 import { EMAIL, LINKEDIN, GITHUB } from '../content.js';
-import CookieConsent from '../CookieConsent.jsx';
 
 export function ContactBand() {
   return (
@@ -27,8 +26,10 @@ export default function SiteFooter() {
           <a href={`mailto:${EMAIL}`}>Email</a>
           <a href="/ai-apps">AI products</a>
         </nav>
+        <p className="footer-note">
+          Visits are counted anonymously with Vercel Web Analytics. No cookies, no personal data, no cross-site tracking.
+        </p>
       </footer>
-      <CookieConsent />
     </>
   );
 }
