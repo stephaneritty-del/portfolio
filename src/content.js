@@ -198,6 +198,17 @@ export const apps = [
     status: 'Prototype'
   },
   {
+    id: 'healthx',
+    title: 'Enterprise Health Platform',
+    subtitle: 'Multi-tenant B2B2C platform',
+    description:
+      'Leading product development for a large-scale health technology platform serving enterprise clients and end users. Building the semantic layer for health data interoperability, AI-powered intelligence layer, and scalable multi-tenant architecture. Currently under NDA.',
+    tags: ['Health tech', 'Enterprise', 'B2B2C', 'AI/ML', 'Platform'],
+    url: null,
+    video: null,
+    status: 'In development - NDA'
+  },
+  {
     id: 'plusplus',
     title: '++ Invasion',
     subtitle: 'Co-created with my son',
