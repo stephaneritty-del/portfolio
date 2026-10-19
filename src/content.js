@@ -215,13 +215,33 @@ export const apps = [
     status: 'Live'
   },
   {
-    id: 'lumi',
-    title: 'Lumi',
-    subtitle: 'Ikigai coach',
+    id: ‘lumi’,
+    title: ‘Lumi’,
+    subtitle: ‘Ikigai coach’,
     description:
-      'Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you’re good at, what the world needs and what you can be paid for.',
-    tags: ['AI coach', 'Self-discovery'],
-    url: 'https://ikig.vercel.app/',
-    status: 'Prototype'
+      ‘Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you’re good at, what the world needs and what you can be paid for.’,
+    tags: [‘AI coach’, ‘Self-discovery’],
+    url: ‘https://ikig.vercel.app/’,
+    status: ‘Prototype’
+  },
+  {
+    id: ‘plusplus’,
+    title: ‘++ Invasion’,
+    subtitle: ‘Co-created with my son’,
+    description:
+      ‘A fun game I built with my son. We’re continuing to develop it together, combining game design with a father-son project.’,
+    tags: [‘Game design’, ‘Multiplayer’, ‘Family project’],
+    url: ‘https://plusplusinvasion.vercel.app/’,
+    status: ‘In development’
+  },
+  {
+    id: ‘ressentis’,
+    title: ‘Ressentis’,
+    subtitle: ‘Emotion tracker & journal’,
+    description:
+      ‘It’s not always easy to name what you feel. Ressentis helps you record your emotions, identify them correctly, work through difficult moments, and get recaps to understand your emotional patterns.’,
+    tags: [‘AI’, ‘Mental health’, ‘Journaling’],
+    url: ‘https://ressentis.vercel.app/’,
+    status: ‘Prototype’
   }
 ];
