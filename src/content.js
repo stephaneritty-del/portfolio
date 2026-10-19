@@ -183,6 +183,7 @@ export const principles = [
 
 // Independent 0→1: small AI products Stephane designs and builds himself.
 // Shown on the homepage (Work) and on /ai-apps.
+// `tip`: optional how-to-try note shown on the card
 // `video`: optional mp4/webm URL for preview (autoplay muted loop before clicking)
 // Order: Best apps first, experimental ones last
 export const apps = [
@@ -215,7 +216,8 @@ export const apps = [
     description:
       'A fun game I built with my son. We\'re continuing to develop it together, combining game design with a father-son project.',
     tags: ['Game design', 'Multiplayer', 'Family project'],
-    url: 'https://plusplusinvasion.vercel.app/',
+    url: 'https://plusplusinvasion.vercel.app/?lang=en',
+    tip: 'Turn the sound on and play a few rounds, not just one. It starts simple and gets better wave after wave, as new stunts, bonuses and bosses come in.',
     video: null, // Add gameplay video here to catch attention!
     status: 'In development'
   },
@@ -269,7 +271,7 @@ export const apps = [
     description:
       'A dinner-party game. Each player gets a character and a rare word, and has to get the others to say it.',
     tags: ['Game design', 'Social', 'Real-time'],
-    url: 'https://missionmot.vercel.app',
+    url: 'https://missionmot.vercel.app/?lang=en',
     video: null,
     status: 'Live'
   }

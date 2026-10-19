@@ -566,6 +566,7 @@ a:focus-visible, button:focus-visible {
 .app-status { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
 .app-subtitle { margin: 0; font-size: 16px; }
 .app-text { margin: 0; max-width: 38em; font-size: 16px; line-height: 1.55; color: var(--faint); }
+.app-tip { margin: 0; max-width: 38em; padding-left: 12px; border-left: 2px solid var(--accent); font-size: 15px; line-height: 1.5; }
 .app-tags { margin: 0 0 8px; font-size: 13px; color: var(--faint); }
 
 /* The live demo sits in a phone frame, since the apps are built for phones. */

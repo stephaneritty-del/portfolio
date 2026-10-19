@@ -40,6 +40,7 @@ export default function AppsPage() {
                 </div>
                 <p className="app-subtitle">{a.subtitle}</p>
                 <p className="app-text">{a.description}</p>
+                {a.tip && <p className="app-tip">{a.tip}</p>}
                 <p className="app-tags">{a.tags.join(' · ')}</p>
                 {a.url && (
                 <div className="button-row">
