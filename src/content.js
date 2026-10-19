@@ -200,10 +200,10 @@ export const apps = [
   {
     id: 'healthx',
     title: 'Enterprise Health Platform',
-    subtitle: 'Multi-tenant B2B2C platform',
+    subtitle: 'Dual-sided platform: Enterprise dashboard + Patient app',
     description:
-      'Leading product development for a large-scale health technology platform serving enterprise clients and end users. Building the semantic layer for health data interoperability, AI-powered intelligence layer, and scalable multi-tenant architecture. Currently under NDA.',
-    tags: ['Health tech', 'Enterprise', 'B2B2C', 'AI/ML', 'Platform'],
+      'Leading product development for a large-scale health platform with interconnected B2B and B2C interfaces. Enterprise dashboard for healthcare providers, patient-facing mobile app, unified semantic layer for health data interoperability, and AI-powered intelligence across both sides. Currently under NDA.',
+    tags: ['Health tech', 'Enterprise', 'B2B', 'B2C', 'AI/ML', 'Platform'],
     url: null,
     video: null,
     status: 'In development - NDA'
