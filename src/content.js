@@ -183,6 +183,7 @@ export const principles = [
 
 // Independent 0→1: small AI products Stephane designs and builds himself.
 // Shown on the homepage (Work) and on /ai-apps.
+// `video`: optional mp4/webm URL for preview (autoplay muted loop before clicking)
 export const apps = [
   {
     id: 'vitaleat',
@@ -192,6 +193,7 @@ export const apps = [
       'Our baby was allergic to dairy, and it took us four months to find out. Four horrible months. I built VitalEat so new parents can spot a food intolerance sooner: log meals by voice, and it looks for patterns between food, symptoms, stress and sleep.',
     tags: ['AI/ML', 'Health tech', 'Voice interface'],
     url: 'https://vitaleat.vercel.app',
+    video: null, // Add video URL here (e.g., '/videos/vitaleat-demo.mp4')
     status: 'Prototype'
   },
   {
@@ -202,6 +204,7 @@ export const apps = [
       'A restaurant wine list gives you names, vintages and prices, but not what you need to choose. Photograph the list or a bottle and get the information that helps you decide.',
     tags: ['Computer vision', 'Web scraping', 'API integration'],
     url: 'https://winecardselctor.vercel.app',
+    video: null,
     status: 'Live beta'
   },
   {
@@ -212,6 +215,7 @@ export const apps = [
       'A dinner-party game. Each player gets a character and a rare word, and has to get the others to say it.',
     tags: ['Game design', 'Social', 'Real-time'],
     url: 'https://missionmot.vercel.app',
+    video: null,
     status: 'Live'
   },
   {
@@ -222,6 +226,7 @@ export const apps = [
       ‘Someone asked me to help him find his ikigai, the Japanese idea of a reason for being. Lumi is a coach that works through it with you: what you love, what you’re good at, what the world needs and what you can be paid for.’,
     tags: [‘AI coach’, ‘Self-discovery’],
     url: ‘https://ikig.vercel.app/’,
+    video: null,
     status: ‘Prototype’
   },
   {
@@ -232,6 +237,7 @@ export const apps = [
       ‘A fun game I built with my son. We’re continuing to develop it together, combining game design with a father-son project.’,
     tags: [‘Game design’, ‘Multiplayer’, ‘Family project’],
     url: ‘https://plusplusinvasion.vercel.app/’,
+    video: null, // Add gameplay video here to catch attention!
     status: ‘In development’
   },
   {
@@ -242,6 +248,7 @@ export const apps = [
       ‘It’s not always easy to name what you feel. Ressentis helps you record your emotions, identify them correctly, work through difficult moments, and get recaps to understand your emotional patterns.’,
     tags: [‘AI’, ‘Mental health’, ‘Journaling’],
     url: ‘https://ressentis.vercel.app/’,
+    video: null,
     status: ‘Prototype’
   }
 ];
