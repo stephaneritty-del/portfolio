@@ -232,16 +232,17 @@ export const apps = [
     video: null,
     status: 'Prototype'
   },
-  // {
-  //   id: 'factuai',
-  //   title: 'FactuAI',
-  //   subtitle: 'TBD',
-  //   description: 'TBD',
-  //   tags: ['AI', 'TBD'],
-  //   url: 'https://factuai.vercel.app/',
-  //   video: null,
-  //   status: 'Coming soon'
-  // },
+  {
+    id: 'factuai',
+    title: 'FactuAI',
+    subtitle: 'Fact-checking that teaches you to doubt',
+    description:
+      'The goal is to beat fake news and bring facts back into public debate, at a speed and scale no human fact-checker can match. Most misleading claims aren\'t false. They\'re true in a frame chosen to mislead: a cherry-picked period, a percentage with no absolute number. FactuAI names the technique, asks you the question worth asking first, then shows the wider context. Several AI agents research, argue against each other and trace where a claim started; plain code, not the AI, scores the evidence.',
+    tags: ['Multi-agent AI', 'Misinformation', 'Browser extension'],
+    url: null,
+    video: null,
+    status: 'In development'
+  },
   {
     id: 'winecard',
     title: 'WineCard Selector',
