@@ -235,9 +235,9 @@ export const apps = [
   {
     id: 'factuai',
     title: 'FactuAI',
-    subtitle: 'Fact-checking that teaches you to doubt',
+    subtitle: 'Fact-checking that teaches you to doubt, and to open your mind',
     description:
-      'The goal is to beat fake news and bring facts back into public debate, at a speed and scale no human fact-checker can match. Most misleading claims aren\'t false. They\'re true in a frame chosen to mislead: a cherry-picked period, a percentage with no absolute number. FactuAI names the technique, asks you the question worth asking first, then shows the wider context. Several AI agents research, argue against each other and trace where a claim started; plain code, not the AI, scores the evidence.',
+      'The goal is to beat fake news and bring facts back into public debate, at a speed and scale no human fact-checker can match. Most misleading claims aren\'t false. They\'re true in a frame chosen to mislead: a cherry-picked period, a percentage with no absolute number. FactuAI names the technique, asks you the question worth asking first, then shows the wider context. When values clash, it asks you to see the situation from the other side too. Several AI agents research, argue against each other and trace where a claim started; plain code, not the AI, scores the evidence.',
     tags: ['Multi-agent AI', 'Misinformation', 'Browser extension'],
     url: null,
     video: null,
