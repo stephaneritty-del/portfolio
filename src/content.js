@@ -211,7 +211,7 @@ export const apps = [
   },
   {
     id: 'plusplus',
-    title: '++ Invasion',
+    title: 'Cross Invasion',
     subtitle: 'Co-created with my son',
     description:
       'A fun game I built with my son. We\'re continuing to develop it together, combining game design with a father-son project.',
