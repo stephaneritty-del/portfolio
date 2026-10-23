@@ -72,7 +72,7 @@ export const cases = [
     component: 'Jit',
     company: 'Thermo Fisher',
     title: 'Just-in-time labeling',
-    line: 'Sold into a ten-year clinical trial before the service existed. Built in three months; process time went from 26 days to 5.',
+    line: 'Sales sold a service we didn\'t have into a $10M, ten-year clinical trial. Built in record time, three months; process time went from 26 days to 5.',
     status: 'Launched',
     dek: 'Sales closed a deal for a service we didn\'t have. We had three months to make it real.',
     role: null,
@@ -80,10 +80,10 @@ export const cases = [
       ['3 months', 'from emergency to running service'],
       ['26 → 5 days', 'process time'],
       ['99%+', 'on-time delivery'],
-      ['$30M+', 'business on the contract']
+      ['$10M', 'ten-year clinical trial contract']
     ],
     description:
-      'A just-in-time labeling service for clinical trials, sold before it existed and built in three months: process time from 26 days to 5.'
+      'A just-in-time labeling service sold into a $10M, ten-year clinical trial before it existed, and built in record time: three months, process time from 26 days to 5.'
   },
   {
     slug: 'rental-business-model',

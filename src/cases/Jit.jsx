@@ -2,8 +2,8 @@ export default function Jit() {
   return (
     <>
       <p>
-        Sales closed a deal for just-in-time labeling on a clinical trial that would run for ten years: more than $30M
-        of business for Thermo Fisher. The service didn&apos;t exist. There was no process, no team and no space to
+        Sales closed a deal for just-in-time labeling on a clinical trial that would run for ten years: a $10M
+        contract for Thermo Fisher. The service didn&apos;t exist. There was no process, no team and no space to
         run it. I was pulled in once it had become an emergency.
       </p>
       <p>
@@ -22,7 +22,7 @@ export default function Jit() {
 
       <h2>What happened</h2>
       <p>
-        Three months later the service was running. Process time went from 26 days to 5, and on-time delivery stayed
+        Three months later, a record for a new service, it was running. Process time went from 26 days to 5, and on-time delivery stayed
         above 99%. A reputational risk with a customer became a new service line.
       </p>
 
