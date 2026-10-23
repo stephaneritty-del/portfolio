@@ -8,7 +8,7 @@ export default function SiteHeader({ className = '' }) {
       <nav className="site-nav" aria-label="Main">
         <a href="/#work">Work</a>
         <a href="/#how">Building 0→1</a>
-        <a href="/ai-apps">AI products</a>
+        <a href="/ai-apps">AI prototypes</a>
         <a href="/#contact">Contact</a>
         {CV_URL && (
           <a href={CV_URL} className="btn btn-outline btn-small">CV</a>

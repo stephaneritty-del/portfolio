@@ -4,7 +4,6 @@
 export const SITE_URL = 'https://stephaneritty.com';
 export const EMAIL = 'stephane.ritty@gmail.com';
 export const LINKEDIN = 'https://www.linkedin.com/in/stephaneritty/';
-export const GITHUB = 'https://github.com/stephaneritty-del';
 
 // Put your CV in /public (e.g. public/stephane-ritty-cv.pdf) and set this to
 // '/stephane-ritty-cv.pdf'. While it\'s null, the CV link stays hidden.
@@ -181,7 +180,7 @@ export const principles = [
   }
 ];
 
-// Independent 0→1: small AI products Stephane designs and builds himself.
+// Prototyping with AI: prototypes and test artifacts Stephane designs and builds himself.
 // Shown on the homepage (Work) and on /ai-apps.
 // `tip`: optional how-to-try note shown on the card
 // `video`: optional mp4/webm URL for preview (autoplay muted loop before clicking)

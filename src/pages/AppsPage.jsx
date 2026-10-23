@@ -22,11 +22,13 @@ export default function AppsPage() {
       <SiteHeader className="page-header" />
       <main>
         <header className="case-hero">
-          <p className="kicker">Independent 0→1</p>
+          <p className="kicker">Prototyping with AI</p>
           <h1 className="display-lg">The environment changes. <em>I still build.</em></h1>
           <p className="lead">
-            Small AI products I design and build myself, from idea to working product, without an organization around
-            them. Try them on your phone or desktop.
+            I started building with AI before it was easy. Since Gemini 3 in November 2025, I have spent my spare time
+            learning to build prototypes and cheap test artifacts that validate assumptions before the big spend, and
+            some just for the pleasure of it. Most are prototypes, and these are only a few. Try them on your phone or
+            desktop.
           </p>
         </header>
 

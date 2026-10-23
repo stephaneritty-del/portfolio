@@ -61,38 +61,14 @@ export default function Home() {
                     <span className="work-title">{c.title}</span>
                     <span className="work-line">{c.line}</span>
                   </span>
-                  <span className="work-status">{c.status}</span>
+                  <span className="work-status">
+                    {c.status}
+                    <span className="work-cta">Read the story</span>
+                  </span>
                 </a>
               </li>
             ))}
           </ol>
-        </section>
-
-        <section id="independent" className="band">
-          <div className="section-head">
-            <h2 className="display-md">Independent 0→1</h2>
-            <p className="section-note">
-              <strong>The environment changes. I still build.</strong> Small AI products I design, build and ship myself.
-            </p>
-          </div>
-          <ol className="work-list">
-            {apps.map((a) => (
-              <li key={a.id}>
-                <a href="/ai-apps" className="work-row">
-                  <span className="work-company">
-                    AI product
-                    <span className="work-type">{a.subtitle}</span>
-                  </span>
-                  <span className="work-main">
-                    <span className="work-title">{a.title}</span>
-                    <span className="work-line">{a.description}</span>
-                  </span>
-                  <span className="work-status">{a.status}</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-          <p className="section-more"><a href="/ai-apps">Try them in the browser</a></p>
         </section>
 
         <section id="how" className="band">
@@ -113,6 +89,36 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section id="independent" className="band">
+          <div className="section-head">
+            <h2 className="display-md">Prototyping with AI</h2>
+            <p className="section-note">
+              <strong>The environment changes. I still build.</strong> I started building with AI before it was easy, and
+              since Gemini 3 in November 2025 I have spent my spare time learning to build prototypes and cheap test
+              artifacts that validate assumptions before the big spend. Some I build just for the pleasure of it. Here
+              are a few; there are more.
+            </p>
+          </div>
+          <ol className="work-list">
+            {apps.map((a) => (
+              <li key={a.id}>
+                <a href="/ai-apps" className="work-row">
+                  <span className="work-company">
+                    AI prototype
+                    <span className="work-type">{a.subtitle}</span>
+                  </span>
+                  <span className="work-main">
+                    <span className="work-title">{a.title}</span>
+                    <span className="work-line">{a.description}</span>
+                  </span>
+                  <span className="work-status">{a.status}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+          <p className="section-more"><a href="/ai-apps">Try them in the browser</a></p>
         </section>
 
         <section id="background" className="band background">

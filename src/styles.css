@@ -268,7 +268,12 @@ a:focus-visible, button:focus-visible {
 .work-title { font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.15; transition: color .2s ease; }
 .work-line { max-width: 44em; font-size: 16px; line-height: 1.55; color: var(--muted); }
 .work-status { font-size: 14px; color: var(--faint); text-align: right; }
+.work-row { transition: background-color .2s ease; }
 .work-row:hover .work-title { color: var(--accent); }
+/* Corporate stories open a full page: say so, and move the arrow on hover */
+.work-cta { display: block; margin-top: 8px; color: var(--accent); font-weight: 600; white-space: nowrap; }
+.work-cta::after { content: " →"; display: inline-block; transition: transform .2s ease; }
+.work-row:hover .work-cta::after, .work-row:focus-visible .work-cta::after { transform: translateX(4px); }
 
 .work-type { display: block; margin-top: 4px; font-size: 13px; color: var(--faint); opacity: 0.8; }
 .section-more { margin: 24px 0 0; font-size: 15px; }

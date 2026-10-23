@@ -1,4 +1,4 @@
-import { EMAIL, LINKEDIN, GITHUB } from '../content.js';
+import { EMAIL, LINKEDIN } from '../content.js';
 
 export function ContactBand() {
   return (
@@ -22,9 +22,8 @@ export default function SiteFooter() {
         <p suppressHydrationWarning>© {new Date().getFullYear()} Stephane Ritty</p>
         <nav aria-label="Footer">
           <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href={`mailto:${EMAIL}`}>Email</a>
-          <a href="/ai-apps">AI products</a>
+          <a href="/ai-apps">AI prototypes</a>
         </nav>
         <p className="footer-note">
           Visits are counted anonymously with Vercel Web Analytics. No cookies, no personal data, no cross-site tracking.
