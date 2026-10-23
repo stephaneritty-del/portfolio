@@ -2,8 +2,8 @@ export default function Jit() {
   return (
     <>
       <p>
-        Sales closed a deal for just-in-time labeling on a clinical trial that would run for ten years: a $10M
-        contract for Thermo Fisher. The service didn&apos;t exist. There was no process, no team and no space to
+        Sales closed a deal for just-in-time labeling on a clinical trial that would run for ten years: a contract
+        worth more than $10M for Thermo Fisher. The service didn&apos;t exist. There was no process, no team and no space to
         run it. I was pulled in once it had become an emergency.
       </p>
       <p>
