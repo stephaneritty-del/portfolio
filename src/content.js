@@ -183,7 +183,8 @@ export const principles = [
 // Prototyping with AI: prototypes and test artifacts Stephane designs and builds himself.
 // Shown on the homepage (Work) and on /ai-apps.
 // `tip`: optional how-to-try note shown on the card
-// `video`: optional mp4/webm URL for preview (autoplay muted loop before clicking)
+// `video`: optional mp4/webm URL for preview (autoplay muted loop before clicking); `poster`: its still image
+// An app with a video but no `url` shows only the video (no live demo)
 // Order: Best apps first, experimental ones last
 export const apps = [
   {
@@ -205,7 +206,9 @@ export const apps = [
       'Leading product development for a large-scale health platform with interconnected B2B and B2C interfaces. Enterprise dashboard for healthcare providers, patient-facing mobile app, unified semantic layer for health data interoperability, and AI-powered intelligence across both sides. Currently under NDA.',
     tags: ['Health tech', 'Enterprise', 'B2B', 'B2C', 'AI/ML', 'Platform'],
     url: null,
-    video: null,
+    video: '/healthx-journey.mp4',
+    poster: '/healthx-journey.jpg',
+    tip: 'The video shows one quick patient journey: a rough night, a recovery plan for the day, a blood test booked and explained, prescriptions reordered. The platform covers far more, on both the patient and the enterprise side.',
     status: 'In development - NDA'
   },
   {

@@ -44,7 +44,7 @@ export default function AppsPage() {
                 <p className="app-text">{a.description}</p>
                 {a.tip && <p className="app-tip">{a.tip}</p>}
                 <p className="app-tags">{a.tags.join(' · ')}</p>
-                {a.url && (
+                {(a.url || a.video) && (
                 <div className="button-row">
                   <button
                     type="button"
@@ -52,11 +52,15 @@ export default function AppsPage() {
                     aria-pressed={active === i}
                     onClick={() => handleAppChange(i)}
                   >
-                    {active === i ? 'Showing preview' : 'Preview'}
+                    {a.url
+                      ? (active === i ? 'Showing preview' : 'Preview')
+                      : (active === i ? 'Playing the journey' : 'Watch the journey')}
                   </button>
-                  <a href={a.url} className="btn btn-accent btn-small" target="_blank" rel="noopener noreferrer">
-                    Play now →
-                  </a>
+                  {a.url && (
+                    <a href={a.url} className="btn btn-accent btn-small" target="_blank" rel="noopener noreferrer">
+                      Play now →
+                    </a>
+                  )}
                 </div>
                 )}
               </li>
@@ -71,12 +75,14 @@ export default function AppsPage() {
                     <video
                       key={app.id}
                       src={app.video}
+                      poster={app.poster}
                       autoPlay
                       muted
                       loop
                       playsInline
                       className="preview-video"
                     />
+                    {app.url && (
                     <button
                       type="button"
                       className="try-app-overlay"
@@ -86,8 +92,9 @@ export default function AppsPage() {
                       <span className="try-icon">▶</span>
                       <span className="try-text">Try it live</span>
                     </button>
+                    )}
                   </div>
-                ) : (
+                ) : app.url && (
                   <iframe
                     key={app.id}
                     src={app.url}
@@ -99,11 +106,15 @@ export default function AppsPage() {
               </div>
             </div>
             <p className="app-demo-caption">
-              {showIframe || !app.video ? 'Live: ' : 'Preview: '}{app.title}
-              {' · '}
-              <a href={app.url} target="_blank" rel="noopener noreferrer">
-                open on your phone
-              </a>
+              {!app.url ? 'Video: ' : showIframe || !app.video ? 'Live: ' : 'Preview: '}{app.title}
+              {app.url ? (
+                <>
+                  {' · '}
+                  <a href={app.url} target="_blank" rel="noopener noreferrer">
+                    open on your phone
+                  </a>
+                </>
+              ) : ' · one journey of many'}
             </p>
           </div>
         </section>
