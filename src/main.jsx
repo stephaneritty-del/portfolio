@@ -18,3 +18,17 @@ if (container.hasChildNodes()) {
 
 // Cookieless page-view counting (no consent banner needed)
 inject()
+
+// PostHog product analytics, also cookieless: nothing is stored on the visitor's device, so a returning
+// visitor counts as new. The key and host come from Vercel's environment variables; without them it stays off.
+const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY
+if (POSTHOG_KEY) {
+  // Loaded separately so it never slows down the page itself
+  import('posthog-js').then(({ default: posthog }) => {
+    posthog.init(POSTHOG_KEY, {
+      api_host: import.meta.env.VITE_POSTHOG_HOST || 'https://eu.i.posthog.com',
+      persistence: 'memory',
+      person_profiles: 'identified_only'
+    })
+  })
+}

@@ -26,7 +26,7 @@ export default function SiteFooter() {
           <a href="/ai-apps">AI prototypes</a>
         </nav>
         <p className="footer-note">
-          Visits are counted anonymously with Vercel Web Analytics. No cookies, no personal data, no cross-site tracking.
+          Visits are counted anonymously with Vercel Web Analytics and PostHog. No cookies, no personal data, no cross-site tracking.
         </p>
       </footer>
     </>
