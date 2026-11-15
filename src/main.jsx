@@ -20,8 +20,8 @@ if (container.hasChildNodes()) {
 inject()
 
 // PostHog product analytics, also cookieless: nothing is stored on the visitor's device, so a returning
-// visitor counts as new. The key and host come from Vercel's environment variables; without them it stays off.
-const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY
+// visitor counts as new. The project key is public by design; Vercel's VITE_POSTHOG_KEY / VITE_POSTHOG_HOST can override it.
+const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY || 'phc_yX7Q9rPy6MV7ZR274L4Vde3XwTWBYHEzvK3berM46Fug'
 if (POSTHOG_KEY) {
   // Loaded separately so it never slows down the page itself
   import('posthog-js').then(({ default: posthog }) => {
