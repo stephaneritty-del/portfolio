@@ -26,7 +26,9 @@ if (POSTHOG_KEY) {
   // Loaded separately so it never slows down the page itself
   import('posthog-js').then(({ default: posthog }) => {
     posthog.init(POSTHOG_KEY, {
-      api_host: import.meta.env.VITE_POSTHOG_HOST || 'https://eu.i.posthog.com',
+      // Sent through our own subdomain (PostHog managed reverse proxy) so ad blockers don't drop visits
+      api_host: import.meta.env.VITE_POSTHOG_HOST || 'https://e.stephaneritty.com',
+      ui_host: 'https://eu.posthog.com',
       persistence: 'memory',
       person_profiles: 'identified_only'
     })
